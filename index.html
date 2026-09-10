@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小白天堂 - 經典 3.81 懷舊復古伺服器</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Microsoft JhengHei', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #0d0d0d; color: #e0e0e0; line-height: 1.6; position: relative; overflow-x: hidden; }
+        body::before { content: "xiaobaiheavens.tw"; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 8vw; font-weight: 900; color: rgba(255, 183, 0, 0.03); white-space: nowrap; z-index: -1; pointer-events: none; letter-spacing: 5px; }
+        a { color: #ffb700; text-decoration: none; transition: 0.3s; cursor: pointer; display: inline-block; }
+        a:hover { color: #ffffff; }
+        header { background-color: rgba(10, 10, 10, 0.95); border-bottom: 2px solid #332200; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo a { font-size: 24px; font-weight: bold; color: #ffb700; text-shadow: 0 0 10px rgba(255, 183, 0, 0.5); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        .hero { background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(13, 13, 13, 1)), url('https://unsplash.com') no-repeat center center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; margin-top: 60px; }
+        .hero h1 { font-size: 3rem; color: #ffffff; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
+        .hero p { font-size: 1.2rem; color: #ffb700; margin-bottom: 30px; }
+        .btn-group .btn { display: inline-block; background: linear-gradient(#4a3b1a, #2b210b); color: #fff !important; padding: 12px 30px; margin: 0 10px; border: 1px solid #ffb700; border-radius: 4px; font-weight: bold; text-decoration: none !important; }
+        .btn-group .btn:hover { background: linear-gradient(#ffb700, #b38000); color: #000 !important; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { font-size: 1.8rem; color: #ffb700; border-left: 5px solid #ffb700; padding-left: 10px; margin-bottom: 20px; }
+        .card, .welfare-box, .disclaimer-section { scroll-margin-top: 100px; }
+        .card { background-color: rgba(26, 26, 26, 0.85); border: 1px solid #2d2d2d; padding: 20px; border-radius: 4px; margin-bottom: 25px; backdrop-filter: blur(3px); }
+        .promo-banner { text-align: center; margin-bottom: 25px; background: rgba(17, 17, 17, 0.9); padding: 15px; border: 1px solid #332200; border-radius: 4px; }
+        .promo-banner img { max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #444; box-shadow: 0 0 15px rgba(0,0,0,0.7); }
+        .welfare-box { background: linear-gradient(135deg, #2b1a08 0%, #151005 100%); border: 1px solid #b38000; padding: 20px; border-radius: 4px; margin-bottom: 25px; box-shadow: inset 0 0 15px rgba(255, 183, 0, 0.1); }
+        .welfare-title { font-size: 1.3rem; color: #ffdd67; font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; }
+        .welfare-title::before { content: "🎁 "; }
+        .welfare-item { color: #ff3333; font-weight: bold; background: rgba(0, 0, 0, 0.4); padding: 3px 8px; border-radius: 3px; border: 1px dashed rgba(255, 51, 51, 0.4); }
+        .news-list { list-style: none; }
+        .news-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #333; }
+        .news-tag { background-color: #b32424; color: white; padding: 2px 6px; font-size: 0.8rem; border-radius: 3px; margin-right: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table th, table td { padding: 12px; text-align: left; border-bottom: 1px solid #2d2d2d; }
+        table th { background-color: #252525; color: #ffb700; }
+        .disclaimer-section { margin-top: 40px; width: 100%; }
+        .disclaimer-box { background-color: #111111; border: 1px solid #b38000; padding: 25px; border-radius: 4px; font-size: 0.9rem; color: #cccccc; transition: all 0.3s ease; }
+        .disclaimer-box.flash-highlight { animation: borderFlash 0.5s ease-in-out 3; }
+        @keyframes borderFlash { 0% { border-color: #b38000; box-shadow: 0 0 0px rgba(255, 0, 0, 0); } 50% { border-color: #ff3333; box-shadow: 0 0 20px rgba(255, 51, 51, 0.6); } 100% { border-color: #b38000; box-shadow: 0 0 0px rgba(255, 0, 0, 0); } }
+        .disclaimer-box h3 { color: #ffb700; font-size: 1.2rem; margin-bottom: 15px; text-align: center; border-bottom: 1px dashed #333; padding-bottom: 10px; }
+        .disclaimer-item { margin-bottom: 15px; line-height: 1.7; text-align: justify; }
+        .disclaimer-item span { display: block; padding-left: 24px; margin-top: 5px; }
+        footer { background-color: #050505; text-align: center; padding: 20px; color: #555; font-size: 0.85rem; border-top: 2px solid #1a1a1a; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="#home">小白天堂 3.81</a></div>
+            <nav><ul>
+                <li><a href="#news">最新消息</a></li>
+                <li><a href="#welfare">新手福利</a></li>
+                <li><a href="#info">伺服器設定</a></li>
+                <li><a href="#download">遊戲下載</a></li>
+                <li><a href="#contact">聯絡客服</a></li>
+                <li><a href="#disclaimer" onclick="flashDisclaimerBox()">免責聲明</a></li>
+            </ul></nav>
+        </div>
+    </header>
+    <div id="home" class="hero">
+        <h1>重返亞丁大陸，續寫輝煌篇章！</h1>
+        <p>經典 3.81 燃燒熱血再臨・開放測試 掛機首選</p>
+        <div class="btn-group">
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn">懶人包下載</a>
+            <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="btn">加入 LINE 社群</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="promo-banner">
+            <img src="https://unsplash.com" alt="小白天堂 宣傳海報">
+            <p style="margin-top: 10px; color: #ffb700; font-weight: bold;">官方認證網址：xiaobaiheavens.tw</p>
+        </div>
+        <section id="welfare" class="welfare-box">
+            <div class="welfare-title">老戰友集結！新手專屬福利免費領</div>
+            <p style="margin-bottom: 10px; color: #ccc;">為了回饋廣大玩家支持，凡是新加入的血盟戰友與行者，完成以下步驟即可至客服領取好禮：</p>
+            <p style="font-size: 1.05rem; line-height: 1.8;">🎯 只要玩家完成 <span style="color: #ffb700; font-weight: bold;">加入官方 LINE 社群</span> 與 <span style="color: #5865F2; font-weight: bold;">Discord 頻道</span>：<br>👉 免費贈送：<span class="welfare-item">[+0]贊助永久卡</span><br>👉 加碼再送：<span class="welfare-item">贊助永久升階卷 1 張</span></p>
+            <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">* 每個帳號限領一次，詳情請洽官方客服進行審核與發放。</p>
+        </section>
+        <section id="news" class="card">
+            <h2 class="section-title">最新消息</h2>
+            <ul class="news-list">
+                <li><div><span class="news-tag" style="background:#b32424;">重要</span><a href="#welfare">新血福利：完成加 LINE 與 DC 送永久卡、升階卷！</a></div><span>2026-09-10</span></li>
+                <li><div><span class="news-tag" style="background:#b38000;">活動</span><a href="#download">開服連續七天，經驗加倍與精彩活動不間斷</a></div><span>2026-09-10</span></li>
+                <li><div><span class="news-tag" style="background:#24b337;">公告</span><a href="#download">新手福利禮包發放與領取教學指南</a></div><span>2026-09-09</span></li>
+            </ul>
+        </section>
+        <section id="download" class="card">
+            <h2 class="section-title">遊戲下載</h2>
+            <p style="margin-bottom: 15px;">請務必下載專用主程式與核心，以免產生斷線或報錯問題。</p>
+            <table style="background: #151515;">
+                <tr>
+                    <td><strong>3.81 官方完整主程式</strong></td>
+                    <td>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" style="color: #ffb700; font-weight: bold; text-decoration: underline;">[ 官方載點 1 ]</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" style="color: #ffb700; font-weight: bold; text-decoration: underline;">[ 雲端載點 2 ]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>小白天堂 專用登入器核心</strong></td>
+                    <td>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" style="color: #ffb700; font-weight: bold; text-decoration: underline;">[ 官方載點 1 ]</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer" style="color: #ffb700; font-weight: bold; text-decoration: underline;">[ 雲端載點 2 ]</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="info" class="card">
+            <h2 class="section-title">伺服器設定</h2>
+            <table>
+                <tr><td>遊戲版本</td><td>3.81 經典仿正</td></tr>
+                <tr><td>經驗倍率</td><td>5 倍</td></tr>
+                <tr><td>金幣倍率</td><td>2 倍</td></tr>
+                <tr><td>掉寶倍率</td><td>1 倍</td></tr>
+                <tr><td>正義倍率</td><td>3 倍</td></tr>
+                <tr><td>武器衝載</td><td>1 %</td></tr>
