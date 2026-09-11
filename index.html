@@ -7,7 +7,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Microsoft JhengHei', sans-serif; }
         html { scroll-behavior: smooth; }
-                body { background: radial-gradient(circle at 50% 25%, #311d08 0%, #0c0c0c 45%, #050505 100%) fixed !important; color: #e0e0e0; line-height: 1.6; position: relative; overflow-x: hidden; }
+                body { background: #070707 linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(13, 13, 13, 0.95) 100%), url('https://unsplash.com') no-repeat center center fixed/cover !important; color: #e0e0e0; line-height: 1.6; position: relative; overflow-x: hidden; }
         body::before { content: "xiaobaiheavens.tw"; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); font-size: 8vw; font-weight: 900; color: rgba(255, 183, 0, 0.02); white-space: nowrap; z-index: -1; pointer-events: none; letter-spacing: 5px; }
         a { color: #ffb700; text-decoration: none; transition: 0.3s; cursor: pointer; display: inline-block; }
         a:hover { color: #ffffff; }
@@ -58,7 +58,6 @@
             </ul></nav>
         </div>
     </header>
-        </style>
     <div id="home" class="hero">
         <h1>重返亞丁大陸，續寫輝煌篇章！</h1>
         <p>經典 3.81 燃燒熱血再臨・開放測試 掛機首選</p>
@@ -123,7 +122,7 @@
         <section id="contact" class="card">
             <h2 class="section-title">聯絡客服</h2>
             <p>若遇到儲值、遊戲障礙或檢舉外掛，請點擊下方加入官方客服：</p>
-            <a href="https://line.me" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center; background:#06C755; color:#fff; padding:10px; margin-top:15px; border-radius:4px; font-weight:bold;">加入 LINE 官方客服</a>
+                        <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center; background:linear-gradient(#4a3b1a, #2b210b); border:1px solid #ffb700; color:#fff; padding:12px; margin-top:15px; border-radius:4px; font-weight:bold;">加入 Discord 官方客服</a>
         </section>
         <div id="disclaimer" class="disclaimer-section">
             <div id="disclaimerBox" class="disclaimer-box">
@@ -148,7 +147,7 @@
         function runFlashAnimation() {
             var box = document.getElementById("disclaimerBox");
             if(box) { box.classList.remove("flash-highlight"); void box.offsetWidth; box.classList.add("flash-highlight"); }
-        }
-    </div>
+                }
+    </script>
 </body>
 </html>
