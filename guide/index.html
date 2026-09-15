@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>攻略指南｜小白天堂 3.81</title>
+
+<meta name="description"
+content="小白天堂 3.81 攻略指南，提供新手入門、角色成長、裝備強化、打怪練功、BOSS攻略與遊戲玩法資訊。">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#080808;
+    color:#f5f5f5;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.96);
+    border-bottom:1px solid rgba(245,190,55,.25);
+    backdrop-filter:blur(10px);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.logo-text{
+    width:100%;
+    text-align:center;
+    color:#ffd45a;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:4px;
+}
+
+.nav a{
+    padding:11px 15px;
+    border-radius:12px;
+    color:#eee;
+    font-size:16px;
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:#ffd45a;
+}
+
+.nav a.active{
+    background:rgba(255,205,70,.12);
+    color:#ffd45a;
+    box-shadow:0 0 18px rgba(255,200,50,.08);
+}
+
+.join{
+    background:linear-gradient(135deg,#ffd85d,#e9ad35);
+    color:#17110a !important;
+    font-weight:900;
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 24px 30px;
+    text-align:center;
+}
+
+.hero img{
+    width:100%;
+    max-width:900px;
+    aspect-ratio:6/4;
+    object-fit:cover;
+    display:block;
+    margin:auto;
+    border-radius:26px;
+    border:1px solid rgba(255,210,90,.35);
+    box-shadow:0 20px 70px rgba(0,0,0,.65);
+}
+
+.hero h1{
+    margin:38px 0 12px;
+    font-size:48px;
+    color:#ffd45a;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+.hero p{
+    margin:0;
+    color:#aaa;
+    font-size:19px;
+}
+
+.section{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 24px;
+}
+
+.section-title{
+    text-align:center;
+    color:#ffd45a;
+    font-size:34px;
+    font-weight:900;
+    margin:0 0 12px;
+}
+
+.section-sub{
+    text-align:center;
+    color:#888;
+    margin:0 0 35px;
+    font-size:17px;
+}
+
+.guide-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.card{
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,210,90,.07),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,210,90,.18);
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,210,90,.45);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin:0 0 10px;
+    color:#ffd45a;
+    font-size:23px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.8;
+    margin:0 0 18px;
+}
+
+.card-btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:10px;
+    border:1px solid rgba(255,210,90,.3);
+    color:#ffd45a;
+    font-weight:700;
+    font-size:14px;
+}
+
+.tips{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.tip{
+    padding:24px;
+    background:#101010;
+    border-radius:18px;
+    border:1px solid #242424;
+}
+
+.tip strong{
+    display:block;
+    color:#ffd45a;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.tip span{
+    color:#999;
+    line-height:1.7;
+}
+
+.cta{
+    max-width:900px;
+    margin:30px auto 80px;
+    padding:50px 25px;
+    text-align:center;
+    border-radius:24px;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,205,75,.13),
+        rgba(255,205,75,.02) 65%,
+        transparent
+    );
+    border:1px solid rgba(255,210,90,.18);
+}
+
+.cta h2{
+    color:#ffd45a;
+    font-size:32px;
+    margin:0 0 12px;
+}
+
+.cta p{
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:900;
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,#ffd85d,#e8ac32);
+    color:#17110a;
+}
+
+.btn-dark{
+    border:1px solid rgba(255,210,90,.35);
+    color:#ffd45a;
+    background:#111;
+}
+
+footer{
+    border-top:1px solid #242424;
+    text-align:center;
+    padding:35px 20px;
+    color:#666;
+    line-height:1.8;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        padding:15px 10px;
+        gap:3px;
+    }
+
+    .logo-text{
+        font-size:24px;
+    }
+
+    .nav a{
+        font-size:14px;
+        padding:9px 10px;
+    }
+
+    .hero{
+        padding:30px 18px 15px;
+    }
+
+    .hero img{
+        border-radius:20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+        margin-top:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .section{
+        padding:45px 18px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .guide-grid{
+        grid-template-columns:1fr;
+    }
+
+    .tips{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .cta{
+        margin:20px 18px 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+
+        <div class="logo-text">
+            小白天堂 3.81
+        </div>
+
+        <a href="../">首頁</a>
+
+        <a href="../game/">遊戲介紹</a>
+
+        <a href="../news/">最新消息</a>
+
+        <a href="../events/">活動</a>
+
+        <a href="../beginner/">新手專區</a>
+
+        <a href="./" class="active">
+            攻略指南
+        </a>
+
+        <a href="../#download">
+            遊戲下載
+        </a>
+
+        <a href="../#community">
+            社群
+        </a>
+
+        <a
+        href="https://discord.gg/6fRCfpHCB"
+        class="join"
+        target="_blank">
+            立即加入
+        </a>
+
+    </nav>
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <img
+    src="../xiaobai-heaven-logo.jpg"
+    alt="小白天堂 3.81">
+
+    <h1>
+        攻略指南
+    </h1>
+
+    <p>
+        從新手入門到角色成長，掌握小白天堂的冒險技巧
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        攻略分類
+    </h2>
+
+    <p class="section-sub">
+        選擇你想了解的內容，逐步熟悉亞丁大陸
+    </p>
+
+
+    <div class="guide-grid">
+
+        <div class="card">
+
+            <div class="icon">🧭</div>
+
+            <h3>
+                新手入門
+            </h3>
+
+            <p>
+                第一次接觸小白天堂？
+                從角色建立、基本操作、任務與遊戲流程開始了解。
+            </p>
+
+            <a
+            class="card-btn"
+            href="../beginner/">
+                查看新手專區 →
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚔️</div>
+
+            <h3>
+                角色成長
+            </h3>
+
+            <p>
+                了解角色升級、能力提升與日常成長方向，
+                找到適合自己的冒險節奏。
+            </p>
+
+            <span class="card-btn">
+                攻略陸續更新
+            </span>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🛡️</div>
+
+            <h3>
+                裝備攻略
+            </h3>
+
+            <p>
+                認識裝備取得、強化與角色配置，
+                打造屬於自己的戰鬥風格。
+            </p>
+
+            <span class="card-btn">
+                攻略陸續更新
+            </span>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💰</div>
+
+            <h3>
+                資源與掉落
+            </h3>
+
+            <p>
+                掌握遊戲中的重要資源，
+                了解打怪、活動與裝備取得方向。
+            </p>
+
+            <span class="card-btn">
+                攻略陸續更新
+            </span>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">👹</div>
+
+            <h3>
+                BOSS 攻略
+            </h3>
+
+            <p>
+                整理各類 BOSS 的相關資訊，
+                協助玩家準備裝備與戰鬥策略。
+            </p>
+
+            <span class="card-btn">
+                攻略陸續更新
+            </span>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎯</div>
+
+            <h3>
+                活動攻略
+            </h3>
+
+            <p>
+                活動期間的玩法、獎勵與注意事項，
+                讓你掌握每次活動的重點。
+            </p>
+
+            <a
+            class="card-btn"
+            href="../events/">
+                查看活動 →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2 class="section-title">
+        冒險小技巧
+    </h2>
+
+    <p class="section-sub">
+        幾個開始冒險前值得注意的方向
+    </p>
+
+
+    <div class="tips">
+
+        <div class="tip">
+
+            <strong>
+                ① 先熟悉角色
+            </strong>
+
+            <span>
+                了解自己的職業特色與基本操作，
+                再逐步挑戰更高難度內容。
+            </span>
+
+        </div>
+
+
+        <div class="tip">
+
+            <strong>
+                ② 善用官方社群
+            </strong>
+
+            <span>
+                活動與遊戲資訊會持續更新，
+                可透過官方 Discord 掌握最新消息。
+            </span>
+
+        </div>
+
+
+        <div class="tip">
+
+            <strong>
+                ③ 先把新手福利拿好
+            </strong>
+
+            <span>
+                開始遊戲前先確認新手福利，
+                再進入亞丁大陸展開冒險。
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <h2>
+        準備好開始冒險了嗎？
+    </h2>
+
+    <p>
+        加入小白天堂官方社群，
+        掌握最新活動與遊戲資訊。
+    </p>
+
+    <div class="buttons">
+
+        <a
+        href="../beginner/"
+        class="btn btn-gold">
+            新手專區
+        </a>
+
+        <a
+        href="https://discord.gg/6fRCfpHCB"
+        class="btn btn-dark"
+        target="_blank">
+            官方 Discord
+        </a>
+
+        <a
+        href="../"
+        class="btn btn-dark">
+            回到首頁
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        小白天堂 3.81
+    </div>
+
+    <div>
+        重返亞丁大陸・續寫輝煌篇章
+    </div>
+
+    <div>
+        © 2026 小白天堂 All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>
