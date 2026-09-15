@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>影片專區｜小白天堂 3.81</title>
+
+<meta name="description"
+content="小白天堂 3.81 官方影片專區，觀看遊戲宣傳影片、冒險故事與最新影片內容。">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#080808;
+    color:#f5f5f5;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.96);
+    border-bottom:1px solid rgba(245,190,55,.25);
+    backdrop-filter:blur(10px);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.logo-text{
+    width:100%;
+    text-align:center;
+    color:#ffd45a;
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:4px;
+}
+
+.nav a{
+    padding:11px 15px;
+    border-radius:12px;
+    color:#eee;
+    font-size:16px;
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:#ffd45a;
+}
+
+.nav a.active{
+    background:rgba(255,205,70,.12);
+    color:#ffd45a;
+}
+
+.join{
+    background:linear-gradient(135deg,#ffd85d,#e9ad35);
+    color:#17110a !important;
+    font-weight:900;
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 24px 35px;
+    text-align:center;
+}
+
+.hero img{
+    width:100%;
+    max-width:900px;
+    aspect-ratio:6/4;
+    object-fit:cover;
+    display:block;
+    margin:auto;
+    border-radius:26px;
+    border:1px solid rgba(255,210,90,.35);
+    box-shadow:0 20px 70px rgba(0,0,0,.65);
+}
+
+.hero h1{
+    margin:38px 0 12px;
+    font-size:48px;
+    color:#ffd45a;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+.hero p{
+    margin:0;
+    color:#aaa;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.section{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 24px;
+}
+
+.section-title{
+    text-align:center;
+    color:#ffd45a;
+    font-size:34px;
+    font-weight:900;
+    margin:0 0 12px;
+}
+
+.section-sub{
+    text-align:center;
+    color:#888;
+    margin:0 0 38px;
+    font-size:17px;
+}
+
+.video-box{
+    max-width:1000px;
+    margin:auto;
+    padding:16px;
+    border-radius:24px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,210,90,.08),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,210,90,.22);
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+video{
+    display:block;
+    width:100%;
+    border-radius:16px;
+    background:#000;
+}
+
+.video-info{
+    padding:25px 10px 10px;
+}
+
+.video-info h2{
+    margin:0 0 10px;
+    color:#ffd45a;
+    font-size:28px;
+}
+
+.video-info p{
+    margin:0;
+    color:#999;
+    line-height:1.8;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:35px;
+}
+
+.feature{
+    padding:28px 22px;
+    text-align:center;
+    background:#101010;
+    border:1px solid #242424;
+    border-radius:18px;
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    color:#ffd45a;
+    margin:0 0 9px;
+    font-size:20px;
+}
+
+.feature p{
+    color:#888;
+    margin:0;
+    line-height:1.7;
+    font-size:15px;
+}
+
+.notice{
+    max-width:900px;
+    margin:35px auto 0;
+    padding:24px;
+    border-radius:18px;
+    background:#101010;
+    border:1px solid #242424;
+    text-align:center;
+}
+
+.notice strong{
+    color:#ffd45a;
+}
+
+.notice p{
+    color:#888;
+    line-height:1.7;
+    margin:10px 0 0;
+}
+
+.cta{
+    max-width:900px;
+    margin:25px auto 80px;
+    padding:50px 25px;
+    text-align:center;
+    border-radius:24px;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,205,75,.13),
+        rgba(255,205,75,.02) 65%,
+        transparent
+    );
+    border:1px solid rgba(255,210,90,.18);
+}
+
+.cta h2{
+    color:#ffd45a;
+    font-size:32px;
+    margin:0 0 12px;
+}
+
+.cta p{
+    color:#aaa;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:900;
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,#ffd85d,#e8ac32);
+    color:#17110a;
+}
+
+.btn-dark{
+    border:1px solid rgba(255,210,90,.35);
+    color:#ffd45a;
+    background:#111;
+}
+
+footer{
+    border-top:1px solid #242424;
+    text-align:center;
+    padding:35px 20px;
+    color:#666;
+    line-height:1.8;
+    font-size:14px;
+}
+
+@media(max-width:800px){
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    .nav{
+        padding:15px 10px;
+        gap:3px;
+    }
+
+    .logo-text{
+        font-size:24px;
+    }
+
+    .nav a{
+        font-size:14px;
+        padding:9px 10px;
+    }
+
+    .hero{
+        padding:30px 18px 20px;
+    }
+
+    .hero img{
+        border-radius:20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+        margin-top:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:45px 18px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .video-box{
+        padding:10px;
+        border-radius:18px;
+    }
+
+    .video-info h2{
+        font-size:24px;
+    }
+
+    .cta{
+        margin:20px 18px 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<div class="logo-text">
+小白天堂 3.81
+</div>
+
+<a href="../">
+首頁
+</a>
+
+<a href="../game/">
+遊戲介紹
+</a>
+
+<a href="../news/">
+最新消息
+</a>
+
+<a href="../events/">
+活動
+</a>
+
+<a href="../beginner/">
+新手專區
+</a>
+
+<a href="../guide/">
+攻略指南
+</a>
+
+<a href="../classes/">
+職業介紹
+</a>
+
+<a href="./" class="active">
+影片專區
+</a>
+
+<a href="../#download">
+遊戲下載
+</a>
+
+<a href="../#community">
+社群
+</a>
+
+<a
+href="https://discord.gg/6fRCfpHCB"
+class="join"
+target="_blank">
+立即加入
+</a>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<img
+src="../xiaobai-heaven-logo.jpg"
+alt="小白天堂 3.81">
+
+<h1>
+影片專區
+</h1>
+
+<p>
+觀看小白天堂的冒險故事，感受全新的亞丁世界
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">
+官方宣傳影片
+</h2>
+
+<p class="section-sub">
+小白天堂 3.81 官方宣傳影片
+</p>
+
+
+<div class="video-box">
+
+<video
+controls
+playsinline
+preload="metadata">
+
+<source
+src="../xiaobai-heaven-promo.MP4"
+type="video/mp4">
+
+您的瀏覽器不支援影片播放。
+
+</video>
+
+
+<div class="video-info">
+
+<h2>
+小白天堂 3.81｜官方宣傳影片
+</h2>
+
+<p>
+重返亞丁大陸，續寫輝煌篇章。
+與夥伴一起踏上冒險旅程，
+探索新的戰鬥、裝備與活動。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">
+影片內容
+</h2>
+
+<p class="section-sub">
+透過影片快速認識小白天堂
+</p>
+
+
+<div class="feature-grid">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🏰
+</div>
+
+<h3>
+亞丁世界
+</h3>
+
+<p>
+重新踏入熟悉又充滿冒險的亞丁大陸。
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+⚔️
+</div>
+
+<h3>
+熱血戰鬥
+</h3>
+
+<p>
+與怪物及強敵交鋒，
+體驗屬於你的戰鬥冒險。
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✨
+</div>
+
+<h3>
+全新冒險
+</h3>
+
+<p>
+與其他玩家一起探索遊戲世界，
+創造屬於自己的故事。
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+<strong>
+📢 官方影片持續更新
+</strong>
+
+<p>
+未來將陸續加入遊戲介紹、
+活動影片、攻略影片與其他官方內容。
+</p>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<h2>
+準備好進入亞丁大陸了嗎？
+</h2>
+
+<p>
+觀看影片後，立即加入小白天堂，
+開始你的冒險旅程。
+</p>
+
+<div class="buttons">
+
+<a
+href="../beginner/"
+class="btn btn-gold">
+新手專區
+</a>
+
+<a
+href="../#download"
+class="btn btn-dark">
+遊戲下載
+</a>
+
+<a
+href="https://discord.gg/6fRCfpHCB"
+class="btn btn-dark"
+target="_blank">
+官方 Discord
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div>
+小白天堂 3.81
+</div>
+
+<div>
+重返亞丁大陸・續寫輝煌篇章
+</div>
+
+<div>
+© 2026 小白天堂 All Rights Reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
