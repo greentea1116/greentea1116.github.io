@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>遊戲下載｜小白天堂 3.81</title>
+
+<meta name="description"
+content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式下載、安裝教學、更新方式與官方客服資訊。">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    Arial,
+    sans-serif;
+
+    background:
+    radial-gradient(circle at top, #2b2110 0%, #090909 45%, #000 100%);
+
+    color:#fff;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    background:rgba(0,0,0,.92);
+    border-bottom:1px solid rgba(230,190,80,.35);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+
+    flex-wrap:wrap;
+}
+
+.nav a{
+    color:#ddd;
+    font-size:14px;
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:#ffd76a;
+}
+
+.nav .active{
+    color:#ffd76a;
+    font-weight:bold;
+}
+
+.nav .join{
+    background:linear-gradient(135deg,#ffd76a,#b98522);
+    color:#111;
+    padding:7px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.hero{
+    min-height:650px;
+    padding:60px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.3),
+        rgba(0,0,0,.85)
+    );
+}
+
+.hero-inner{
+    max-width:850px;
+}
+
+.hero img{
+    width:min(700px,92vw);
+    max-height:430px;
+    object-fit:contain;
+
+    filter:
+    drop-shadow(0 0 25px rgba(255,210,80,.28));
+
+    margin-bottom:20px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #d9ad4c;
+    color:#ffd76a;
+    padding:5px 16px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:clamp(32px,6vw,58px);
+    color:#ffd76a;
+    text-shadow:0 3px 15px #000;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#ddd;
+    font-size:17px;
+}
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-title h2{
+    color:#ffd76a;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#aaa;
+}
+
+.download-box{
+    max-width:850px;
+    margin:auto;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(53,40,18,.95),
+        rgba(12,12,12,.98)
+    );
+
+    border:1px solid rgba(236,190,75,.45);
+    border-radius:20px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.55);
+}
+
+.download-box h3{
+    font-size:28px;
+    color:#ffe08a;
+    margin-bottom:12px;
+}
+
+.download-box p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.download-btn{
+    display:inline-block;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffe08a,
+        #c08a24
+    );
+
+    color:#111;
+
+    padding:14px 34px;
+    border-radius:35px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    box-shadow:
+    0 7px 25px rgba(210,160,50,.25);
+
+    transition:.25s;
+}
+
+.download-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:
+    0 10px 30px rgba(255,210,80,.35);
+}
+
+.notice{
+    margin-top:25px;
+    padding:15px 18px;
+
+    background:rgba(255,210,80,.07);
+    border-left:3px solid #d9ad4c;
+
+    color:#bbb;
+    text-align:left;
+
+    border-radius:8px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+    background:
+    linear-gradient(
+        145deg,
+        rgba(35,29,17,.95),
+        rgba(14,14,14,.98)
+    );
+
+    border:1px solid rgba(230,190,80,.22);
+    border-radius:16px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,215,106,.55);
+}
+
+.card .icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#ffd76a;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.steps{
+    max-width:850px;
+    margin:auto;
+}
+
+.step{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+
+    margin-bottom:22px;
+
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,215,106,.12);
+
+    border-radius:14px;
+    padding:20px;
+}
+
+.number{
+    min-width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#c18b28;
+    color:#111;
+
+    font-weight:bold;
+    font-size:18px;
+}
+
+.step h3{
+    color:#ffe08a;
+    margin-bottom:4px;
+}
+
+.step p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.cta{
+    text-align:center;
+    padding:70px 20px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(179,135,43,.18),
+        transparent 65%
+    );
+}
+
+.cta h2{
+    color:#ffd76a;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:11px 24px;
+    border-radius:28px;
+
+    border:1px solid #c99c3b;
+    color:#ffd76a;
+}
+
+.btn.primary{
+    background:#c18b28;
+    color:#111;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:30px 20px;
+
+    border-top:1px solid rgba(230,190,80,.2);
+
+    color:#777;
+    font-size:13px;
+}
+
+@media(max-width:800px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav{
+        gap:12px 16px;
+    }
+
+    .hero{
+        min-height:560px;
+        padding:40px 15px;
+    }
+
+    .hero img{
+        max-height:300px;
+    }
+
+    .section{
+        padding:55px 18px;
+    }
+
+    .download-box{
+        padding:32px 20px;
+    }
+
+    .step{
+        gap:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="../">首頁</a>
+
+<a href="../game/">遊戲介紹</a>
+
+<a href="../news/">最新消息</a>
+
+<a href="../events/">活動</a>
+
+<a href="../beginner/">新手專區</a>
+
+<a href="../guide/">攻略指南</a>
+
+<a href="../classes/">職業介紹</a>
+
+<a href="../videos/">影片</a>
+
+<a href="../community/">玩家社群</a>
+
+<a href="./" class="active">遊戲下載</a>
+
+<a href="../#download" class="join">
+立即加入
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<img
+src="../xiaobai-heaven-logo.jpg"
+alt="小白天堂 3.81"
+>
+
+<div class="badge">
+小白天堂 3.81 官方下載專區
+</div>
+
+<h1>遊戲下載</h1>
+
+<p>
+下載遊戲主程式，準備再次踏上亞丁大陸。
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>🎮 官方遊戲下載</h2>
+
+<p>
+請使用官方下載連結取得遊戲主程式
+</p>
+
+</div>
+
+
+<div class="download-box">
+
+<h3>小白天堂 3.81 遊戲主程式</h3>
+
+<p>
+下載完整遊戲程式後，依照下方安裝步驟即可開始遊戲。
+</p>
+
+<a
+class="download-btn"
+href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
+target="_blank"
+rel="noopener"
+>
+⬇️ 立即下載遊戲
+</a>
+
+<div class="notice">
+
+<strong>📌 下載提醒</strong><br>
+
+請確認硬碟有足夠空間，
+並建議將遊戲安裝在獨立資料夾中。
+若下載速度較慢，請稍候片刻或重新整理下載頁面。
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>📋 開始遊戲前</h2>
+
+<p>
+第一次進入小白天堂，可以先確認以下事項
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">💻</div>
+
+<h3>準備電腦</h3>
+
+<p>
+請使用 Windows 電腦進行遊戲，
+並確認系統可以正常執行遊戲程式。
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📦</div>
+
+<h3>完整下載</h3>
+
+<p>
+請等待遊戲主程式完整下載完成，
+不要在下載途中中斷檔案。
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🛡️</div>
+
+<h3>安全設定</h3>
+
+<p>
+若 Windows 或防毒軟體出現提示，
+請先確認檔案來源為官方下載位置。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>📥 安裝教學</h2>
+
+<p>
+依照以下流程即可完成基本安裝
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<div>
+
+<h3>下載遊戲主程式</h3>
+
+<p>
+點擊上方「立即下載遊戲」，
+下載官方提供的遊戲檔案。
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<div>
+
+<h3>建立遊戲資料夾</h3>
+
+<p>
+建議在電腦中建立專用的
+「小白天堂 3.81」資料夾。
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<div>
+
+<h3>解壓縮或安裝</h3>
+
+<p>
+依照下載檔案的格式，
+完成解壓縮或安裝程序。
+</p>
+
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<div>
+
+<h3>啟動遊戲</h3>
+
+<p>
+完成安裝後，啟動遊戲程式，
+即可開始你的亞丁冒險。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>🔄 遊戲更新</h2>
+
+<p>
+保持遊戲版本最新，才能正常進入伺服器
+</p>
+
+</div>
+
+
+<div class="download-box">
+
+<h3>需要更新時怎麼辦？</h3>
+
+<p>
+若官方發布新的遊戲版本或更新檔，
+請依照官方公告提供的更新方式進行更新。
+</p>
+
+<div class="notice">
+
+<strong>⚠️ 重要提醒</strong><br>
+
+請不要使用來路不明的更新檔案。
+若遇到無法登入、版本不符或遊戲異常，
+請前往官方社群聯絡客服。
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<h2>準備好重返亞丁大陸了嗎？</h2>
+
+<p>
+下載遊戲，加入小白天堂 3.81。
+</p>
+
+<div class="buttons">
+
+<a
+class="btn primary"
+href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
+target="_blank"
+rel="noopener"
+>
+立即下載
+</a>
+
+<a
+class="btn"
+href="../community/"
+>
+加入玩家社群
+</a>
+
+<a
+class="btn"
+href="../"
+>
+回到首頁
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+小白天堂 3.81｜重返亞丁大陸・續寫輝煌篇章
+
+<br><br>
+
+© 2026 小白天堂 3.81. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
