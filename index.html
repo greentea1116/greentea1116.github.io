@@ -8,10 +8,12 @@
 
 <meta name="description" content="小白天堂 3.81 經典仿正天堂伺服器，重返亞丁大陸，續寫輝煌篇章。提供新手福利、活動資訊、遊戲下載與官方 Discord 社群。">
 
+<link rel="stylesheet" href="/assets/css/style.css">
+
 <style>
 
 /* =========================================================
-   ===== 電腦版 CSS：從這裡開始
+   首頁專用 CSS
    ========================================================= */
 
 /* ===== 基礎設定 ===== */
@@ -50,70 +52,92 @@ img{
 }
 
 
+/* =========================================================
+   首頁導覽列
+   與其他頁面統一
+   ========================================================= */
 
-/* ===== 導覽列 ===== */
-
-header{
+.site-header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(8,6,12,.90);
+    background:rgba(8,6,12,.92);
     backdrop-filter:blur(12px);
     border-bottom:1px solid rgba(225,171,63,.35);
 }
 
-.nav{
-    min-height:72px;
+.nav-container{
+    min-height:64px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
 
-.brand{
+.nav-logo{
     font-size:21px;
     font-weight:900;
     color:#ffd66b;
     white-space:nowrap;
 }
 
-.brand span{
-    color:#fff4d5;
-}
-
-nav{
+.nav-menu{
     display:flex;
     align-items:center;
-    gap:24px;
+    justify-content:flex-end;
+    gap:18px;
+    margin-left:auto;
 }
 
-nav a{
+.nav-menu a{
     color:#eadfc9;
-    font-size:15px;
+    font-size:14px;
+    font-weight:600;
+    white-space:nowrap;
     transition:.25s;
 }
 
-nav a:hover{
+.nav-menu a:hover{
     color:#ffd15c;
 }
 
-.nav-btn{
-    background:linear-gradient(135deg,#ffe28a,#c98a1e);
-    color:#211506;
-    padding:9px 18px;
-    border-radius:999px;
-    font-weight:800;
+.nav-menu a.active{
+    color:#ffd15c;
 }
 
+.nav-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:9px 18px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#ffe28a,#c98a1e);
+    color:#211506 !important;
+    font-weight:800 !important;
+}
+
+.menu-toggle{
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(225,171,63,.45);
+    border-radius:10px;
+    background:rgba(20,15,23,.85);
+    color:#ffd66b;
+    font-size:24px;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
 
 
 /* ===== Hero ===== */
 
 .hero{
     min-height:100vh;
-    padding:60px 0 40px;
+    padding:90px 0 40px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -211,7 +235,6 @@ nav a:hover{
 }
 
 
-
 /* ===== 共用區塊 ===== */
 
 section{
@@ -243,10 +266,7 @@ section{
 }
 
 
-
-/* =========================================================
-   ===== 遊戲特色：電腦版
-   ========================================================= */
+/* ===== 遊戲特色 ===== */
 
 .cards{
     display:grid;
@@ -341,7 +361,6 @@ section{
 }
 
 
-
 /* ===== 福利 ===== */
 
 .welfare{
@@ -385,7 +404,6 @@ section{
 }
 
 
-
 /* ===== 最新消息 ===== */
 
 .news-grid{
@@ -418,9 +436,8 @@ section{
 }
 
 
-
 /* =========================================================
-   ===== 首頁影片：自適應尺寸
+   首頁影片：自適應尺寸
    ========================================================= */
 
 .video-wrap{
@@ -461,7 +478,6 @@ section{
 }
 
 
-
 /* ===== 伺服器設定 ===== */
 
 .server-table{
@@ -489,7 +505,6 @@ section{
 }
 
 
-
 /* ===== 社群 ===== */
 
 .community-box{
@@ -513,7 +528,6 @@ section{
 }
 
 
-
 /* ===== 下載 ===== */
 
 .download-box{
@@ -526,7 +540,6 @@ section{
     color:#bdb09a;
     margin:12px 0 25px;
 }
-
 
 
 /* ===== 免責 ===== */
@@ -544,7 +557,6 @@ section{
 }
 
 
-
 /* ===== Footer ===== */
 
 footer{
@@ -557,46 +569,159 @@ footer{
 }
 
 
-
 /* =========================================================
-   ===== 電腦版 CSS 到這裡結束
-   ===== 以下全部都是手機版
+   手機版
    ========================================================= */
 
+@media(max-width:1100px){
 
-
-/* ===== 手機版 ===== */
-
-@media(max-width:800px){
-
-    header{
-        position:relative;
+    .nav-menu{
+        gap:12px;
     }
 
-    .nav{
-        min-height:auto;
-        padding:15px 0;
-        flex-direction:column;
-    }
-
-    nav{
-        width:100%;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:12px 16px;
-    }
-
-    nav a{
+    .nav-menu a{
         font-size:13px;
     }
 
+}
+
+
+@media(max-width:800px){
+
+    /* ===== 手機導覽列 ===== */
+
+    html.menu-open,
+    body.menu-open{
+        overflow:hidden !important;
+        height:100%;
+    }
+
+    .site-header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:64px;
+        z-index:1000;
+    }
+
+    .nav-container{
+        min-height:64px;
+        height:64px;
+        padding:0 4%;
+    }
+
+    .nav-logo{
+        font-size:19px;
+    }
+
+    .menu-toggle{
+        display:flex;
+        flex-shrink:0;
+    }
+
+    .nav-menu{
+        position:fixed;
+        top:64px;
+        left:0;
+        right:0;
+
+        width:100%;
+        height:calc(100dvh - 64px);
+
+        display:none;
+
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:flex-start;
+
+        gap:0;
+        margin:0;
+
+        padding:8px 0 24px;
+
+        overflow-y:auto;
+        overflow-x:hidden;
+
+        background:rgba(8,6,12,.98);
+        backdrop-filter:blur(14px);
+
+        border-top:1px solid rgba(225,171,63,.25);
+
+        touch-action:pan-y;
+        overscroll-behavior:contain;
+
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .nav-menu.open{
+        display:flex;
+    }
+
+    .nav-menu > a{
+        width:100%;
+        min-width:100%;
+        height:51px;
+        min-height:51px;
+
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+
+        padding:0 22px;
+
+        font-size:16px;
+        font-weight:700;
+
+        border:0;
+        border-left:3px solid transparent;
+
+        color:#eadfc9;
+
+        flex-shrink:0;
+    }
+
+    .nav-menu > a:hover{
+        color:#eadfc9;
+        background:transparent;
+        border-left-color:transparent;
+    }
+
+    .nav-menu > a.active{
+        color:#ffd15c;
+        background:rgba(225,171,63,.08);
+        border-left-color:#ffd15c;
+    }
+
+    .nav-menu > a.nav-cta{
+        width:calc(100% - 28px);
+        min-width:calc(100% - 28px);
+
+        height:48px;
+        min-height:48px;
+
+        margin:12px 14px 0;
+
+        justify-content:center;
+
+        border-left:0;
+        border-radius:999px;
+
+        background:linear-gradient(135deg,#ffe28a,#c98a1e);
+        color:#211506 !important;
+    }
+
+    .nav-menu > a.nav-cta:hover{
+        background:linear-gradient(135deg,#ffe28a,#c98a1e);
+        color:#211506 !important;
+    }
 
 
     /* ===== 手機 Hero ===== */
 
     .hero{
         min-height:auto;
-        padding:45px 0 60px;
+        padding:110px 0 60px;
     }
 
     .hero-logo{
@@ -610,7 +735,6 @@ footer{
     .hero-subtitle{
         font-size:14px;
     }
-
 
 
     /* ===== 手機遊戲特色 ===== */
@@ -639,7 +763,6 @@ footer{
     }
 
 
-
     /* ===== 手機最新消息 ===== */
 
     .news-grid{
@@ -647,9 +770,8 @@ footer{
     }
 
 
-
     /* =====================================================
-       ===== 手機影片：自動依螢幕寬度縮放
+       手機影片：自動依螢幕寬度縮放
        ===================================================== */
 
     .video-wrap{
@@ -681,7 +803,6 @@ footer{
     }
 
 
-
     /* ===== 手機共用區塊 ===== */
 
     section{
@@ -689,13 +810,11 @@ footer{
     }
 
 
-
     /* ===== 手機福利 ===== */
 
     .welfare-box{
         padding:25px 18px;
     }
-
 
 
     /* ===== 手機伺服器設定 ===== */
@@ -710,7 +829,6 @@ footer{
     }
 
 
-
     /* ===== 手機按鈕 ===== */
 
     .btn{
@@ -723,41 +841,64 @@ footer{
 
 }
 
-
-
-/* =========================================================
-   ===== 手機版 CSS 到這裡結束
-   ========================================================= */
-
 </style>
 </head>
 
+
 <body>
 
-<header>
+<!-- =========================================================
+     導覽列
+     ========================================================= -->
 
-    <div class="container nav">
+<header class="site-header">
 
-        <div class="brand">
-            小白天堂 <span>3.81</span>
-        </div>
+    <div class="nav-container container">
 
-        <nav>
+        <a href="/" class="nav-logo">
+            小白天堂 3.81
+        </a>
 
-            <a href="/">首頁</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="開啟選單"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-menu">
+
+            <a href="/" class="active">首頁</a>
+
             <a href="/game/">遊戲介紹</a>
+
             <a href="/news/">最新消息</a>
+
             <a href="/events/">活動</a>
+
             <a href="/beginner/">新手專區</a>
+
             <a href="/guide/">攻略指南</a>
+
             <a href="/classes/">職業介紹</a>
+
             <a href="/videos/">影片</a>
+
             <a href="/community/">玩家社群</a>
+
             <a href="/download/">遊戲下載</a>
+
             <a href="/about/">關於我們</a>
+
             <a href="/disclaimer/">免責聲明</a>
+
             <a href="/faq/">FAQ</a>
-            <a href="/download/" class="nav-btn">立即加入</a>
+
+            <a href="/download/" class="nav-cta">
+                立即加入
+            </a>
 
         </nav>
 
@@ -766,13 +907,11 @@ footer{
 </header>
 
 
-
 <main>
 
 
-
 <!-- =========================================================
-     ===== HERO
+     HERO
      ========================================================= -->
 
 <section class="hero" id="home">
@@ -799,6 +938,7 @@ footer{
                 class="btn btn-gold"
                 href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 📥 遊戲下載
             </a>
@@ -807,6 +947,7 @@ footer{
                 class="btn btn-dark"
                 href="https://discord.gg/6fRCfpHCB"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 💬 官方 Discord
             </a>
@@ -818,9 +959,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 遊戲特色
+     遊戲特色
      ========================================================= -->
 
 <section class="section-dark features-section">
@@ -829,14 +969,15 @@ footer{
 
         <div class="section-title">
 
-            <h2>⚔️ 經典天堂・重新出發</h2>
+            <h2>
+                ⚔️ 經典天堂・重新出發
+            </h2>
 
             <p>
                 熟悉的亞丁大陸，等待老玩家與新冒險者再次踏上旅程
             </p>
 
         </div>
-
 
 
         <div class="cards">
@@ -859,7 +1000,6 @@ footer{
             </div>
 
 
-
             <div class="card">
 
                 <div class="card-icon">
@@ -876,7 +1016,6 @@ footer{
                 </p>
 
             </div>
-
 
 
             <div class="card">
@@ -903,9 +1042,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 新手福利
+     新手福利
      ========================================================= -->
 
 <section class="welfare" id="welfare">
@@ -914,14 +1052,15 @@ footer{
 
         <div class="section-title">
 
-            <h2>🎁 新手福利</h2>
+            <h2>
+                🎁 新手福利
+            </h2>
 
             <p>
                 加入官方社群即可了解最新福利資訊
             </p>
 
         </div>
-
 
 
         <div class="welfare-box">
@@ -934,7 +1073,6 @@ footer{
                 完成加入官方 LINE 社群與 Discord，
                 即可申請新手福利。
             </p>
-
 
 
             <ul class="welfare-list">
@@ -954,17 +1092,16 @@ footer{
             </ul>
 
 
-
             <p>
                 詳細領取方式請加入官方社群並聯繫客服。
             </p>
-
 
 
             <a
                 class="btn btn-gold"
                 href="https://discord.gg/AwxV7gWn3"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 💬 加入官方 Discord
             </a>
@@ -976,9 +1113,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 最新消息
+     最新消息
      ========================================================= -->
 
 <section class="section-soft" id="news">
@@ -996,7 +1132,6 @@ footer{
             </p>
 
         </div>
-
 
 
         <div class="news-grid">
@@ -1019,7 +1154,6 @@ footer{
             </article>
 
 
-
             <article class="news">
 
                 <div class="news-date">
@@ -1036,7 +1170,6 @@ footer{
                 </p>
 
             </article>
-
 
 
             <article class="news">
@@ -1063,9 +1196,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 宣傳影片
+     宣傳影片
      ========================================================= -->
 
 <section class="section-dark">
@@ -1085,10 +1217,13 @@ footer{
         </div>
 
 
-
         <div class="video-wrap">
 
-            <video controls playsinline preload="metadata">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
 
                 <source
                     src="xiaobai-heaven-promo.MP4"
@@ -1106,9 +1241,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 伺服器設定
+     伺服器設定
      ========================================================= -->
 
 <section class="section-soft" id="server">
@@ -1128,7 +1262,6 @@ footer{
         </div>
 
 
-
         <table class="server-table">
 
             <thead>
@@ -1146,7 +1279,6 @@ footer{
                 </tr>
 
             </thead>
-
 
 
             <tbody>
@@ -1195,9 +1327,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 下載
+     下載
      ========================================================= -->
 
 <section class="section-dark" id="download">
@@ -1219,17 +1350,16 @@ footer{
             </div>
 
 
-
             <p>
                 請下載遊戲主程式，安裝完成後即可開始冒險。
             </p>
-
 
 
             <a
                 class="btn btn-gold"
                 href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 📥 下載小白天堂 3.81
             </a>
@@ -1241,9 +1371,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 社群
+     社群
      ========================================================= -->
 
 <section class="section-soft" id="community">
@@ -1263,7 +1392,6 @@ footer{
         </div>
 
 
-
         <div class="community-box">
 
             <p>
@@ -1272,13 +1400,13 @@ footer{
             </p>
 
 
-
             <div class="hero-buttons">
 
                 <a
                     class="btn btn-gold"
                     href="https://discord.gg/AwxV7gWn3"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     💬 小白天堂專用 DC
                 </a>
@@ -1287,6 +1415,7 @@ footer{
                     class="btn btn-dark"
                     href="https://discord.gg/6fRCfpHCB"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     🎧 聯絡客服
                 </a>
@@ -1300,9 +1429,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 聯絡客服
+     聯絡客服
      ========================================================= -->
 
 <section class="section-dark" id="contact">
@@ -1322,7 +1450,6 @@ footer{
         </div>
 
 
-
         <div class="community-box">
 
             <p>
@@ -1331,11 +1458,11 @@ footer{
             </p>
 
 
-
             <a
                 class="btn btn-gold"
                 href="https://discord.gg/6fRCfpHCB"
                 target="_blank"
+                rel="noopener noreferrer"
             >
                 前往官方客服 Discord
             </a>
@@ -1347,9 +1474,8 @@ footer{
 </section>
 
 
-
 <!-- =========================================================
-     ===== 免責聲明
+     免責聲明
      ========================================================= -->
 
 <section class="section-soft">
@@ -1363,7 +1489,6 @@ footer{
             </h2>
 
         </div>
-
 
 
         <div class="disclaimer disclaimer-box">
@@ -1410,13 +1535,11 @@ footer{
 </section>
 
 
-
 </main>
 
 
-
 <!-- =========================================================
-     ===== Footer
+     Footer
      ========================================================= -->
 
 <footer>
@@ -1434,6 +1557,7 @@ footer{
 </footer>
 
 
+<script src="/assets/js/main.js"></script>
 
 </body>
 </html>
