@@ -108,21 +108,29 @@ nav a:hover{
     justify-content:center;
     position:relative;
     overflow:hidden;
-    background:
-        radial-gradient(circle at 50% 25%,rgba(255,190,60,.20),transparent 38%),
-        radial-gradient(circle at 15% 70%,rgba(117,70,180,.16),transparent 30%),
-        linear-gradient(180deg,#17111d,#08070b 90%);
+        background:#05070e;
 }
 
 .hero::before{
     content:"";
     position:absolute;
-    inset:0;
+    inset:-60px;
+
     background:
-        radial-gradient(circle,rgba(255,215,120,.65) 1px,transparent 1.5px);
-    background-size:85px 85px;
-    opacity:.18;
-    pointer-events:none;
+        linear-gradient(
+            180deg,
+            rgba(4,7,18,.38),
+            rgba(4,7,18,.72)
+        ),
+        url("xiaobai-heaven-logo.jpg")
+        center / cover no-repeat;
+
+    filter:blur(18px);
+    transform:scale(1.08);
+
+    opacity:.72;
+
+    z-index:0;
 }
 
 .hero-content{
@@ -131,14 +139,15 @@ nav a:hover{
     width:min(1050px,94%);
     text-align:center;
 }
-
-.hero-logo{
+    .hero-logo{
     width:min(950px,100%);
     margin:0 auto 25px;
     filter:
-        drop-shadow(0 15px 35px rgba(0,0,0,.75))
-        drop-shadow(0 0 25px rgba(255,190,50,.18));
+        drop-shadow(0 18px 35px rgba(0,0,0,.80))
+        drop-shadow(0 0 30px rgba(255,205,80,.30));
     border-radius:18px;
+    position:relative;
+    z-index:2;
 }
 
 .hero-title{
