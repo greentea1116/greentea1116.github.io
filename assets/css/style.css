@@ -720,11 +720,16 @@ button {
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+    }
+
+    html {
+        overscroll-behavior-x: none !important;
     }
 
     body {
         font-size: 15px;
+        overscroll-behavior-x: none !important;
     }
 
 
@@ -736,6 +741,9 @@ button {
         position: sticky;
         top: 0;
         z-index: 10000;
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
     }
 
     .nav-container {
@@ -747,12 +755,14 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        overflow: visible;
     }
 
     .nav-logo {
         flex: 1 1 auto;
         min-width: 0;
         max-width: calc(100% - 58px);
+        overflow: hidden;
     }
 
     .nav-logo img {
@@ -763,6 +773,7 @@ button {
 
     .nav-logo span {
         font-size: 15px;
+        white-space: nowrap;
     }
 
 
@@ -776,14 +787,22 @@ button {
         justify-content: center;
         flex-direction: column;
         flex-shrink: 0;
+
         width: 46px !important;
         height: 46px !important;
-        min-width: 46px;
-        max-width: 46px;
+        min-width: 46px !important;
+        max-width: 46px !important;
+
         visibility: visible !important;
         opacity: 1 !important;
+
         position: relative;
         z-index: 10002;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        touch-action: manipulation;
     }
 
     .menu-toggle span {
@@ -793,12 +812,15 @@ button {
         margin: 4px auto;
         background: #f7dc91;
         border-radius: 10px;
+        flex-shrink: 0;
     }
 
 
     /* =====================================================
        MOBILE NAV MENU
-       真正獨立的手機滑動選單
+       ★ 完全單欄
+       ★ 不允許左右溢出
+       ★ 選單自己負責上下滑動
     ===================================================== */
 
     .nav-menu {
@@ -806,10 +828,10 @@ button {
 
         top: 64px !important;
         left: 0 !important;
-        right: auto !important;
+        right: 0 !important;
 
-        width: 100vw !important;
-        max-width: 100vw !important;
+        width: 100% !important;
+        max-width: 100% !important;
         min-width: 0 !important;
 
         height: calc(100dvh - 64px) !important;
@@ -825,20 +847,20 @@ button {
         justify-content: flex-start !important;
         flex-wrap: nowrap !important;
 
-        gap: 5px !important;
+        gap: 6px !important;
 
         padding:
             10px
-            16px
-            calc(24px + env(safe-area-inset-bottom))
-            16px !important;
+            14px
+            calc(28px + env(safe-area-inset-bottom))
+            14px !important;
 
         overflow-x: hidden !important;
         overflow-y: auto !important;
 
         box-sizing: border-box !important;
 
-        background: rgba(5, 7, 14, 0.98) !important;
+        background: rgba(5, 7, 14, 0.99) !important;
 
         border-top: 1px solid rgba(217, 180, 90, 0.18);
         border-bottom: 1px solid rgba(217, 180, 90, 0.35);
@@ -850,18 +872,40 @@ button {
 
         -webkit-overflow-scrolling: touch;
 
-        overscroll-behavior-y: contain;
-        overscroll-behavior-x: none;
+        overscroll-behavior: contain !important;
+        overscroll-behavior-y: contain !important;
+        overscroll-behavior-x: none !important;
 
-        touch-action: pan-y;
+        touch-action: pan-y !important;
 
         scrollbar-width: none;
     }
 
     .nav-menu::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+
+    /* =====================================================
+       ★ 選單內所有直接子元素
+       防止任何元素偷偷跑到右邊
+    ===================================================== */
+
+    .nav-menu > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        flex: 0 0 auto !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        align-self: stretch !important;
+
+        box-sizing: border-box !important;
     }
 
 
@@ -871,29 +915,37 @@ button {
 
     .nav-menu.open {
         display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
     }
 
 
     /* =====================================================
        MOBILE NAV LINKS
+       ★ 每個選項都是獨立一整列
     ===================================================== */
 
     .nav-menu a {
         display: flex !important;
-        align-items: center;
-        justify-content: center;
+        align-items: center !important;
+        justify-content: center !important;
+
+        position: relative !important;
 
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
 
-        height: auto !important;
-        min-height: 51px;
+        height: 51px !important;
+        min-height: 51px !important;
+        max-height: 51px !important;
 
-        flex: 0 0 auto !important;
+        flex: 0 0 51px !important;
 
-        padding: 14px 16px !important;
         margin: 0 !important;
+        padding: 12px 16px !important;
 
         font-size: 16px;
         line-height: 1.4;
@@ -906,55 +958,106 @@ button {
 
         background: rgba(20, 16, 25, 0.72);
 
-        box-sizing: border-box;
+        box-sizing: border-box !important;
 
         transform: none !important;
 
-        white-space: normal;
-        overflow: hidden;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+
+        touch-action: manipulation;
     }
 
 
     /* =====================================================
        MOBILE ACTIVE
-       只有目前所在頁面保持黃色
+       ★ 只有目前頁面保持黃色
     ===================================================== */
 
     .nav-menu a.active {
         color: #ffd875 !important;
-        border-color: rgba(217, 180, 90, 0.45) !important;
-        background: rgba(45, 32, 22, 0.85) !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.45) !important;
+
+        background:
+            rgba(45, 32, 22, 0.85) !important;
+
         transform: none !important;
     }
 
 
     /* =====================================================
        MOBILE HOVER FIX
-       iPhone 觸控滑動時不要讓其他選項變黃色
+       ★ iPhone 不允許滑動時產生第二個黃框
     ===================================================== */
 
-    .nav-menu a:hover:not(.active):not(.nav-cta) {
+    .nav-menu a:hover {
         color: #eadfc9 !important;
-        border-color: rgba(217, 180, 90, 0.12) !important;
-        background: rgba(20, 16, 25, 0.72) !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.12) !important;
+
+        background:
+            rgba(20, 16, 25, 0.72) !important;
+
         transform: none !important;
     }
 
-    .nav-menu a.touch-hover:not(.active):not(.nav-cta) {
+    .nav-menu a:hover.active {
+        color: #ffd875 !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.45) !important;
+
+        background:
+            rgba(45, 32, 22, 0.85) !important;
+
+        transform: none !important;
+    }
+
+    .nav-menu a.touch-hover {
         color: #eadfc9 !important;
-        border-color: rgba(217, 180, 90, 0.12) !important;
-        background: rgba(20, 16, 25, 0.72) !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.12) !important;
+
+        background:
+            rgba(20, 16, 25, 0.72) !important;
+
+        transform: none !important;
+    }
+
+    .nav-menu a.touch-hover.active {
+        color: #ffd875 !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.45) !important;
+
+        background:
+            rgba(45, 32, 22, 0.85) !important;
+
         transform: none !important;
     }
 
 
     /* =====================================================
        MOBILE CTA
-       「立即加入」維持獨立金色按鈕
+       ★ 「立即加入」固定在最下面
     ===================================================== */
 
     .nav-menu .nav-cta {
         margin-top: 5px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: 51px !important;
+        min-height: 51px !important;
+        max-height: 51px !important;
+
+        flex: 0 0 51px !important;
 
         background: linear-gradient(
             135deg,
@@ -964,34 +1067,67 @@ button {
 
         color: #15100a !important;
 
-        border-color: rgba(217, 180, 90, 0.45) !important;
+        border-color:
+            rgba(217, 180, 90, 0.45) !important;
     }
 
     .nav-menu .nav-cta:hover {
         background: linear-gradient(
             135deg,
-            #ffe7a4,
-            #c99b43
+            #f1d487,
+            #b88732
         ) !important;
 
         color: #15100a !important;
+
+        border-color:
+            rgba(217, 180, 90, 0.45) !important;
+
+        transform: none !important;
+    }
+
+    .nav-menu .nav-cta.touch-hover {
+        background: linear-gradient(
+            135deg,
+            #f1d487,
+            #b88732
+        ) !important;
+
+        color: #15100a !important;
+
         transform: none !important;
     }
 
 
     /* =====================================================
        MOBILE BACKGROUND LOCK
-       選單打開時，後面的首頁不要跟著滑
+       ★ CSS 層先禁止背景橫向與回彈
+       ★ 垂直鎖定會由 JS 同步處理
     ===================================================== */
 
-    html.menu-open,
-    body.menu-open {
+    html.menu-open {
+        width: 100% !important;
+        max-width: 100% !important;
         overflow: hidden !important;
         overscroll-behavior: none !important;
+        touch-action: none !important;
     }
 
     body.menu-open {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
         overflow-x: hidden !important;
+        overscroll-behavior: none !important;
+        touch-action: none !important;
+    }
+
+    body.menu-open .site-header {
+        overflow: visible !important;
+    }
+
+    body.menu-open .nav-menu {
+        touch-action: pan-y !important;
     }
 
 
