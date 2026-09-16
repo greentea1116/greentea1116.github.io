@@ -1,0 +1,946 @@
+/* =========================================================
+   小白天堂 3.81
+   全站共用樣式
+   Desktop + Mobile
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL 全域設定
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+    background: #05070e;
+    color: #f5f7ff;
+    line-height: 1.7;
+}
+
+body,
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: #d9b45b;
+    color: #05070e;
+}
+
+
+/* =========================================================
+   02. SITE HEADER 導覽列
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(5, 7, 14, 0.94);
+    border-bottom: 1px solid rgba(217, 180, 91, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-container {
+    width: min(1400px, 92%);
+    min-height: 74px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-logo span {
+    color: #f5d98a;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    padding: 10px 13px;
+    border-radius: 8px;
+    color: #dce2ef;
+    font-size: 14px;
+    font-weight: 700;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #f7dc91;
+    background: rgba(217, 180, 91, 0.10);
+}
+
+.nav-menu a:hover {
+    transform: translateY(-1px);
+}
+
+.nav-cta {
+    background: linear-gradient(
+        135deg,
+        #f1d487,
+        #b88732
+    ) !important;
+    color: #15100a !important;
+    box-shadow: 0 5px 20px rgba(217, 180, 91, 0.18);
+}
+
+.nav-cta:hover {
+    background: linear-gradient(
+        135deg,
+        #ffe7a4,
+        #c99b43
+    ) !important;
+}
+
+
+/* =========================================================
+   03. MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(217, 180, 91, 0.35);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #f7dc91;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: currentColor;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   04. HERO 主視覺
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 78vh;
+    padding: 70px 0 55px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #05070e;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(5, 7, 14, 0.15),
+            rgba(5, 7, 14, 0.88)
+        ),
+        url("../../xiaobai-heaven-logo.jpg") center / cover no-repeat;
+    filter: blur(10px);
+    transform: scale(1.08);
+    opacity: 0.38;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(217, 180, 91, 0.10),
+            transparent 55%
+        );
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-logo {
+    width: min(950px, 100%);
+    margin: 0 auto 22px;
+    filter:
+        drop-shadow(0 10px 25px rgba(0, 0, 0, 0.65))
+        drop-shadow(0 0 30px rgba(217, 180, 91, 0.15));
+}
+
+.hero-title {
+    margin: 0;
+    color: #f7dc91;
+    font-size: clamp(28px, 4vw, 54px);
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    margin: 14px auto 0;
+    max-width: 760px;
+    color: #d9dfec;
+    font-size: clamp(15px, 1.7vw, 20px);
+}
+
+.hero-actions {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   05. BUTTONS 按鈕
+========================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 25px;
+    border: 1px solid rgba(217, 180, 91, 0.45);
+    border-radius: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #f2d88d,
+        #b88934
+    );
+    color: #15100a;
+    box-shadow: 0 8px 25px rgba(217, 180, 91, 0.18);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 12px 30px rgba(217, 180, 91, 0.28);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.045);
+    color: #f4f6fb;
+}
+
+.btn-secondary:hover {
+    background: rgba(217, 180, 91, 0.10);
+}
+
+
+/* =========================================================
+   06. SECTIONS 區塊
+========================================================= */
+
+.section {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+.section-dark {
+    background: #070a13;
+}
+
+.section-light {
+    background: #0b0f1b;
+}
+
+.section-title {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-kicker {
+    margin-bottom: 8px;
+    color: #c9a14d;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    margin: 0 0 12px;
+    color: #f7dc91;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.25;
+}
+
+.section-title p {
+    margin: 0;
+    color: #aeb7ca;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   07. CARDS 卡片
+========================================================= */
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    position: relative;
+    padding: 30px 26px;
+    border: 1px solid rgba(217, 180, 91, 0.18);
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(217, 180, 91, 0.42);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #f4d886;
+    font-size: 22px;
+}
+
+.card p {
+    margin: 0;
+    color: #b8c0d0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.card-line {
+    width: 45px;
+    height: 2px;
+    margin-top: 20px;
+    background: #c9a14d;
+}
+
+
+/* =========================================================
+   08. CONTENT BOX 內容區塊
+========================================================= */
+
+.content-box {
+    padding: 32px;
+    border: 1px solid rgba(217, 180, 91, 0.18);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.content-box h2,
+.content-box h3 {
+    color: #f4d886;
+}
+
+.content-box p {
+    color: #c1c8d6;
+}
+
+.content-box ul,
+.content-box ol {
+    color: #c1c8d6;
+    padding-left: 22px;
+}
+
+
+/* =========================================================
+   09. PAGE HERO 分頁標題
+========================================================= */
+
+.page-hero {
+    padding: 100px 20px 70px;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(217, 180, 91, 0.09),
+            transparent 60%
+        ),
+        #05070e;
+    border-bottom: 1px solid rgba(217, 180, 91, 0.14);
+}
+
+.page-hero h1 {
+    margin: 0 0 12px;
+    color: #f7dc91;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.2;
+}
+
+.page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #aeb7ca;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   10. NEWS / LISTS 新聞與列表
+========================================================= */
+
+.news-list {
+    display: grid;
+    gap: 16px;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    padding: 22px 24px;
+    border: 1px solid rgba(217, 180, 91, 0.14);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.news-date {
+    color: #d5b05b;
+    font-weight: 800;
+}
+
+.news-item h3 {
+    margin: 0 0 6px;
+    color: #f4d886;
+}
+
+.news-item p {
+    margin: 0;
+    color: #b8c0d0;
+}
+
+
+/* =========================================================
+   11. VIDEO 影片
+========================================================= */
+
+.video-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(217, 180, 91, 0.20);
+    border-radius: 16px;
+    background: #000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+
+/* =========================================================
+   12. DOWNLOAD 下載區
+========================================================= */
+
+.download-box {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 42px;
+    text-align: center;
+    border: 1px solid rgba(217, 180, 91, 0.22);
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(217, 180, 91, 0.07),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+.download-box h2 {
+    margin-top: 0;
+    color: #f7dc91;
+}
+
+.download-box p {
+    color: #b8c0d0;
+}
+
+
+/* =========================================================
+   13. COMMUNITY 社群
+========================================================= */
+
+.community-links {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.community-link {
+    min-width: 220px;
+    padding: 20px 25px;
+    text-align: center;
+    border: 1px solid rgba(217, 180, 91, 0.20);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #f4d886;
+    font-weight: 800;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.community-link:hover {
+    transform: translateY(-3px);
+    background: rgba(217, 180, 91, 0.08);
+}
+
+
+/* =========================================================
+   14. FOOTER 頁尾
+========================================================= */
+
+.site-footer {
+    padding: 45px 20px 30px;
+    border-top: 1px solid rgba(217, 180, 91, 0.16);
+    background: #03050a;
+    text-align: center;
+}
+
+.footer-inner {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #aeb7ca;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #f4d886;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    color: #737d90;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   15. BACK TO TOP 回到頂端
+========================================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(217, 180, 91, 0.35);
+    border-radius: 50%;
+    background: rgba(5, 7, 14, 0.90);
+    color: #f4d886;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   16. UTILITY 常用工具
+========================================================= */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.gold {
+    color: #f4d886;
+}
+
+.muted {
+    color: #aeb7ca;
+}
+
+
+/* =========================================================
+   📱 MOBILE 手機版
+   所有手機專用 CSS 統一放在這裡
+========================================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        position: sticky;
+    }
+
+    .nav-container {
+        min-height: 64px;
+        width: 92%;
+        gap: 12px;
+    }
+
+    .nav-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-logo span {
+        font-size: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 12px 4%;
+        border-bottom: 1px solid rgba(217, 180, 91, 0.20);
+        background: rgba(5, 7, 14, 0.98);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-menu.open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+        min-height: auto;
+        padding: 45px 0 40px;
+    }
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-logo {
+        width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .hero-title {
+        font-size: 29px;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .hero-actions {
+        margin-top: 22px;
+        gap: 10px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* ---------- Buttons ---------- */
+
+    .btn {
+        min-height: 50px;
+        padding: 12px 18px;
+    }
+
+    /* ---------- Sections ---------- */
+
+    .section {
+        width: 92%;
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* ---------- Cards ---------- */
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 22px 18px;
+        border-radius: 13px;
+    }
+
+    .card-icon {
+        font-size: 34px;
+        margin-bottom: 8px;
+    }
+
+    .card h3 {
+        margin-bottom: 7px;
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* ---------- Content ---------- */
+
+    .content-box {
+        padding: 22px 18px;
+        border-radius: 13px;
+    }
+
+    /* ---------- Page Hero ---------- */
+
+    .page-hero {
+        padding: 65px 18px 45px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+    .page-hero p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    /* ---------- News ---------- */
+
+    .news-list {
+        gap: 12px;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 18px;
+    }
+
+    .news-date {
+        font-size: 13px;
+    }
+
+    .news-item h3 {
+        font-size: 18px;
+    }
+
+    .news-item p {
+        font-size: 14px;
+    }
+
+    /* ---------- Video ---------- */
+
+    .video-wrapper {
+        border-radius: 12px;
+    }
+
+    /* ---------- Download ---------- */
+
+    .download-box {
+        padding: 28px 18px;
+        border-radius: 14px;
+    }
+
+    /* ---------- Community ---------- */
+
+    .community-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .community-link {
+        width: 100%;
+        min-width: 0;
+        padding: 17px 18px;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .site-footer {
+        padding: 35px 15px 25px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    /* ---------- Back to top ---------- */
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
