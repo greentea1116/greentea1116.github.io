@@ -16,9 +16,76 @@
     >
 
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* =====================================================
+           新手必做｜可點擊卡片
+        ====================================================== */
+
+        .beginner-action-card {
+            display: block;
+            height: 100%;
+            padding: 28px 22px;
+            border-radius: 16px;
+            background: rgba(255,255,255,.035);
+            border: 1px solid rgba(255,215,120,.14);
+            text-align: center;
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .beginner-action-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,215,120,.45);
+            background: rgba(255,215,120,.055);
+            box-shadow: 0 12px 35px rgba(0,0,0,.28);
+        }
+
+        .beginner-action-icon {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .beginner-action-card h3 {
+            margin-top: 12px;
+            color: #f7dc91;
+            font-size: 20px;
+        }
+
+        .beginner-action-card p {
+            margin-top: 8px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .beginner-action-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: #f7dc91;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        @media (max-width: 700px) {
+
+            .beginner-action-card {
+                padding: 25px 20px;
+            }
+
+            .beginner-action-card:hover {
+                transform: none;
+            }
+
+        }
+    </style>
+
 </head>
 
 <body>
+
 
     <!-- =====================================================
          HEADER
@@ -35,7 +102,9 @@
                     alt="小白天堂 3.81"
                 >
 
-                <span>小白天堂 3.81</span>
+                <span>
+                    小白天堂 3.81
+                </span>
 
             </a>
 
@@ -369,9 +438,16 @@
             <div class="cards">
 
 
-                <article class="card">
+                <!-- 官方 Discord -->
 
-                    <div class="card-icon">
+                <a
+                    class="beginner-action-card"
+                    href="https://discord.gg/AwxV7gWn3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="beginner-action-icon">
                         💬
                     </div>
 
@@ -384,14 +460,23 @@
                         也可以聯絡官方客服。
                     </p>
 
-                    <div class="card-line"></div>
+                    <span class="beginner-action-link">
+                        前往 Discord →
+                    </span>
 
-                </article>
+                </a>
 
 
-                <article class="card">
+                <!-- 新手福利 -->
 
-                    <div class="card-icon">
+                <a
+                    class="beginner-action-card"
+                    href="https://discord.gg/6fRCfpHCB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="beginner-action-icon">
                         🎁
                     </div>
 
@@ -404,14 +489,21 @@
                         聯絡官方客服確認福利資格。
                     </p>
 
-                    <div class="card-line"></div>
+                    <span class="beginner-action-link">
+                        聯絡官方客服 →
+                    </span>
 
-                </article>
+                </a>
 
 
-                <article class="card">
+                <!-- 遊戲下載 -->
 
-                    <div class="card-icon">
+                <a
+                    class="beginner-action-card"
+                    href="../download/"
+                >
+
+                    <div class="beginner-action-icon">
                         💻
                     </div>
 
@@ -424,9 +516,11 @@
                         安裝後即可開始冒險。
                     </p>
 
-                    <div class="card-line"></div>
+                    <span class="beginner-action-link">
+                        前往遊戲下載 →
+                    </span>
 
-                </article>
+                </a>
 
 
             </div>
