@@ -10,6 +10,81 @@
 content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin VPN 連線方式、安裝教學與官方客服資訊。">
 
 <link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+/* DOWNLOAD 主按鈕 */
+.download-main-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    padding: 17px 38px;
+    border-radius: 36px;
+    background: linear-gradient(135deg, #ffe08a, #c08a24);
+    color: #111;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 32px rgba(210,160,50,.32);
+    transition: .25s;
+}
+
+.download-main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 38px rgba(255,210,80,.42);
+}
+
+/* JOIN US 下載按鈕 */
+.join-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 205px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffe08a, #c08a24);
+    color: #111;
+    font-size: 17px;
+    font-weight: 800;
+    box-shadow: 0 8px 25px rgba(210,160,50,.25);
+    transition: .25s;
+}
+
+.join-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 11px 30px rgba(255,210,80,.35);
+}
+
+/* 安裝教學下載連結 */
+.install-download-link {
+    color: #ffd76a;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.install-download-link:hover {
+    color: #ffe9a8;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+
+    .download-main-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 16px 22px;
+        font-size: 19px;
+    }
+
+    .join-download-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+</style>
+
 </head>
 
 <body>
@@ -123,7 +198,7 @@ content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin V
             </p>
 
             <a
-                class="download-btn"
+                class="download-main-btn"
                 href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -175,7 +250,6 @@ content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin V
                 加入「免費測試服」網路後，再開啟小白天堂遊戲。
             </p>
 
-
             <a
                 class="download-btn"
                 href="https://www.radmin-vpn.com/tw/"
@@ -184,7 +258,6 @@ content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin V
             >
                 🌐 下載 Radmin VPN
             </a>
-
 
             <div class="notice">
 
@@ -428,12 +501,19 @@ content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin V
                 <div class="step-content">
 
                     <h3>
-                        下載遊戲主程式
+                        <a
+                            class="install-download-link"
+                            href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            下載遊戲主程式
+                        </a>
                     </h3>
 
                     <p>
-                        點擊「立即下載遊戲」，
-                        下載官方提供的遊戲檔案。
+                        點擊「下載遊戲主程式」，
+                        直接前往官方 Google Drive 下載遊戲檔案。
                     </p>
 
                 </div>
@@ -580,7 +660,7 @@ content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin V
             <div class="community-links">
 
                 <a
-                    class="download-btn"
+                    class="join-download-btn"
                     href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
