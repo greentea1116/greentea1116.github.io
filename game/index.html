@@ -1,476 +1,149 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>遊戲介紹｜小白天堂 3.81</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="小白天堂 3.81 遊戲介紹，經典 3.81 仿正天堂，重返亞丁大陸，續寫輝煌篇章。">
+<title>遊戲介紹 | 小白天堂 3.81</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<meta name="description"
+      content="小白天堂 3.81 遊戲介紹，了解經典 3.81 仿正天堂、角色成長、裝備強化、戰鬥玩法與伺服器設定。">
 
-html {
-    scroll-behavior: smooth;
-}
+<link rel="stylesheet"
+      href="../assets/css/style.css">
 
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Noto Sans TC",
-        "Microsoft JhengHei",
-        sans-serif;
-    background:
-        radial-gradient(circle at top, #241b12 0%, #0b0810 45%, #050408 100%);
-    color: #f7e8c2;
-    line-height: 1.8;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* ===== 導覽列 ===== */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(7, 5, 10, 0.95);
-    border-bottom: 1px solid rgba(230, 174, 63, 0.45);
-    backdrop-filter: blur(10px);
-}
-
-.nav {
-    max-width: 1180px;
-    margin: auto;
-    min-height: 72px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.logo-text {
-    font-size: 22px;
-    font-weight: 900;
-    color: #ffd76a;
-    white-space: nowrap;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-size: 15px;
-}
-
-.nav-links a {
-    color: #eadfc9;
-    transition: 0.25s;
-}
-
-.nav-links a:hover {
-    color: #ffd45c;
-}
-
-.join-btn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #ffe18a, #d99b24);
-    color: #211606 !important;
-    font-weight: 900;
-}
-
-/* ===== 共用 ===== */
-
-.container {
-    width: min(1100px, 92%);
-    margin: auto;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-title h2 {
-    font-size: clamp(30px, 5vw, 46px);
-    color: #ffd76a;
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: #cdbf9e;
-}
-
-/* ===== Hero ===== */
-
-.hero {
-    padding: 70px 0 90px;
-    text-align: center;
-    background:
-        radial-gradient(circle at center, rgba(255, 194, 66, 0.16), transparent 55%);
-}
-
-.hero-logo {
-    width: min(900px, 100%);
-    border-radius: 20px;
-    display: block;
-    margin: 0 auto 38px;
-    box-shadow:
-        0 0 45px rgba(255, 190, 50, 0.18),
-        0 20px 60px rgba(0,0,0,0.5);
-}
-
-.hero h1 {
-    font-size: clamp(32px, 6vw, 58px);
-    color: #ffe18a;
-    margin-bottom: 12px;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #d8c7a4;
-    max-width: 760px;
-    margin: auto;
-}
-
-/* ===== 遊戲特色 ===== */
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.feature-card {
-    padding: 30px 24px;
-    border: 1px solid rgba(224, 170, 62, 0.32);
-    border-radius: 18px;
-    background: linear-gradient(
-        145deg,
-        rgba(50, 37, 22, 0.9),
-        rgba(18, 13, 22, 0.95)
-    );
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-
-.feature-icon {
-    font-size: 42px;
-    margin-bottom: 12px;
-}
-
-.feature-card h3 {
-    color: #ffd76a;
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.feature-card p {
-    color: #cbbd9d;
-}
-
-/* ===== 遊戲內容 ===== */
-
-.info-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.info-card {
-    background: rgba(25, 18, 27, 0.9);
-    border: 1px solid rgba(224, 170, 62, 0.3);
-    border-radius: 18px;
-    padding: 30px;
-}
-
-.info-card h3 {
-    color: #ffd76a;
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-.info-card p {
-    color: #d2c3a4;
-}
-
-/* ===== 經典玩法 ===== */
-
-.classic-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.classic-item {
-    padding: 22px;
-    border-left: 4px solid #dca42e;
-    background: rgba(30, 22, 31, 0.9);
-    border-radius: 0 14px 14px 0;
-}
-
-.classic-item h3 {
-    color: #ffe08a;
-    margin-bottom: 5px;
-}
-
-.classic-item p {
-    color: #c9b996;
-}
-
-/* ===== 伺服器 ===== */
-
-.server-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 15px;
-    background: rgba(22, 16, 25, 0.95);
-}
-
-.server-table th,
-.server-table td {
-    padding: 16px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.server-table th {
-    color: #ffe08a;
-    background: rgba(210, 157, 40, 0.12);
-}
-
-.server-table td {
-    color: #d8c9aa;
-}
-
-/* ===== CTA ===== */
-
-.cta {
-    text-align: center;
-    padding: 70px 20px;
-    background:
-        radial-gradient(circle at center, rgba(230, 168, 46, 0.18), transparent 65%);
-}
-
-.cta h2 {
-    font-size: clamp(30px, 6vw, 48px);
-    color: #ffe08a;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    color: #cbbd9d;
-    margin-bottom: 28px;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    border-radius: 35px;
-    font-weight: 900;
-    font-size: 17px;
-}
-
-.btn-gold {
-    background: linear-gradient(135deg, #ffe28c, #d99c24);
-    color: #211606;
-}
-
-.btn-outline {
-    border: 1px solid #d8a73c;
-    color: #ffe08a;
-}
-
-/* ===== Footer ===== */
-
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 1px solid rgba(224, 170, 62, 0.25);
-    color: #8f836e;
-    font-size: 14px;
-}
-
-/* ===== 手機版 ===== */
-
-@media (max-width: 800px) {
-
-    .nav {
-        flex-direction: column;
-        padding: 18px 15px;
-    }
-
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-
-    .join-btn {
-        display: none;
-    }
-
-    .hero {
-        padding: 35px 0 60px;
-    }
-
-    .hero-logo {
-        border-radius: 12px;
-        margin-bottom: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .section {
-        padding: 55px 0;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .info-box {
-        grid-template-columns: 1fr;
-    }
-
-    .classic-list {
-        grid-template-columns: 1fr;
-    }
-
-    .server-table {
-        font-size: 14px;
-    }
-
-    .server-table th,
-    .server-table td {
-        padding: 12px 7px;
-    }
-}
-</style>
 </head>
+
 
 <body>
 
-<!-- ===== 導覽列 ===== -->
 
 <header>
-    <nav class="nav">
 
-        <a href="../" class="logo-text">
-            小白天堂 3.81
-        </a>
+    <div class="container nav">
 
-        <div class="nav-links">
-            <a href="../">首頁</a>
-            <a href="./">遊戲介紹</a>
-            <a href="../#news">最新消息</a>
-            <a href="../#welfare">新手福利</a>
-            <a href="../#download">遊戲下載</a>
-            <a href="../#community">社群</a>
+        <div class="brand">
+            小白天堂 <span>3.81</span>
         </div>
 
-        <a
-            class="join-btn"
-            href="https://discord.gg/6fRCfpHCB"
-            target="_blank"
-        >
-            立即加入
-        </a>
 
-    </nav>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="開啟網站選單"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <nav class="nav-menu">
+
+            <a href="/">首頁</a>
+
+            <a href="/game/" class="active">
+                遊戲介紹
+            </a>
+
+            <a href="/news/">
+                最新消息
+            </a>
+
+            <a href="/events/">
+                活動
+            </a>
+
+            <a href="/beginner/">
+                新手專區
+            </a>
+
+            <a href="/guide/">
+                攻略指南
+            </a>
+
+            <a href="/classes/">
+                職業介紹
+            </a>
+
+            <a href="/videos/">
+                影片
+            </a>
+
+            <a href="/community/">
+                玩家社群
+            </a>
+
+            <a href="/download/">
+                遊戲下載
+            </a>
+
+            <a href="/about/">
+                關於我們
+            </a>
+
+            <a href="/faq/">
+                FAQ
+            </a>
+
+            <a
+                href="/download/"
+                class="nav-btn"
+            >
+                立即加入
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
 
-<!-- ===== Hero ===== -->
+
+<main>
+
+
+<!-- =====================================================
+     遊戲介紹 HERO
+===================================================== -->
 
 <section class="hero">
 
-    <div class="container">
+    <div class="hero-content">
 
         <img
-            class="hero-logo"
             src="../xiaobai-heaven-logo.jpg"
             alt="小白天堂 3.81"
+            class="hero-logo"
         >
 
-        <h1>遊戲介紹</h1>
+        <h1 class="hero-title">
+            遊戲介紹
+        </h1>
 
-        <p>
-            重返亞丁大陸，續寫輝煌篇章！
-            <br>
-            經典 3.81 仿正天堂，熟悉的世界，全新的冒險。
+        <p class="hero-subtitle">
+            經典 3.81 仿正天堂・重新踏上亞丁大陸
         </p>
 
-    </div>
+        <div class="hero-buttons">
 
-</section>
+            <a
+                href="#features"
+                class="btn btn-gold"
+            >
+                ⚔️ 開始了解
+            </a>
 
-
-<!-- ===== 遊戲特色 ===== -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>遊戲特色</h2>
-            <p>經典玩法與全新冒險再次相遇</p>
-        </div>
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-                <div class="feature-icon">⚔️</div>
-                <h3>經典戰鬥</h3>
-                <p>
-                    延續經典天堂戰鬥體驗，
-                    挑戰怪物、Boss 與其他冒險者。
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">👑</div>
-                <h3>角色成長</h3>
-                <p>
-                    從新手開始一步步提升角色，
-                    裝備、等級與能力持續成長。
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🏰</div>
-                <h3>亞丁世界</h3>
-                <p>
-                    熟悉的經典世界，
-                    再次踏上屬於你的冒險旅程。
-                </p>
-            </div>
+            <a
+                href="/download/"
+                class="btn btn-dark"
+            >
+                📥 遊戲下載
+            </a>
 
         </div>
 
@@ -479,40 +152,99 @@ footer {
 </section>
 
 
-<!-- ===== 遊戲介紹 ===== -->
 
-<section class="section">
+<!-- =====================================================
+     經典遊戲
+===================================================== -->
+
+<section
+    class="section-dark"
+    id="features"
+>
 
     <div class="container">
 
         <div class="section-title">
-            <h2>小白天堂 3.81</h2>
-            <p>經典版本・經典玩法・經典回憶</p>
+
+            <div class="section-kicker">
+                ADEN ADVENTURE
+            </div>
+
+            <h2>
+                ⚔️ 經典天堂・重新出發
+            </h2>
+
+            <p>
+                熟悉的亞丁大陸，等待老玩家與新冒險者再次踏上旅程
+            </p>
+
         </div>
 
-        <div class="info-box">
 
-            <div class="info-card">
-                <h3>⚔️ 經典天堂體驗</h3>
+        <div class="cards">
 
-                <p>
-                    小白天堂以經典 3.81 為核心，
-                    打造熟悉的遊戲環境。
-                    無論是練功、打寶、挑戰 Boss，
-                    都能重新體驗經典天堂的冒險樂趣。
-                </p>
-            </div>
 
-            <div class="info-card">
-                <h3>🌟 全新冒險旅程</h3>
+            <div class="card">
+
+                <div class="card-icon">
+                    🏰
+                </div>
+
+                <h3>
+                    經典 3.81
+                </h3>
 
                 <p>
-                    熟悉的亞丁大陸再次開放，
-                    等待玩家探索。
-                    與朋友一起組隊、聊天、打怪，
-                    重新找回當年的遊戲回憶。
+                    延續經典天堂 3.81 遊戲體驗，
+                    保留熟悉的世界、角色與冒險感。
                 </p>
+
+                <div class="card-line"></div>
+
             </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚔️
+                </div>
+
+                <h3>
+                    經典戰鬥
+                </h3>
+
+                <p>
+                    熟悉的角色成長、裝備強化與
+                    冒險戰鬥玩法，重新找回最初的感動。
+                </p>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👑
+                </div>
+
+                <h3>
+                    全新冒險
+                </h3>
+
+                <p>
+                    與夥伴一起加入亞丁世界，
+                    開始屬於你的全新榮耀篇章。
+                </p>
+
+                <div class="card-line"></div>
+
+            </div>
+
 
         </div>
 
@@ -521,50 +253,89 @@ footer {
 </section>
 
 
-<!-- ===== 經典玩法 ===== -->
 
-<section class="section">
+<!-- =====================================================
+     遊戲內容
+===================================================== -->
+
+<section class="section-soft">
 
     <div class="container">
 
         <div class="section-title">
-            <h2>經典玩法</h2>
-            <p>一步一步打造屬於自己的角色</p>
+
+            <h2>
+                🎮 遊戲內容
+            </h2>
+
+            <p>
+                從角色成長到裝備強化，體驗熟悉的冒險節奏
+            </p>
+
         </div>
 
-        <div class="classic-list">
 
-            <div class="classic-item">
-                <h3>⚔️ 練功升級</h3>
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🧙
+                </div>
+
+                <h3>
+                    角色成長
+                </h3>
+
                 <p>
-                    挑戰不同地區的怪物，
-                    持續提升角色等級。
+                    從初入亞丁大陸開始，
+                    逐步提升角色能力，
+                    展開自己的冒險旅程。
                 </p>
+
             </div>
 
-            <div class="classic-item">
-                <h3>💎 裝備成長</h3>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    裝備強化
+                </h3>
+
                 <p>
-                    收集與強化裝備，
-                    讓角色戰力逐步提升。
+                    透過裝備成長與強化，
+                    持續提升角色戰力，
+                    挑戰更多冒險內容。
                 </p>
+
             </div>
 
-            <div class="classic-item">
-                <h3>🐉 Boss 挑戰</h3>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚔️
+                </div>
+
+                <h3>
+                    冒險戰鬥
+                </h3>
+
                 <p>
-                    與隊友一起挑戰強大的 Boss，
-                    爭奪珍貴戰利品。
+                    熟悉的戰鬥玩法，
+                    與其他玩家一起探索
+                    屬於你的亞丁冒險。
                 </p>
+
             </div>
 
-            <div class="classic-item">
-                <h3>🤝 玩家社群</h3>
-                <p>
-                    加入官方 Discord，
-                    與其他玩家交流遊戲資訊。
-                </p>
-            </div>
 
         </div>
 
@@ -573,58 +344,143 @@ footer {
 </section>
 
 
-<!-- ===== 伺服器設定 ===== -->
 
-<section class="section">
+<!-- =====================================================
+     伺服器設定
+===================================================== -->
+
+<section
+    class="section-dark"
+    id="server"
+>
 
     <div class="container">
 
         <div class="section-title">
-            <h2>伺服器設定</h2>
-            <p>目前小白天堂 3.81 遊戲設定</p>
+
+            <h2>
+                ⚙️ 伺服器設定
+            </h2>
+
+            <p>
+                小白天堂 3.81 經典仿正設定
+            </p>
+
         </div>
+
 
         <table class="server-table">
 
-            <tr>
-                <th>項目</th>
-                <th>設定</th>
-            </tr>
+            <thead>
 
-            <tr>
-                <td>遊戲版本</td>
-                <td>3.81 經典仿正</td>
-            </tr>
+                <tr>
 
-            <tr>
-                <td>經驗值</td>
-                <td>5 倍</td>
-            </tr>
+                    <th>
+                        項目
+                    </th>
 
-            <tr>
-                <td>金幣</td>
-                <td>3 倍</td>
-            </tr>
+                    <th>
+                        設定
+                    </th>
 
-            <tr>
-                <td>掉寶</td>
-                <td>2 倍</td>
-            </tr>
+                </tr>
 
-            <tr>
-                <td>正義</td>
-                <td>2 倍</td>
-            </tr>
+            </thead>
 
-            <tr>
-                <td>武器</td>
-                <td>2 倍</td>
-            </tr>
 
-            <tr>
-                <td>防具</td>
-                <td>2 倍</td>
-            </tr>
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        遊戲版本
+                    </td>
+
+                    <td>
+                        3.81 經典仿正
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        經驗值
+                    </td>
+
+                    <td>
+                        5 倍
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        金幣
+                    </td>
+
+                    <td>
+                        3 倍
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        掉寶
+                    </td>
+
+                    <td>
+                        2 倍
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        正義
+                    </td>
+
+                    <td>
+                        2 倍
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        武器
+                    </td>
+
+                    <td>
+                        2 倍
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        防具
+                    </td>
+
+                    <td>
+                        2 倍
+                    </td>
+
+                </tr>
+
+            </tbody>
 
         </table>
 
@@ -633,46 +489,132 @@ footer {
 </section>
 
 
-<!-- ===== CTA ===== -->
 
-<section class="cta">
+<!-- =====================================================
+     官方宣傳影片
+===================================================== -->
 
-    <h2>準備好重返亞丁大陸了嗎？</h2>
+<section class="section-soft">
 
-    <p>
-        加入小白天堂 3.81，
-        與朋友一起開始新的冒險。
-    </p>
+    <div class="container">
 
-    <div class="cta-buttons">
+        <div class="section-title">
 
-        <a
-            class="btn btn-gold"
-            href="../#download"
-        >
-            🎮 遊戲下載
-        </a>
+            <h2>
+                🎬 官方宣傳影片
+            </h2>
 
-        <a
-            class="btn btn-outline"
-            href="https://discord.gg/6fRCfpHCB"
-            target="_blank"
-        >
-            💬 官方 Discord
-        </a>
+            <p>
+                一起看看小白天堂的全新冒險
+            </p>
+
+        </div>
+
+
+        <div class="video-wrap">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="../xiaobai-heaven-promo.MP4"
+                    type="video/mp4"
+                >
+
+                您的瀏覽器不支援影片播放。
+
+            </video>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ===== Footer ===== -->
+
+<!-- =====================================================
+     加入小白天堂
+===================================================== -->
+
+<section class="section-dark">
+
+    <div class="container">
+
+        <div class="download-box">
+
+            <div class="section-title">
+
+                <h2>
+                    👑 準備踏上亞丁大陸
+                </h2>
+
+                <p>
+                    開始你的 3.81 冒險旅程
+                </p>
+
+            </div>
+
+
+            <p>
+                下載遊戲主程式，
+                安裝完成後即可開始冒險。
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    class="btn btn-gold"
+                    href="/download/"
+                >
+                    📥 前往遊戲下載
+                </a>
+
+
+                <a
+                    class="btn btn-dark"
+                    href="https://discord.gg/AwxV7gWn3"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    💬 加入官方 Discord
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
 
 <footer>
 
-    © 2026 小白天堂 3.81 All Rights Reserved.
+    <div class="container">
+
+        © 2026 小白天堂 3.81 All Rights Reserved.
+
+        <br>
+
+        重返亞丁大陸・續寫輝煌篇章
+
+    </div>
 
 </footer>
 
+
+
+<script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>
