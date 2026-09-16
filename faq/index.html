@@ -1,791 +1,787 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>常見問題 FAQ｜小白天堂 3.81</title>
-
-<meta name="description"
-content="小白天堂 3.81 官方 FAQ 常見問題，提供遊戲下載、安裝、新手福利、更新、登入及客服相關說明。">
-
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    Arial,
-    sans-serif;
-
-    background:
-    radial-gradient(circle at top,#2b2110 0%,#090909 45%,#000 100%);
-
-    color:#fff;
-    line-height:1.8;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-header{
-    background:rgba(0,0,0,.93);
-    border-bottom:1px solid rgba(230,190,80,.35);
-
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.nav{
-    max-width:1200px;
-    margin:auto;
-
-    padding:14px 20px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.nav a{
-    color:#ddd;
-    font-size:14px;
-    transition:.25s;
-}
-
-.nav a:hover{
-    color:#ffd76a;
-}
-
-.nav .active{
-    color:#ffd76a;
-    font-weight:bold;
-}
-
-.nav .join{
-    background:
-    linear-gradient(135deg,#ffd76a,#b98522);
-
-    color:#111;
-
-    padding:7px 15px;
-    border-radius:20px;
-
-    font-weight:bold;
-}
-
-.hero{
-    min-height:600px;
-
-    padding:55px 20px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-}
-
-.hero-inner{
-    max-width:900px;
-}
-
-.hero img{
-    width:min(680px,92vw);
-    max-height:410px;
-
-    object-fit:contain;
-
-    filter:
-    drop-shadow(0 0 28px rgba(255,210,80,.28));
-
-    margin-bottom:20px;
-}
-
-.badge{
-    display:inline-block;
-
-    border:1px solid #d9ad4c;
-
-    color:#ffd76a;
-
-    padding:5px 16px;
-
-    border-radius:30px;
-
-    font-size:13px;
-
-    margin-bottom:14px;
-}
-
-h1{
-    font-size:clamp(34px,6vw,58px);
-
-    color:#ffd76a;
-
-    text-shadow:0 3px 15px #000;
-
-    margin-bottom:12px;
-}
-
-.hero p{
-    color:#ddd;
-    font-size:17px;
-}
-
-.section{
-    max-width:1000px;
-    margin:auto;
-
-    padding:70px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title h2{
-    color:#ffd76a;
-    font-size:34px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#aaa;
-}
-
-.faq-list{
-    max-width:900px;
-    margin:auto;
-}
-
-.faq{
-    margin-bottom:16px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(35,29,17,.95),
-        rgba(14,14,14,.98)
-    );
-
-    border:1px solid rgba(230,190,80,.22);
-
-    border-radius:15px;
-
-    overflow:hidden;
-}
-
-.faq summary{
-    cursor:pointer;
-
-    list-style:none;
-
-    padding:20px 24px;
-
-    color:#ffd76a;
-
-    font-size:17px;
-    font-weight:bold;
-
-    position:relative;
-
-    padding-right:55px;
-}
-
-.faq summary::-webkit-details-marker{
-    display:none;
-}
-
-.faq summary::after{
-    content:"+";
-
-    position:absolute;
-
-    right:22px;
-    top:16px;
-
-    font-size:25px;
-
-    color:#d9ad4c;
-}
-
-.faq[open] summary::after{
-    content:"−";
-}
-
-.answer{
-    padding:0 24px 22px;
-
-    color:#aaa;
-
-    font-size:15px;
-
-    border-top:1px solid rgba(230,190,80,.12);
-}
-
-.answer p{
-    padding-top:18px;
-}
-
-.highlight{
-    color:#ffd76a;
-    font-weight:bold;
-}
-
-.notice{
-    max-width:900px;
-    margin:auto;
-
-    padding:25px;
-
-    background:
-    rgba(255,210,80,.06);
-
-    border-left:3px solid #d9ad4c;
-
-    border-radius:8px;
-
-    color:#aaa;
-}
-
-.notice strong{
-    color:#ffd76a;
-}
-
-.cta{
-    text-align:center;
-
-    padding:70px 20px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(179,135,43,.18),
-        transparent 65%
-    );
-}
-
-.cta h2{
-    color:#ffd76a;
-
-    font-size:32px;
-
-    margin-bottom:10px;
-}
-
-.cta p{
-    color:#aaa;
-
-    margin-bottom:25px;
-}
-
-.buttons{
-    display:flex;
-
-    justify-content:center;
-
-    gap:14px;
-
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-
-    padding:11px 24px;
-
-    border-radius:28px;
-
-    border:1px solid #c99c3b;
-
-    color:#ffd76a;
-}
-
-.btn.primary{
-    background:#c18b28;
-
-    color:#111;
-
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-
-    padding:30px 20px;
-
-    border-top:
-    1px solid rgba(230,190,80,.2);
-
-    color:#777;
-
-    font-size:13px;
-}
-
-@media(max-width:800px){
-
-    .nav{
-        gap:12px 16px;
-    }
-
-    .hero{
-        min-height:550px;
-        padding:40px 15px;
-    }
-
-    .hero img{
-        max-height:300px;
-    }
-
-    .section{
-        padding:55px 18px;
-    }
-
-    .faq summary{
-        font-size:15px;
-        padding:18px 48px 18px 18px;
-    }
-
-    .answer{
-        padding:0 18px 18px;
-        font-size:14px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>常見問題 FAQ｜小白天堂 3.81</title>
+
+    <meta
+        name="description"
+        content="小白天堂 3.81 官方 FAQ 常見問題，提供遊戲下載、安裝、新手福利、更新、登入及客服相關說明。"
+    >
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* =========================================================
+           FAQ 專用樣式
+        ========================================================== */
+
+        .faq-list {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq {
+            margin-bottom: 16px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(35, 29, 17, 0.95),
+                    rgba(14, 14, 14, 0.98)
+                );
+            border: 1px solid rgba(230, 190, 80, 0.22);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 20px 58px 20px 24px;
+            color: #ffd76a;
+            font-size: 17px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 22px;
+            top: 14px;
+            font-size: 28px;
+            line-height: 1;
+            color: #d9ad4c;
+        }
+
+        .faq[open] summary::after {
+            content: "−";
+        }
+
+        .answer {
+            padding: 0 24px 22px;
+            color: #aaa;
+            font-size: 15px;
+            border-top: 1px solid rgba(230, 190, 80, 0.12);
+        }
+
+        .answer p {
+            padding-top: 18px;
+        }
+
+        .highlight {
+            color: #ffd76a;
+            font-weight: bold;
+        }
+
+        .faq-notice {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .faq summary {
+                font-size: 15px;
+                padding: 18px 48px 18px 18px;
+            }
+
+            .faq summary::after {
+                right: 17px;
+                top: 14px;
+                font-size: 25px;
+            }
+
+            .answer {
+                padding: 0 18px 18px;
+                font-size: 14px;
+            }
+
+            .answer p {
+                padding-top: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<!-- =========================================================
+     HEADER
+========================================================== -->
 
-<nav class="nav">
+<header class="site-header">
 
-<a href="../">首頁</a>
+    <div class="nav-container">
 
-<a href="../game/">遊戲介紹</a>
+        <a href="../" class="nav-logo">
+            <img
+                src="../xiaobai-heaven-logo.jpg"
+                alt="小白天堂 3.81"
+            >
+            <span>小白天堂 3.81</span>
+        </a>
 
-<a href="../news/">最新消息</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="開啟選單"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-<a href="../events/">活動</a>
+        <nav class="nav-menu">
 
-<a href="../beginner/">新手專區</a>
+            <a href="../">
+                首頁
+            </a>
 
-<a href="../guide/">攻略指南</a>
+            <a href="../game/">
+                遊戲介紹
+            </a>
 
-<a href="../classes/">職業介紹</a>
+            <a href="../news/">
+                最新消息
+            </a>
 
-<a href="../videos/">影片</a>
+            <a href="../events/">
+                活動
+            </a>
 
-<a href="../community/">玩家社群</a>
+            <a href="../beginner/">
+                新手專區
+            </a>
 
-<a href="../download/">遊戲下載</a>
+            <a href="../guide/">
+                攻略指南
+            </a>
 
-<a href="../about/">關於我們</a>
+            <a href="../classes/">
+                職業介紹
+            </a>
 
-<a href="./" class="active">FAQ</a>
+            <a href="../videos/">
+                影片
+            </a>
 
-<a href="../#download" class="join">
-立即加入
-</a>
+            <a href="../community/">
+                玩家社群
+            </a>
 
-</nav>
+            <a href="../download/">
+                遊戲下載
+            </a>
+
+            <a href="../about/">
+                關於我們
+            </a>
+
+            <a href="../disclaimer/">
+                免責聲明
+            </a>
+
+            <a href="./" class="active">
+                FAQ
+            </a>
+
+            <a
+                href="https://discord.gg/AwxV7gWn3"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-cta"
+            >
+                立即加入
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
-<section class="hero">
+<!-- =========================================================
+     PAGE HERO
+========================================================== -->
 
-<div class="hero-inner">
+<section class="page-hero">
 
-<img
-src="../xiaobai-heaven-logo.jpg"
-alt="小白天堂 3.81"
->
+    <h1>
+        常見問題
+    </h1>
 
-<div class="badge">
-小白天堂 3.81 官方 FAQ
-</div>
-
-<h1>常見問題</h1>
-
-<p>
-新手、下載、安裝與遊戲問題一次整理。
-</p>
-
-</div>
+    <p>
+        新手、下載、安裝與遊戲問題一次整理。
+    </p>
 
 </section>
 
 
-<section class="section">
+<main>
 
-<div class="section-title">
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
 
-<h2>❓ 常見問題 FAQ</h2>
+    <section class="section">
 
-<p>
-以下整理玩家可能遇到的常見問題
-</p>
+        <div class="section-title">
 
-</div>
+            <div class="section-kicker">
+                FAQ
+            </div>
 
+            <h2>
+                ❓ 常見問題 FAQ
+            </h2>
 
-<div class="faq-list">
+            <p>
+                以下整理玩家可能遇到的常見問題
+            </p>
 
+        </div>
 
-<details class="faq">
 
-<summary>
-Q1．小白天堂 3.81 要去哪裡下載？
-</summary>
+        <div class="faq-list">
 
-<div class="answer">
 
-<p>
-請前往官方
-<span class="highlight">「遊戲下載」</span>
-頁面，使用官方提供的下載連結取得遊戲主程式。
-</p>
+            <!-- Q1 -->
 
-</div>
+            <details class="faq">
 
-</details>
+                <summary>
+                    Q1．小白天堂 3.81 要去哪裡下載？
+                </summary>
 
+                <div class="answer">
 
-<details class="faq">
+                    <p>
+                        請前往官方
+                        <span class="highlight">
+                            「遊戲下載」
+                        </span>
+                        頁面，使用官方提供的下載連結取得遊戲主程式。
+                    </p>
 
-<summary>
-Q2．遊戲支援什麼平台？
-</summary>
+                </div>
 
-<div class="answer">
+            </details>
 
-<p>
-目前網站提供的遊戲主程式以
-<span class="highlight">Windows PC</span>
-環境為主。
-</p>
 
-</div>
+            <!-- Q2 -->
 
-</details>
+            <details class="faq">
 
+                <summary>
+                    Q2．遊戲支援什麼平台？
+                </summary>
 
-<details class="faq">
+                <div class="answer">
 
-<summary>
-Q3．下載遊戲後要怎麼安裝？
-</summary>
+                    <p>
+                        目前網站提供的遊戲主程式以
+                        <span class="highlight">
+                            Windows PC
+                        </span>
+                        環境為主。
+                    </p>
 
-<div class="answer">
+                </div>
 
-<p>
-完成遊戲檔案下載後，
-依照下載檔案格式完成解壓縮或安裝，
-再啟動遊戲程式即可。
-</p>
+            </details>
 
-<p>
-詳細流程可以參考
-<span class="highlight">遊戲下載</span>
-頁面的安裝教學。
-</p>
 
-</div>
+            <!-- Q3 -->
 
-</details>
+            <details class="faq">
 
+                <summary>
+                    Q3．下載遊戲後要怎麼安裝？
+                </summary>
 
-<details class="faq">
+                <div class="answer">
 
-<summary>
-Q4．新手福利在哪裡領取？
-</summary>
+                    <p>
+                        完成遊戲檔案下載後，
+                        依照下載檔案格式完成解壓縮或安裝，
+                        再啟動遊戲程式即可。
+                    </p>
 
-<div class="answer">
+                    <p>
+                        詳細流程可以參考
+                        <span class="highlight">
+                            遊戲下載
+                        </span>
+                        頁面的安裝教學。
+                    </p>
 
-<p>
-新手福利與相關活動內容會依官方公告進行。
-</p>
+                </div>
 
-<p>
-可以前往
-<span class="highlight">新手專區</span>
-以及
-<span class="highlight">最新消息</span>
-查看目前的福利資訊。
-</p>
+            </details>
 
-</div>
 
-</details>
+            <!-- Q4 -->
 
+            <details class="faq">
 
-<details class="faq">
+                <summary>
+                    Q4．新手福利在哪裡領取？
+                </summary>
 
-<summary>
-Q5．遊戲有哪些職業？
-</summary>
+                <div class="answer">
 
-<div class="answer">
+                    <p>
+                        新手福利與相關活動內容會依官方公告進行。
+                    </p>
 
-<p>
-目前網站介紹的主要職業包含：
-<span class="highlight">
-王族、騎士、妖精、法師
-</span>。
-</p>
+                    <p>
+                        可以前往
+                        <span class="highlight">
+                            新手專區
+                        </span>
+                        以及
+                        <span class="highlight">
+                            最新消息
+                        </span>
+                        查看目前的福利資訊。
+                    </p>
 
-<p>
-可以前往
-<span class="highlight">職業介紹</span>
-頁面查看各職業特色。
-</p>
+                </div>
 
-</div>
+            </details>
 
-</details>
 
+            <!-- Q5 -->
 
-<details class="faq">
+            <details class="faq">
 
-<summary>
-Q6．遊戲版本是多少？
-</summary>
+                <summary>
+                    Q5．遊戲有哪些職業？
+                </summary>
 
-<div class="answer">
+                <div class="answer">
 
-<p>
-目前官方網站所介紹的遊戲版本為
-<span class="highlight">小白天堂 3.81</span>。
-</p>
+                    <p>
+                        目前網站介紹的五大職業包含：
+                        <span class="highlight">
+                            王族、騎士、妖精、法師、黑暗妖精
+                        </span>。
+                    </p>
 
-</div>
+                    <p>
+                        可以前往
+                        <span class="highlight">
+                            職業介紹
+                        </span>
+                        頁面查看各職業特色。
+                    </p>
 
-</details>
+                </div>
 
+            </details>
 
-<details class="faq">
 
-<summary>
-Q7．遊戲更新後無法登入怎麼辦？
-</summary>
+            <!-- Q6 -->
 
-<div class="answer">
+            <details class="faq">
 
-<p>
-請先確認遊戲版本是否與官方目前公告的版本一致。
-</p>
+                <summary>
+                    Q6．遊戲版本是多少？
+                </summary>
 
-<p>
-如果仍然無法登入，
-建議查看最新官方公告，
-或前往官方 Discord 聯絡客服。
-</p>
+                <div class="answer">
 
-</div>
+                    <p>
+                        目前官方網站所介紹的遊戲版本為
+                        <span class="highlight">
+                            小白天堂 3.81
+                        </span>。
+                    </p>
 
-</details>
+                </div>
 
+            </details>
 
-<details class="faq">
 
-<summary>
-Q8．遇到遊戲問題可以找誰？
-</summary>
+            <!-- Q7 -->
 
-<div class="answer">
+            <details class="faq">
 
-<p>
-可以前往
-<span class="highlight">玩家社群</span>
-頁面，加入官方 Discord。
-</p>
+                <summary>
+                    Q7．遊戲更新後無法登入怎麼辦？
+                </summary>
 
-<p>
-若需要協助，也可以透過官方客服 Discord 聯絡。
-</p>
+                <div class="answer">
 
-</div>
+                    <p>
+                        請先確認遊戲版本是否與官方目前公告的版本一致。
+                    </p>
 
-</details>
+                    <p>
+                        如果仍然無法登入，
+                        建議查看最新官方公告，
+                        或前往官方 Discord 聯絡客服。
+                    </p>
 
+                </div>
 
-<details class="faq">
+            </details>
 
-<summary>
-Q9．哪裡可以看到最新活動？
-</summary>
 
-<div class="answer">
+            <!-- Q8 -->
 
-<p>
-最新活動資訊會整理在
-<span class="highlight">活動</span>
-與
-<span class="highlight">最新消息</span>
-頁面。
-</p>
+            <details class="faq">
 
-</div>
+                <summary>
+                    Q8．遇到遊戲問題可以找誰？
+                </summary>
 
-</details>
+                <div class="answer">
 
+                    <p>
+                        可以前往
+                        <span class="highlight">
+                            玩家社群
+                        </span>
+                        頁面，加入官方 Discord。
+                    </p>
 
-<details class="faq">
+                    <p>
+                        若需要協助，也可以透過官方客服 Discord 聯絡。
+                    </p>
 
-<summary>
-Q10．哪裡可以查看遊戲攻略？
-</summary>
+                </div>
 
-<div class="answer">
+            </details>
 
-<p>
-可以前往
-<span class="highlight">攻略指南</span>
-頁面，
-查看新手、職業、裝備與遊戲相關攻略。
-</p>
 
-</div>
+            <!-- Q9 -->
 
-</details>
+            <details class="faq">
 
+                <summary>
+                    Q9．哪裡可以看到最新活動？
+                </summary>
 
-<details class="faq">
+                <div class="answer">
 
-<summary>
-Q11．可以和其他玩家交流嗎？
-</summary>
+                    <p>
+                        最新活動資訊會整理在
+                        <span class="highlight">
+                            活動
+                        </span>
+                        與
+                        <span class="highlight">
+                            最新消息
+                        </span>
+                        頁面。
+                    </p>
 
-<div class="answer">
+                </div>
 
-<p>
-可以加入官方 Discord 玩家社群，
-與其他玩家交流遊戲資訊、組隊冒險與攻略心得。
-</p>
+            </details>
 
-</div>
 
-</details>
+            <!-- Q10 -->
 
+            <details class="faq">
 
-<details class="faq">
+                <summary>
+                    Q10．哪裡可以查看遊戲攻略？
+                </summary>
 
-<summary>
-Q12．官方資訊要以哪裡為準？
-</summary>
+                <div class="answer">
 
-<div class="answer">
+                    <p>
+                        可以前往
+                        <span class="highlight">
+                            攻略指南
+                        </span>
+                        頁面，
+                        查看新手、職業、裝備與遊戲相關攻略。
+                    </p>
 
-<p>
-遊戲版本、活動內容、獎勵、
-更新方式與伺服器相關資訊，
-請以官方最新公告為準。
-</p>
+                </div>
 
-</div>
+            </details>
 
-</details>
 
+            <!-- Q11 -->
 
-</div>
+            <details class="faq">
 
-</section>
+                <summary>
+                    Q11．可以和其他玩家交流嗎？
+                </summary>
 
+                <div class="answer">
 
-<section class="section">
+                    <p>
+                        可以加入官方 Discord 玩家社群，
+                        與其他玩家交流遊戲資訊、組隊冒險與攻略心得。
+                    </p>
 
-<div class="section-title">
+                </div>
 
-<h2>📌 還是找不到答案？</h2>
+            </details>
 
-<p>
-直接前往官方社群尋求協助
-</p>
 
-</div>
+            <!-- Q12 -->
 
+            <details class="faq">
 
-<div class="notice">
+                <summary>
+                    Q12．官方資訊要以哪裡為準？
+                </summary>
 
-<strong>官方客服與玩家社群</strong>
+                <div class="answer">
 
-<br><br>
+                    <p>
+                        遊戲版本、活動內容、獎勵、
+                        更新方式與伺服器相關資訊，
+                        請以官方最新公告為準。
+                    </p>
 
-如果 FAQ 沒有解決你的問題，
-可以前往官方 Discord，
-向客服或其他玩家詢問。
+                </div>
 
-<br><br>
+            </details>
 
-請盡量提供遇到問題時的畫面、
-錯誤訊息及相關遊戲資訊，
-方便快速確認問題。
 
-</div>
+        </div>
 
-</section>
+    </section>
 
 
-<section class="cta">
+    <!-- =====================================================
+         CUSTOMER SERVICE
+    ====================================================== -->
 
-<h2>準備好開始冒險了嗎？</h2>
+    <section class="section">
 
-<p>
-下載遊戲，加入小白天堂 3.81。
-</p>
+        <div class="section-title">
 
-<div class="buttons">
+            <div class="section-kicker">
+                NEED HELP?
+            </div>
 
-<a
-class="btn primary"
-href="../download/"
->
-下載遊戲
-</a>
+            <h2>
+                📌 還是找不到答案？
+            </h2>
 
-<a
-class="btn"
-href="../community/"
->
-加入社群
-</a>
+            <p>
+                直接前往官方社群尋求協助
+            </p>
 
-<a
-class="btn"
-href="../"
->
-回到首頁
-</a>
+        </div>
 
-</div>
 
-</section>
+        <div class="notice faq-notice">
 
+            <strong>
+                官方客服與玩家社群
+            </strong>
 
-<footer>
+            <br><br>
 
-小白天堂 3.81｜重返亞丁大陸・續寫輝煌篇章
+            如果 FAQ 沒有解決你的問題，
+            可以前往官方 Discord，
+            向客服或其他玩家詢問。
 
-<br><br>
+            <br><br>
 
-© 2026 小白天堂 3.81. All Rights Reserved.
+            請盡量提供遇到問題時的畫面、
+            錯誤訊息及相關遊戲資訊，
+            方便快速確認問題。
+
+            <br><br>
+
+            <a
+                href="https://discord.gg/AwxV7gWn3"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                💬 加入官方 Discord
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="content-box text-center">
+
+            <div class="section-title">
+
+                <div class="section-kicker">
+                    JOIN US
+                </div>
+
+                <h2>
+                    準備好開始冒險了嗎？
+                </h2>
+
+                <p>
+                    下載遊戲，加入小白天堂 3.81。
+                </p>
+
+            </div>
+
+
+            <div class="hero-actions">
+
+                <a
+                    class="btn btn-primary"
+                    href="../download/"
+                >
+                    ⬇️ 下載遊戲
+                </a>
+
+                <a
+                    class="btn btn-secondary"
+                    href="../community/"
+                >
+                    💬 加入社群
+                </a>
+
+                <a
+                    class="btn btn-secondary"
+                    href="../"
+                >
+                    回到首頁
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <p>
+            小白天堂 3.81｜重返亞丁大陸・續寫輝煌篇章
+        </p>
+
+        <p>
+
+            <a href="../">
+                首頁
+            </a>
+
+            ｜
+
+            <a href="../game/">
+                遊戲介紹
+            </a>
+
+            ｜
+
+            <a href="../news/">
+                最新消息
+            </a>
+
+            ｜
+
+            <a href="../events/">
+                活動
+            </a>
+
+            ｜
+
+            <a href="../beginner/">
+                新手專區
+            </a>
+
+            ｜
+
+            <a href="../guide/">
+                攻略指南
+            </a>
+
+            ｜
+
+            <a href="../classes/">
+                職業介紹
+            </a>
+
+            ｜
+
+            <a href="../videos/">
+                影片
+            </a>
+
+            ｜
+
+            <a href="../community/">
+                玩家社群
+            </a>
+
+            ｜
+
+            <a href="../download/">
+                遊戲下載
+            </a>
+
+            ｜
+
+            <a href="../about/">
+                關於我們
+            </a>
+
+            ｜
+
+            <a href="../disclaimer/">
+                免責聲明
+            </a>
+
+            ｜
+
+            <a href="./">
+                FAQ
+            </a>
+
+        </p>
+
+        <p>
+            © 2026 小白天堂 3.81. All Rights Reserved.
+        </p>
+
+    </div>
 
 </footer>
+
+
+<script src="../assets/js/main.js"></script>
 
 </body>
 </html>
