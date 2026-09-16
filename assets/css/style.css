@@ -522,6 +522,8 @@ button {
 
 /* =========================================================
    11. VIDEO 影片
+   ★ 桌面版維持 16:9
+   ★ 手機版依照影片原始比例
 ========================================================= */
 
 .video-wrapper {
@@ -535,10 +537,19 @@ button {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-.video-wrapper video,
+.video-wrapper video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    object-fit: contain;
+}
+
 .video-wrapper iframe {
     display: block;
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     border: 0;
 }
@@ -735,9 +746,6 @@ button {
 
     /* =====================================================
        HEADER
-       ★ 手機固定同一排
-       ★ 左邊網站名稱
-       ★ 右邊 ☰
     ===================================================== */
 
     .site-header {
@@ -755,39 +763,28 @@ button {
         height: 64px;
         margin: 0 auto;
         gap: 12px;
-
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        flex-wrap: nowrap !important;
-
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         overflow: visible;
     }
 
     .nav-logo {
-        display: inline-flex !important;
-        align-items: center !important;
-        flex: 1 1 auto !important;
-        min-width: 0 !important;
-        width: auto !important;
-        max-width: calc(100% - 58px) !important;
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: calc(100% - 58px);
         overflow: hidden;
-        white-space: nowrap;
     }
 
     .nav-logo img {
         width: 42px;
         height: 42px;
-        flex: 0 0 42px;
         flex-shrink: 0;
     }
 
     .nav-logo span {
         font-size: 15px;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
 
@@ -1304,34 +1301,63 @@ button {
 
     /* =====================================================
        VIDEO
-       ★ 手機寬度完全跟著螢幕
-       ★ 不超出左右畫面
+       ★ 手機影片寬度永遠不超過手機螢幕
+       ★ 跟著每一支手機的實際寬度自動縮放
        ★ 保留影片原始比例
+       ★ 不再強制 16:9
     ===================================================== */
 
     .video-wrapper {
-        width: 100vw !important;
+        width: 100% !important;
         max-width: 100vw !important;
-        margin-left: calc(50% - 50vw) !important;
-        margin-right: 0 !important;
+        min-width: 0 !important;
 
-        border-radius: 0;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding: 0 !important;
+
         overflow: hidden !important;
 
-        box-sizing: border-box !important;
+        border-radius: 12px;
     }
 
-    .video-wrapper video,
-    .video-wrapper iframe {
-        display: block;
+    .video-wrapper video {
+        display: block !important;
+
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
+
         height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
 
         aspect-ratio: auto !important;
 
-        border: 0;
-        object-fit: contain;
+        object-fit: contain !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: 0 !important;
+    }
+
+    .video-wrapper iframe {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+
+        aspect-ratio: 16 / 9 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: 0 !important;
     }
 
 
