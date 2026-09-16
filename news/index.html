@@ -1,613 +1,405 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>最新消息｜小白天堂 3.81</title>
+    <title>最新消息｜小白天堂 3.81</title>
 
-<meta name="description" content="小白天堂 3.81 官方最新消息、活動公告、新手福利與伺服器資訊。">
+    <meta
+        name="description"
+        content="小白天堂 3.81 官方最新消息、活動公告、新手福利與伺服器資訊。"
+    >
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    sans-serif;
-  background:#090909;
-  color:#f5f5f5;
-  line-height:1.8;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* ===== Header ===== */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(8,8,8,.96);
-  border-bottom:1px solid rgba(255,215,120,.2);
-  backdrop-filter:blur(10px);
-}
-
-.nav{
-  max-width:1180px;
-  margin:auto;
-  min-height:68px;
-  padding:0 22px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.brand{
-  font-size:20px;
-  font-weight:900;
-  color:#ffd76a;
-  letter-spacing:1px;
-  white-space:nowrap;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-.nav-links a{
-  padding:7px 12px;
-  color:#ddd;
-  font-size:14px;
-  border-radius:8px;
-  transition:.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-  color:#ffd76a;
-  background:rgba(255,215,106,.08);
-}
-
-.join-btn{
-  background:linear-gradient(135deg,#d6a83c,#ffe18a);
-  color:#111 !important;
-  font-weight:900;
-}
-
-/* ===== Hero ===== */
-
-.hero{
-  max-width:1180px;
-  margin:auto;
-  padding:55px 22px 35px;
-  text-align:center;
-}
-
-.hero-logo{
-  width:min(100%,720px);
-  max-height:330px;
-  object-fit:contain;
-  border-radius:18px;
-  box-shadow:
-    0 0 45px rgba(255,190,70,.15);
-  border:1px solid rgba(255,215,120,.18);
-}
-
-.hero h1{
-  margin-top:30px;
-  color:#ffd76a;
-  font-size:42px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.hero p{
-  margin-top:10px;
-  color:#aaa;
-  font-size:17px;
-}
-
-/* ===== Main ===== */
-
-.container{
-  max-width:1050px;
-  margin:auto;
-  padding:20px 22px 80px;
-}
-
-.section-title{
-  text-align:center;
-  margin:30px 0 35px;
-}
-
-.section-title h2{
-  color:#ffd76a;
-  font-size:30px;
-}
-
-.section-title p{
-  color:#888;
-  margin-top:6px;
-}
-
-/* ===== News Cards ===== */
-
-.news-list{
-  display:grid;
-  gap:22px;
-}
-
-.news-card{
-  position:relative;
-  padding:28px 30px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.055),
-      rgba(255,255,255,.018)
-    );
-  border:1px solid rgba(255,215,120,.16);
-  border-radius:16px;
-  transition:.25s;
-  overflow:hidden;
-}
-
-.news-card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(255,215,120,.42);
-  box-shadow:0 12px 35px rgba(0,0,0,.3);
-}
-
-.news-card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  width:4px;
-  height:100%;
-  background:#d5a73c;
-}
-
-.news-top{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-bottom:12px;
-}
-
-.date{
-  color:#999;
-  font-size:14px;
-}
-
-.tag{
-  display:inline-block;
-  padding:3px 10px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
-  color:#161616;
-  background:#ffd76a;
-}
-
-.tag.event{
-  background:#e9bd62;
-}
-
-.tag.notice{
-  background:#d8d8d8;
-}
-
-.news-card h3{
-  font-size:23px;
-  color:#fff;
-  margin-bottom:8px;
-}
-
-.news-card p{
-  color:#b8b8b8;
-  font-size:15px;
-}
-
-.news-detail{
-  margin-top:18px;
-  padding-top:16px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#999;
-  font-size:14px;
-}
-
-.news-detail strong{
-  color:#ddd;
-}
-
-/* ===== Highlight ===== */
-
-.highlight{
-  margin-top:55px;
-  padding:35px 28px;
-  text-align:center;
-  border-radius:18px;
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255,197,70,.12),
-      transparent 65%
-    ),
-    rgba(255,255,255,.025);
-  border:1px solid rgba(255,215,120,.18);
-}
-
-.highlight h2{
-  color:#ffd76a;
-  font-size:26px;
-}
-
-.highlight p{
-  margin-top:10px;
-  color:#aaa;
-}
-
-.buttons{
-  margin-top:22px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  padding:11px 22px;
-  border-radius:10px;
-  font-weight:900;
-  border:1px solid rgba(255,215,120,.3);
-  background:#151515;
-  color:#ffd76a;
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  background:#211d13;
-}
-
-.btn.primary{
-  background:linear-gradient(135deg,#d6a83c,#ffe18a);
-  color:#111;
-  border:none;
-}
-
-/* ===== Footer ===== */
-
-footer{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding:30px 20px;
-  text-align:center;
-  color:#777;
-  font-size:13px;
-}
-
-/* ===== Mobile ===== */
-
-@media(max-width:700px){
-
-  .nav{
-    padding:12px 14px;
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .nav-links{
-    width:100%;
-    justify-content:center;
-  }
-
-  .nav-links a{
-    font-size:13px;
-    padding:6px 8px;
-  }
-
-  .hero{
-    padding:30px 15px 20px;
-  }
-
-  .hero-logo{
-    border-radius:14px;
-  }
-
-  .hero h1{
-    font-size:30px;
-    margin-top:22px;
-  }
-
-  .hero p{
-    font-size:15px;
-  }
-
-  .container{
-    padding:10px 15px 55px;
-  }
-
-  .section-title h2{
-    font-size:26px;
-  }
-
-  .news-card{
-    padding:23px 20px;
-  }
-
-  .news-card h3{
-    font-size:20px;
-  }
-
-  .highlight{
-    padding:28px 20px;
-  }
-}
-</style>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-    <a href="../" class="brand">
-      小白天堂 3.81
-    </a>
+    <header class="site-header">
 
-    <nav class="nav-links">
+        <div class="nav-container">
 
-      <a href="../">首頁</a>
+            <a href="../" class="nav-logo">
 
-      <a href="../game/">遊戲介紹</a>
+                <img
+                    src="../xiaobai-heaven-logo.jpg"
+                    alt="小白天堂 3.81"
+                >
 
-      <a href="./" class="active">最新消息</a>
+                <span>小白天堂 3.81</span>
 
-      <a href="../#welfare">新手福利</a>
+            </a>
 
-      <a href="../#download">遊戲下載</a>
 
-      <a href="../#community">社群</a>
+            <!-- 手機版選單按鈕 -->
 
-      <a
-        href="https://discord.gg/6fRCfpHCB"
-        target="_blank"
-        class="join-btn"
-      >
-        立即加入
-      </a>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="開啟選單"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    </nav>
 
-  </div>
-</header>
+            <!-- 導覽列 -->
 
+            <nav class="nav-menu">
 
-<!-- ===== Hero ===== -->
+                <a href="../">
+                    首頁
+                </a>
 
-<section class="hero">
+                <a href="../game/">
+                    遊戲介紹
+                </a>
 
-  <img
-    class="hero-logo"
-    src="../xiaobai-heaven-logo.jpg"
-    alt="小白天堂 3.81"
-  >
+                <a href="./" class="active">
+                    最新消息
+                </a>
 
-  <h1>最新消息</h1>
+                <a href="../events/">
+                    活動
+                </a>
 
-  <p>
-    掌握小白天堂 3.81 最新公告、活動與福利資訊
-  </p>
+                <a href="../beginner/">
+                    新手專區
+                </a>
 
-</section>
+                <a href="../guide/">
+                    攻略指南
+                </a>
 
+                <a href="../classes/">
+                    職業介紹
+                </a>
 
-<main class="container">
+                <a href="../videos/">
+                    影片
+                </a>
 
-  <div class="section-title">
-    <h2>官方公告</h2>
-    <p>最新遊戲資訊與重要通知</p>
-  </div>
+                <a href="../community/">
+                    玩家社群
+                </a>
 
+                <a href="../download/">
+                    遊戲下載
+                </a>
 
-  <section class="news-list">
+                <a href="../about/">
+                    關於我們
+                </a>
 
+                <a href="../faq/">
+                    FAQ
+                </a>
 
-    <!-- News 1 -->
+                <a
+                    href="https://discord.gg/6fRCfpHCB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-cta"
+                >
+                    立即加入
+                </a>
 
-    <article class="news-card">
+            </nav>
 
-      <div class="news-top">
+        </div>
 
-        <span class="tag">
-          重要
-        </span>
+    </header>
 
-        <span class="date">
-          2026-09-10
-        </span>
 
-      </div>
+    <!-- =====================================================
+         PAGE HERO
+    ====================================================== -->
 
-      <h3>
-        新血福利：完成加 LINE 與 DC 送永久卡、升階卷！
-      </h3>
+    <section class="page-hero">
 
-      <p>
-        新玩家加入小白天堂後，完成官方 LINE
-        與 Discord 加入，即可申請新血福利。
-      </p>
+        <h1>
+            最新消息
+        </h1>
 
-      <div class="news-detail">
+        <p>
+            掌握小白天堂 3.81 最新公告、活動與福利資訊
+        </p>
 
-        <strong>福利內容：</strong>
+    </section>
 
-        [ +0 ] 贊助永久卡 1 張、
-        贊助永久升階卷 1 張。
 
-        <br>
+    <!-- =====================================================
+         NEWS
+    ====================================================== -->
 
-        每個帳號限領一次，完成後請聯絡官方客服進行確認與發放。
+    <main>
 
-      </div>
+        <section class="section">
 
-    </article>
+            <div class="section-title">
 
+                <div class="section-kicker">
+                    OFFICIAL NEWS
+                </div>
 
-    <!-- News 2 -->
+                <h2>
+                    官方公告
+                </h2>
 
-    <article class="news-card">
+                <p>
+                    最新遊戲資訊與重要通知
+                </p>
 
-      <div class="news-top">
+            </div>
 
-        <span class="tag event">
-          活動
-        </span>
 
-        <span class="date">
-          2026-09-10
-        </span>
+            <div class="news-list">
 
-      </div>
 
-      <h3>
-        開服連續七天，經驗加倍與精彩活動不間斷
-      </h3>
+                <!-- =================================================
+                     NEWS 01
+                ================================================== -->
 
-      <p>
-        開服期間準備多項活動內容，陪伴冒險者重新踏上亞丁大陸。
-      </p>
+                <article class="news-item">
 
-      <div class="news-detail">
+                    <div class="news-date">
+                        2026-09-10
+                    </div>
 
-        <strong>活動期間：</strong>
+                    <div>
 
-        開服連續七天。
+                        <h3>
+                            新血福利：完成加 LINE 與 DC 送永久卡、升階卷！
+                        </h3>
 
-        <br>
+                        <p>
+                            新玩家加入小白天堂後，完成官方 LINE
+                            與 Discord 加入，即可申請新血福利。
+                        </p>
 
-        詳細活動內容與實際開放時間，請留意官方 Discord 最新公告。
+                        <p class="muted" style="margin-top:10px;">
+                            <strong>福利內容：</strong>
+                            [ +0 ] 贊助永久卡 1 張、
+                            贊助永久升階卷 1 張。
+                            每個帳號限領一次，完成後請聯絡官方客服進行確認與發放。
+                        </p>
 
-      </div>
+                    </div>
 
-    </article>
+                </article>
 
 
-    <!-- News 3 -->
+                <!-- =================================================
+                     NEWS 02
+                ================================================== -->
 
-    <article class="news-card">
+                <article class="news-item">
 
-      <div class="news-top">
+                    <div class="news-date">
+                        2026-09-10
+                    </div>
 
-        <span class="tag notice">
-          公告
-        </span>
+                    <div>
 
-        <span class="date">
-          2026-09-09
-        </span>
+                        <h3>
+                            開服連續七天，經驗加倍與精彩活動不間斷
+                        </h3>
 
-      </div>
+                        <p>
+                            開服期間準備多項活動內容，陪伴冒險者重新踏上亞丁大陸。
+                        </p>
 
-      <h3>
-        新手福利禮包發放與領取教學
-      </h3>
+                        <p class="muted" style="margin-top:10px;">
+                            <strong>活動期間：</strong>
+                            開服連續七天。
+                            詳細活動內容與實際開放時間，請留意官方 Discord 最新公告。
+                        </p>
 
-      <p>
-        新加入的玩家可以依照官方流程領取新手福利，快速開始亞丁大陸冒險。
-      </p>
+                    </div>
 
-      <div class="news-detail">
+                </article>
 
-        <strong>提醒：</strong>
 
-        領取福利前請先加入官方 LINE
-        與 Discord，並依照客服指示完成確認。
+                <!-- =================================================
+                     NEWS 03
+                ================================================== -->
 
-      </div>
+                <article class="news-item">
 
-    </article>
+                    <div class="news-date">
+                        2026-09-09
+                    </div>
 
+                    <div>
 
-  </section>
+                        <h3>
+                            新手福利禮包發放與領取教學
+                        </h3>
 
+                        <p>
+                            新加入的玩家可以依照官方流程領取新手福利，
+                            快速開始亞丁大陸冒險。
+                        </p>
 
-  <!-- ===== Highlight ===== -->
+                        <p class="muted" style="margin-top:10px;">
+                            <strong>提醒：</strong>
+                            領取福利前請先加入官方 LINE
+                            與 Discord，並依照客服指示完成確認。
+                        </p>
 
-  <section class="highlight">
+                    </div>
 
-    <h2>
-      不錯過任何官方消息
-    </h2>
+                </article>
 
-    <p>
-      加入官方 Discord，第一時間掌握活動、公告與遊戲資訊。
-    </p>
 
-    <div class="buttons">
+            </div>
 
-      <a
-        class="btn primary"
-        href="https://discord.gg/6fRCfpHCB"
-        target="_blank"
-      >
-        聯絡官方客服
-      </a>
+        </section>
 
-      <a
-        class="btn"
-        href="https://discord.gg/AwxV7gWn3"
-        target="_blank"
-      >
-        加入玩家社群
-      </a>
 
-      <a
-        class="btn"
-        href="../"
-      >
-        返回首頁
-      </a>
+        <!-- =====================================================
+             COMMUNITY CTA
+        ====================================================== -->
 
-    </div>
+        <section class="section">
 
-  </section>
+            <div class="content-box text-center">
 
-</main>
+                <h2>
+                    不錯過任何官方消息
+                </h2>
 
+                <p style="margin-top:10px;">
+                    加入官方 Discord，第一時間掌握活動、公告與遊戲資訊。
+                </p>
 
-<footer>
 
-  © 2026 小白天堂 3.81 All Rights Reserved.
+                <div
+                    class="hero-actions"
+                    style="margin-top:24px;"
+                >
 
-  <br>
+                    <a
+                        class="btn btn-primary"
+                        href="https://discord.gg/6fRCfpHCB"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        聯絡官方客服
+                    </a>
 
-  重返亞丁大陸・續寫輝煌篇章
+                    <a
+                        class="btn btn-secondary"
+                        href="https://discord.gg/AwxV7gWn3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        加入玩家社群
+                    </a>
 
-</footer>
+                    <a
+                        class="btn btn-secondary"
+                        href="../"
+                    >
+                        返回首頁
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-links">
+
+                <a href="../">
+                    首頁
+                </a>
+
+                <a href="../game/">
+                    遊戲介紹
+                </a>
+
+                <a href="./">
+                    最新消息
+                </a>
+
+                <a href="../events/">
+                    活動
+                </a>
+
+                <a href="../beginner/">
+                    新手專區
+                </a>
+
+                <a href="../guide/">
+                    攻略指南
+                </a>
+
+                <a href="../classes/">
+                    職業介紹
+                </a>
+
+                <a href="../community/">
+                    玩家社群
+                </a>
+
+                <a href="../download/">
+                    遊戲下載
+                </a>
+
+                <a href="../faq/">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <p>
+                © 2026 小白天堂 3.81 All Rights Reserved.
+            </p>
+
+            <p>
+                重返亞丁大陸・續寫輝煌篇章
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        type="button"
+        aria-label="回到頂端"
+    >
+        ↑
+    </button>
+
+
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>
