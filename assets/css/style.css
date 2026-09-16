@@ -983,5 +983,8 @@ button {
     min-height: 0 !important;
     box-sizing: border-box !important;
     overflow-x: hidden !important;
+    max-height: calc(100vh - 64px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
 }
 }
