@@ -16,6 +16,208 @@
 <link rel="stylesheet"
       href="../assets/css/style.css">
 
+<style>
+
+/* =====================================================
+   遊戲介紹頁面專用 CSS
+===================================================== */
+
+
+/* =====================================================
+   伺服器設定
+===================================================== */
+
+.server-settings-wrap{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    padding:0;
+}
+
+.server-table{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+
+    border-collapse:separate;
+    border-spacing:0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27,20,29,.98),
+            rgba(14,11,17,.98)
+        );
+
+    border:1px solid rgba(218,164,64,.32);
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.30),
+        inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+
+/* ===== 表頭 ===== */
+
+.server-table thead th{
+    padding:18px 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(50,38,27,.98),
+            rgba(31,24,28,.98)
+        );
+
+    color:#ffe08a;
+
+    font-size:16px;
+    font-weight:900;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(218,164,64,.35);
+
+    letter-spacing:.5px;
+}
+
+
+/* ===== 表格內容 ===== */
+
+.server-table tbody td{
+    padding:17px 24px;
+
+    color:#ddd0b9;
+
+    font-size:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+
+    vertical-align:middle;
+}
+
+
+/* 最後一列取消底線 */
+
+.server-table tbody tr:last-child td{
+    border-bottom:0;
+}
+
+
+/* ===== 左側項目 ===== */
+
+.server-table tbody td:first-child{
+    width:48%;
+
+    color:#cfc2ad;
+
+    font-weight:700;
+}
+
+
+/* ===== 右側設定值 ===== */
+
+.server-table tbody td:last-child{
+    width:52%;
+
+    color:#ffd76a;
+
+    font-weight:900;
+
+    font-size:16px;
+
+    text-shadow:
+        0 0 10px rgba(255,215,106,.12);
+}
+
+
+/* ===== 滑過效果 ===== */
+
+.server-table tbody tr{
+    transition:
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.server-table tbody tr:hover{
+    background:rgba(218,164,64,.07);
+}
+
+
+/* =====================================================
+   手機版伺服器設定
+===================================================== */
+
+@media(max-width:800px){
+
+    .server-settings-wrap{
+        width:100%;
+        max-width:100%;
+    }
+
+    .server-table{
+        width:100%;
+        max-width:100%;
+
+        border-radius:16px;
+    }
+
+    .server-table thead th{
+        padding:14px 10px;
+
+        font-size:14px;
+    }
+
+    .server-table tbody td{
+        padding:14px 10px;
+
+        font-size:14px;
+    }
+
+    .server-table tbody td:first-child{
+        width:48%;
+    }
+
+    .server-table tbody td:last-child{
+        width:52%;
+
+        font-size:15px;
+    }
+
+}
+
+
+/* =====================================================
+   小尺寸手機
+===================================================== */
+
+@media(max-width:420px){
+
+    .server-table thead th{
+        padding:13px 8px;
+
+        font-size:13px;
+    }
+
+    .server-table tbody td{
+        padding:13px 7px;
+
+        font-size:13px;
+    }
+
+    .server-table tbody td:last-child{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
 </head>
 
 
@@ -43,7 +245,9 @@
 
         <nav class="nav-menu">
 
-            <a href="/">首頁</a>
+            <a href="/">
+                首頁
+            </a>
 
             <a href="/game/" class="active">
                 遊戲介紹
@@ -83,6 +287,10 @@
 
             <a href="/about/">
                 關於我們
+            </a>
+
+            <a href="/disclaimer/">
+                免責聲明
             </a>
 
             <a href="/faq/">
@@ -358,6 +566,10 @@
 
         <div class="section-title">
 
+            <div class="section-kicker">
+                SERVER SETTINGS
+            </div>
+
             <h2>
                 ⚙️ 伺服器設定
             </h2>
@@ -369,120 +581,124 @@
         </div>
 
 
-        <table class="server-table">
+        <div class="server-settings-wrap">
 
-            <thead>
+            <table class="server-table">
 
-                <tr>
+                <thead>
 
-                    <th>
-                        項目
-                    </th>
+                    <tr>
 
-                    <th>
-                        設定
-                    </th>
+                        <th>
+                            項目
+                        </th>
 
-                </tr>
+                        <th>
+                            設定
+                        </th>
 
-            </thead>
+                    </tr>
 
-
-            <tbody>
-
-                <tr>
-
-                    <td>
-                        遊戲版本
-                    </td>
-
-                    <td>
-                        3.81 經典仿正
-                    </td>
-
-                </tr>
+                </thead>
 
 
-                <tr>
+                <tbody>
 
-                    <td>
-                        經驗值
-                    </td>
+                    <tr>
 
-                    <td>
-                        5 倍
-                    </td>
+                        <td>
+                            遊戲版本
+                        </td>
 
-                </tr>
+                        <td>
+                            3.81 經典仿正
+                        </td>
 
-
-                <tr>
-
-                    <td>
-                        金幣
-                    </td>
-
-                    <td>
-                        3 倍
-                    </td>
-
-                </tr>
+                    </tr>
 
 
-                <tr>
+                    <tr>
 
-                    <td>
-                        掉寶
-                    </td>
+                        <td>
+                            經驗值
+                        </td>
 
-                    <td>
-                        2 倍
-                    </td>
+                        <td>
+                            5 倍
+                        </td>
 
-                </tr>
-
-
-                <tr>
-
-                    <td>
-                        正義
-                    </td>
-
-                    <td>
-                        2 倍
-                    </td>
-
-                </tr>
+                    </tr>
 
 
-                <tr>
+                    <tr>
 
-                    <td>
-                        武器
-                    </td>
+                        <td>
+                            金幣
+                        </td>
 
-                    <td>
-                        2 倍
-                    </td>
+                        <td>
+                            3 倍
+                        </td>
 
-                </tr>
+                    </tr>
 
 
-                <tr>
+                    <tr>
 
-                    <td>
-                        防具
-                    </td>
+                        <td>
+                            掉寶
+                        </td>
 
-                    <td>
-                        2 倍
-                    </td>
+                        <td>
+                            2 倍
+                        </td>
 
-                </tr>
+                    </tr>
 
-            </tbody>
 
-        </table>
+                    <tr>
+
+                        <td>
+                            正義
+                        </td>
+
+                        <td>
+                            2 倍
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            武器
+                        </td>
+
+                        <td>
+                            2 倍
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            防具
+                        </td>
+
+                        <td>
+                            2 倍
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 
