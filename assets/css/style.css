@@ -971,5 +971,12 @@ button {
         right: 15px;
         bottom: 15px;
     }
+/* ===== 手機選單位置修正 ===== */
 
+.nav-menu {
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
 }
