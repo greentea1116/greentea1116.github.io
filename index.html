@@ -257,7 +257,67 @@ section{
     font-size:38px;
     margin-bottom:10px;
 }
+/* ===== 遊戲特色卡片強化 ===== */
 
+.features-section .card{
+    position:relative;
+    overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.features-section .card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:12%;
+    width:76%;
+    height:2px;
+    background:linear-gradient(90deg, transparent, #daa440, #fff1a8, #daa440, transparent);
+    box-shadow:0 0 12px rgba(218,164,64,.65);
+}
+
+.features-section .card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:radial-gradient(circle at 50% 0%, rgba(218,164,64,.12), transparent 55%);
+}
+
+.features-section .card-icon{
+    position:relative;
+    z-index:1;
+    filter:drop-shadow(0 0 8px rgba(218,164,64,.45));
+}
+
+.features-section .card h3,
+.features-section .card p{
+    position:relative;
+    z-index:1;
+}
+
+/* 手機版縮小卡片高度 */
+@media (max-width:768px){
+
+    .features-section .card{
+        padding:18px 16px;
+    }
+
+    .features-section .card-icon{
+        font-size:34px;
+        margin-bottom:6px;
+    }
+
+    .features-section .card h3{
+        margin-bottom:6px;
+    }
+
+    .features-section .card p{
+        font-size:14px;
+        line-height:1.7;
+        margin:0;
+    }
+}
 .card h3{
     color:#f7d47e;
     margin-bottom:8px;
