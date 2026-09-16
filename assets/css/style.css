@@ -976,7 +976,12 @@ button {
 .nav-menu {
     justify-content: flex-start !important;
     align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     height: auto !important;
     min-height: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
 }
 }
