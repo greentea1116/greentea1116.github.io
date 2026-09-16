@@ -1,721 +1,551 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>玩家社群｜小白天堂 3.81</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta name="description"
-content="小白天堂 3.81 玩家社群，加入官方 Discord 與 LINE，掌握最新遊戲資訊、活動公告與玩家交流內容。">
+    <title>玩家社群｜小白天堂 3.81</title>
 
-<style>
-*{
-    box-sizing:border-box;
-}
+    <meta
+        name="description"
+        content="小白天堂 3.81 玩家社群，加入官方 Discord，掌握最新遊戲資訊、活動公告與玩家交流內容。"
+    >
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    margin:0;
-    background:#080808;
-    color:#f5f5f5;
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    sans-serif;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(5,5,5,.96);
-    border-bottom:1px solid rgba(245,190,55,.25);
-    backdrop-filter:blur(10px);
-}
-
-.nav{
-    max-width:1200px;
-    margin:auto;
-    padding:18px 24px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.logo-text{
-    width:100%;
-    text-align:center;
-    color:#ffd45a;
-    font-size:28px;
-    font-weight:900;
-    letter-spacing:2px;
-    margin-bottom:4px;
-}
-
-.nav a{
-    padding:11px 15px;
-    border-radius:12px;
-    color:#eee;
-    font-size:16px;
-    transition:.25s;
-}
-
-.nav a:hover{
-    color:#ffd45a;
-}
-
-.nav a.active{
-    background:rgba(255,205,70,.12);
-    color:#ffd45a;
-}
-
-.join{
-    background:linear-gradient(135deg,#ffd85d,#e9ad35);
-    color:#17110a !important;
-    font-weight:900;
-}
-
-.hero{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 24px 35px;
-    text-align:center;
-}
-
-.hero img{
-    width:100%;
-    max-width:900px;
-    aspect-ratio:6/4;
-    object-fit:cover;
-    display:block;
-    margin:auto;
-    border-radius:26px;
-    border:1px solid rgba(255,210,90,.35);
-    box-shadow:0 20px 70px rgba(0,0,0,.65);
-}
-
-.hero h1{
-    margin:38px 0 12px;
-    font-size:48px;
-    color:#ffd45a;
-    font-weight:900;
-    letter-spacing:3px;
-}
-
-.hero p{
-    margin:0;
-    color:#aaa;
-    font-size:19px;
-    line-height:1.7;
-}
-
-.section{
-    max-width:1150px;
-    margin:auto;
-    padding:60px 24px;
-}
-
-.section-title{
-    text-align:center;
-    color:#ffd45a;
-    font-size:34px;
-    font-weight:900;
-    margin:0 0 12px;
-}
-
-.section-sub{
-    text-align:center;
-    color:#888;
-    margin:0 0 38px;
-    font-size:17px;
-}
-
-.community-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-}
-
-.community-card{
-    padding:35px 30px;
-    border-radius:22px;
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,210,90,.08),
-        rgba(255,255,255,.025)
-    );
-    border:1px solid rgba(255,210,90,.2);
-    text-align:center;
-    transition:.3s;
-}
-
-.community-card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(255,210,90,.5);
-    box-shadow:0 18px 50px rgba(0,0,0,.45);
-}
-
-.icon{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.community-card h3{
-    margin:0 0 12px;
-    color:#ffd45a;
-    font-size:28px;
-}
-
-.community-card p{
-    margin:0 auto 24px;
-    max-width:480px;
-    color:#aaa;
-    line-height:1.9;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:12px;
-    font-weight:900;
-    transition:.25s;
-}
-
-.btn-gold{
-    background:linear-gradient(135deg,#ffd85d,#e8ac32);
-    color:#17110a;
-}
-
-.btn-gold:hover{
-    transform:translateY(-2px);
-}
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:35px;
-}
-
-.info{
-    padding:25px 20px;
-    background:#101010;
-    border:1px solid #242424;
-    border-radius:18px;
-    text-align:center;
-}
-
-.info-icon{
-    font-size:35px;
-    margin-bottom:10px;
-}
-
-.info h3{
-    color:#ffd45a;
-    margin:0 0 8px;
-    font-size:19px;
-}
-
-.info p{
-    color:#888;
-    margin:0;
-    line-height:1.7;
-    font-size:15px;
-}
-
-.notice{
-    max-width:900px;
-    margin:40px auto 0;
-    padding:28px;
-    border-radius:20px;
-    background:#101010;
-    border:1px solid #252525;
-    text-align:center;
-}
-
-.notice h3{
-    margin:0 0 10px;
-    color:#ffd45a;
-    font-size:22px;
-}
-
-.notice p{
-    margin:0;
-    color:#999;
-    line-height:1.8;
-}
-
-.cta{
-    max-width:900px;
-    margin:25px auto 80px;
-    padding:50px 25px;
-    text-align:center;
-    border-radius:24px;
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(255,205,75,.13),
-        rgba(255,205,75,.02) 65%,
-        transparent
-    );
-    border:1px solid rgba(255,210,90,.18);
-}
-
-.cta h2{
-    color:#ffd45a;
-    font-size:32px;
-    margin:0 0 12px;
-}
-
-.cta p{
-    color:#aaa;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn-dark{
-    border:1px solid rgba(255,210,90,.35);
-    color:#ffd45a;
-    background:#111;
-}
-
-footer{
-    border-top:1px solid #242424;
-    text-align:center;
-    padding:35px 20px;
-    color:#666;
-    line-height:1.8;
-    font-size:14px;
-}
-
-@media(max-width:800px){
-
-    .community-grid{
-        grid-template-columns:1fr;
-    }
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:700px){
-
-    .nav{
-        padding:15px 10px;
-        gap:3px;
-    }
-
-    .logo-text{
-        font-size:24px;
-    }
-
-    .nav a{
-        font-size:14px;
-        padding:9px 10px;
-    }
-
-    .hero{
-        padding:30px 18px 20px;
-    }
-
-    .hero img{
-        border-radius:20px;
-    }
-
-    .hero h1{
-        font-size:38px;
-        margin-top:28px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .section{
-        padding:45px 18px;
-    }
-
-    .section-title{
-        font-size:30px;
-    }
-
-    .community-card{
-        padding:30px 22px;
-    }
-
-    .community-card h3{
-        font-size:25px;
-    }
-
-    .cta{
-        margin:20px 18px 60px;
-    }
-}
-</style>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-<header>
 
-<nav class="nav">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<div class="logo-text">
-小白天堂 3.81
-</div>
+    <header class="site-header">
 
-<a href="../">
-首頁
-</a>
+        <div class="nav-container">
 
-<a href="../game/">
-遊戲介紹
-</a>
+            <a href="../" class="nav-logo">
 
-<a href="../news/">
-最新消息
-</a>
+                <img
+                    src="../xiaobai-heaven-logo.jpg"
+                    alt="小白天堂 3.81"
+                >
 
-<a href="../events/">
-活動
-</a>
+                <span>
+                    小白天堂 3.81
+                </span>
 
-<a href="../beginner/">
-新手專區
-</a>
+            </a>
 
-<a href="../guide/">
-攻略指南
-</a>
 
-<a href="../classes/">
-職業介紹
-</a>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="開啟選單"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<a href="../videos/">
-影片專區
-</a>
 
-<a href="./" class="active">
-社群
-</a>
+            <nav class="nav-menu">
 
-<a href="../#download">
-遊戲下載
-</a>
+                <a href="../">
+                    首頁
+                </a>
 
-<a
-href="https://discord.gg/6fRCfpHCB"
-class="join"
-target="_blank">
-立即加入
-</a>
+                <a href="../game/">
+                    遊戲介紹
+                </a>
 
-</nav>
+                <a href="../news/">
+                    最新消息
+                </a>
 
-</header>
+                <a href="../events/">
+                    活動
+                </a>
 
+                <a href="../beginner/">
+                    新手專區
+                </a>
 
-<main>
+                <a href="../guide/">
+                    攻略指南
+                </a>
 
-<section class="hero">
+                <a href="../classes/">
+                    職業介紹
+                </a>
 
-<img
-src="../xiaobai-heaven-logo.jpg"
-alt="小白天堂 3.81">
+                <a href="../videos/">
+                    影片
+                </a>
 
-<h1>
-玩家社群
-</h1>
+                <a href="./" class="active">
+                    玩家社群
+                </a>
 
-<p>
-加入官方社群，與其他玩家一起交流、冒險與分享遊戲資訊
-</p>
+                <a href="../download/">
+                    遊戲下載
+                </a>
 
-</section>
+                <a href="../about/">
+                    關於我們
+                </a>
 
+                <a href="../faq/">
+                    FAQ
+                </a>
 
-<section class="section">
+                <a
+                    href="https://discord.gg/6fRCfpHCB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-cta"
+                >
+                    立即加入
+                </a>
 
-<h2 class="section-title">
-官方社群
-</h2>
+            </nav>
 
-<p class="section-sub">
-最新消息與玩家交流都在這裡
-</p>
+        </div>
 
+    </header>
 
-<div class="community-grid">
 
+    <!-- =====================================================
+         PAGE HERO
+    ====================================================== -->
 
-<div class="community-card">
+    <section class="page-hero">
 
-<div class="icon">
-💬
-</div>
+        <h1>
+            玩家社群
+        </h1>
 
-<h3>
-官方 Discord
-</h3>
+        <p>
+            加入官方社群，與其他玩家一起交流、冒險與分享遊戲資訊
+        </p>
 
-<p>
-加入小白天堂官方 Discord，
-掌握遊戲公告、活動資訊，
-並與其他玩家交流。
-</p>
+    </section>
 
-<a
-href="https://discord.gg/AwxV7gWn3"
-class="btn btn-gold"
-target="_blank">
-加入玩家社群
-</a>
 
-</div>
+    <main>
 
 
-<div class="community-card">
+        <!-- =================================================
+             OFFICIAL COMMUNITY
+        ================================================== -->
 
-<div class="icon">
-🎧
-</div>
+        <section class="section">
 
-<h3>
-官方客服
-</h3>
+            <div class="section-title">
 
-<p>
-如果遇到遊戲相關問題，
-可以透過官方 Discord 客服管道
-與管理團隊聯繫。
-</p>
+                <div class="section-kicker">
+                    OFFICIAL COMMUNITY
+                </div>
 
-<a
-href="https://discord.gg/6fRCfpHCB"
-class="btn btn-gold"
-target="_blank">
-聯絡官方客服
-</a>
+                <h2>
+                    官方社群
+                </h2>
 
-</div>
+                <p>
+                    最新消息與玩家交流都在這裡
+                </p>
 
+            </div>
 
-</div>
 
-</section>
+            <div class="cards">
 
 
-<section class="section">
+                <!-- 官方 Discord -->
 
-<h2 class="section-title">
-加入社群可以做什麼？
-</h2>
+                <article class="card">
 
-<p class="section-sub">
-一起探索小白天堂的世界
-</p>
+                    <div class="card-icon">
+                        💬
+                    </div>
 
+                    <h3>
+                        官方 Discord
+                    </h3>
 
-<div class="info-grid">
+                    <p>
+                        加入小白天堂官方 Discord，
+                        掌握遊戲公告、活動資訊，
+                        並與其他玩家交流。
+                    </p>
 
+                    <div class="hero-actions">
 
-<div class="info">
+                        <a
+                            href="https://discord.gg/AwxV7gWn3"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            加入玩家社群
+                        </a>
 
-<div class="info-icon">
-📢
-</div>
+                    </div>
 
-<h3>
-最新公告
-</h3>
+                </article>
 
-<p>
-掌握官方發布的最新遊戲消息與重要公告。
-</p>
 
-</div>
+                <!-- 官方客服 -->
 
+                <article class="card">
 
-<div class="info">
+                    <div class="card-icon">
+                        🎧
+                    </div>
 
-<div class="info-icon">
-🎉
-</div>
+                    <h3>
+                        官方客服
+                    </h3>
 
-<h3>
-活動資訊
-</h3>
+                    <p>
+                        如果遇到遊戲相關問題，
+                        可以透過官方 Discord 客服管道
+                        與管理團隊聯繫。
+                    </p>
 
-<p>
-了解目前進行中的活動與相關遊戲內容。
-</p>
+                    <div class="hero-actions">
 
-</div>
+                        <a
+                            href="https://discord.gg/6fRCfpHCB"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            聯絡官方客服
+                        </a>
 
+                    </div>
 
-<div class="info">
+                </article>
 
-<div class="info-icon">
-👥
-</div>
 
-<h3>
-玩家交流
-</h3>
+            </div>
 
-<p>
-與其他玩家分享冒險經驗與遊戲心得。
-</p>
+        </section>
 
-</div>
 
+        <!-- =================================================
+             COMMUNITY FEATURES
+        ================================================== -->
 
-<div class="info">
+        <section class="section">
 
-<div class="info-icon">
-⚔️
-</div>
+            <div class="section-title">
 
-<h3>
-組隊冒險
-</h3>
+                <div class="section-kicker">
+                    COMMUNITY FEATURES
+                </div>
 
-<p>
-尋找志同道合的玩家，一起挑戰遊戲內容。
-</p>
+                <h2>
+                    加入社群可以做什麼？
+                </h2>
 
-</div>
+                <p>
+                    一起探索小白天堂的世界
+                </p>
 
+            </div>
 
-<div class="info">
 
-<div class="info-icon">
-🧭
-</div>
+            <div class="cards">
 
-<h3>
-攻略討論
-</h3>
 
-<p>
-交流角色成長、裝備與遊戲玩法。
-</p>
+                <!-- 最新公告 -->
 
-</div>
+                <article class="card">
 
+                    <div class="card-icon">
+                        📢
+                    </div>
 
-<div class="info">
+                    <h3>
+                        最新公告
+                    </h3>
 
-<div class="info-icon">
-🛠️
-</div>
+                    <p>
+                        掌握官方發布的最新遊戲消息與重要公告。
+                    </p>
 
-<h3>
-問題回報
-</h3>
+                </article>
 
-<p>
-遇到遊戲問題時，可以透過官方管道反映。
-</p>
 
-</div>
+                <!-- 活動資訊 -->
 
+                <article class="card">
 
-</div>
+                    <div class="card-icon">
+                        🎉
+                    </div>
 
+                    <h3>
+                        活動資訊
+                    </h3>
 
-<div class="notice">
+                    <p>
+                        了解目前進行中的活動與相關遊戲內容。
+                    </p>
 
-<h3>
-📌 官方提醒
-</h3>
+                </article>
 
-<p>
-請認明官方社群與官方公告，
-不要相信未經官方確認的遊戲資訊。
-</p>
 
-</div>
+                <!-- 玩家交流 -->
 
-</section>
+                <article class="card">
 
+                    <div class="card-icon">
+                        👥
+                    </div>
 
-<section class="cta">
+                    <h3>
+                        玩家交流
+                    </h3>
 
-<h2>
-準備好加入小白天堂了嗎？
-</h2>
+                    <p>
+                        與其他玩家分享冒險經驗與遊戲心得。
+                    </p>
 
-<p>
-加入官方社群，與其他冒險者一起踏上亞丁大陸。
-</p>
+                </article>
 
-<div class="buttons">
 
-<a
-href="https://discord.gg/AwxV7gWn3"
-class="btn btn-gold"
-target="_blank">
-加入玩家社群
-</a>
+                <!-- 組隊冒險 -->
 
-<a
-href="../beginner/"
-class="btn btn-dark">
-新手專區
-</a>
+                <article class="card">
 
-<a
-href="../"
-class="btn btn-dark">
-回到首頁
-</a>
+                    <div class="card-icon">
+                        ⚔️
+                    </div>
 
-</div>
+                    <h3>
+                        組隊冒險
+                    </h3>
 
-</section>
+                    <p>
+                        尋找志同道合的玩家，一起挑戰遊戲內容。
+                    </p>
 
-</main>
+                </article>
 
 
-<footer>
+                <!-- 攻略討論 -->
 
-<div>
-小白天堂 3.81
-</div>
+                <article class="card">
 
-<div>
-重返亞丁大陸・續寫輝煌篇章
-</div>
+                    <div class="card-icon">
+                        🧭
+                    </div>
 
-<div>
-© 2026 小白天堂 All Rights Reserved.
-</div>
+                    <h3>
+                        攻略討論
+                    </h3>
 
-</footer>
+                    <p>
+                        交流角色成長、裝備與遊戲玩法。
+                    </p>
+
+                </article>
+
+
+                <!-- 問題回報 -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        🛠️
+                    </div>
+
+                    <h3>
+                        問題回報
+                    </h3>
+
+                    <p>
+                        遇到遊戲問題時，可以透過官方管道反映。
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- 官方提醒 -->
+
+            <div
+                class="content-box"
+                style="max-width:900px;margin:40px auto 0;text-align:center;"
+            >
+
+                <h3>
+                    📌 官方提醒
+                </h3>
+
+                <p style="margin-top:10px;">
+                    請認明官方社群與官方公告，
+                    不要相信未經官方確認的遊戲資訊。
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="content-box text-center">
+
+                <h2>
+                    準備好加入小白天堂了嗎？
+                </h2>
+
+                <p style="margin-top:10px;">
+                    加入官方社群，與其他冒險者一起踏上亞丁大陸。
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="https://discord.gg/AwxV7gWn3"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        加入玩家社群
+                    </a>
+
+
+                    <a
+                        href="../beginner/"
+                        class="btn btn-secondary"
+                    >
+                        新手專區
+                    </a>
+
+
+                    <a
+                        href="../"
+                        class="btn btn-secondary"
+                    >
+                        回到首頁
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-links">
+
+                <a href="../">
+                    首頁
+                </a>
+
+                <a href="../game/">
+                    遊戲介紹
+                </a>
+
+                <a href="../news/">
+                    最新消息
+                </a>
+
+                <a href="../events/">
+                    活動
+                </a>
+
+                <a href="../beginner/">
+                    新手專區
+                </a>
+
+                <a href="../guide/">
+                    攻略指南
+                </a>
+
+                <a href="../classes/">
+                    職業介紹
+                </a>
+
+                <a href="../videos/">
+                    影片
+                </a>
+
+                <a href="./">
+                    玩家社群
+                </a>
+
+                <a href="../download/">
+                    遊戲下載
+                </a>
+
+                <a href="../about/">
+                    關於我們
+                </a>
+
+                <a href="../faq/">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <p>
+                © 2026 小白天堂 3.81 All Rights Reserved.
+            </p>
+
+            <p>
+                重返亞丁大陸・續寫輝煌篇章
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button
+        class="back-to-top"
+        type="button"
+        aria-label="回到頂端"
+    >
+        ↑
+    </button>
+
+
+    <script src="../assets/js/main.js"></script>
 
 </body>
 </html>
