@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="小白天堂 3.81 經典仿正天堂伺服器，重返亞丁大陸，續寫輝煌篇章。提供新手福利、活動資訊、遊戲下載與官方 Discord 社群。"
+        content="小白天堂 3.81 經典仿正天堂伺服器，重返亞丁大陸，續寫輝煌篇章。經典玩法、新手福利、活動資訊、遊戲下載與官方社群。"
     >
 
     <link
@@ -28,10 +28,6 @@
 
         /* =========================================================
            首頁專用 CSS
-        ========================================================== */
-
-        /* =========================================================
-           基礎設定
         ========================================================== */
 
         * {
@@ -80,7 +76,7 @@
         .hero {
             min-height: 100vh;
 
-            padding: 90px 0 40px;
+            padding: 90px 0 60px;
 
             display: flex;
             align-items: center;
@@ -102,7 +98,7 @@
                 linear-gradient(
                     180deg,
                     rgba(4, 7, 18, 0.38),
-                    rgba(4, 7, 18, 0.72)
+                    rgba(4, 7, 18, 0.78)
                 ),
                 url("xiaobai-heaven-logo.jpg")
                 center / cover no-repeat;
@@ -128,7 +124,7 @@
         .hero-logo {
             width: min(950px, 100%);
 
-            margin: 0 auto 15px;
+            margin: 0 auto 18px;
 
             filter:
                 drop-shadow(0 18px 35px rgba(0, 0, 0, 0.80))
@@ -222,10 +218,12 @@
 
             overflow: hidden;
 
+            padding: 75px 0;
+
             background:
                 radial-gradient(
                     circle at center,
-                    rgba(218, 164, 64, 0.14),
+                    rgba(218, 164, 64, 0.12),
                     transparent 48%
                 ),
                 linear-gradient(
@@ -235,31 +233,14 @@
                 );
         }
 
-        .memory-section::before {
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    rgba(9, 7, 11, 0.20),
-                    rgba(9, 7, 11, 0.70)
-                );
-
-            pointer-events: none;
-        }
-
         .memory-box {
             position: relative;
 
-            max-width: 900px;
+            max-width: 850px;
 
             margin: auto;
 
-            padding: 55px 45px;
+            padding: 50px 42px;
 
             text-align: center;
 
@@ -322,7 +303,7 @@
 
             font-size: clamp(30px, 5vw, 44px);
 
-            margin-bottom: 28px;
+            margin-bottom: 22px;
 
             text-shadow:
                 0 3px 15px rgba(0, 0, 0, 0.8);
@@ -335,7 +316,7 @@
 
             font-weight: 700;
 
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
         .memory-box p {
@@ -343,9 +324,9 @@
 
             font-size: 16px;
 
-            line-height: 2;
+            line-height: 1.9;
 
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .memory-highlight {
@@ -353,15 +334,11 @@
 
             font-weight: 700;
 
-            margin-top: 22px !important;
+            margin-top: 18px !important;
         }
 
-        .memory-ending {
-            margin-top: 20px !important;
-
-            color: #e8d6b4 !important;
-
-            font-weight: 700;
+        .memory-button {
+            margin-top: 25px;
         }
 
         /* =========================================================
@@ -369,7 +346,7 @@
         ========================================================== */
 
         section {
-            padding: 85px 0;
+            padding: 75px 0;
         }
 
         .section-dark {
@@ -388,7 +365,7 @@
         .section-title {
             text-align: center;
 
-            margin-bottom: 42px;
+            margin-bottom: 38px;
         }
 
         .section-title h2 {
@@ -404,19 +381,19 @@
         }
 
         /* =========================================================
-           遊戲特色
+           三大特色
         ========================================================== */
 
-        .cards {
+        .feature-grid {
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 16px;
+            gap: 18px;
         }
 
-        .card {
+        .feature-card {
             position: relative;
 
             overflow: hidden;
@@ -433,7 +410,7 @@
 
             border-radius: 18px;
 
-            padding: 20px 18px;
+            padding: 28px 20px;
 
             text-align: center;
 
@@ -446,17 +423,17 @@
                 border-color 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
+        .feature-card:hover {
+            transform: translateY(-7px);
 
             border-color:
                 rgba(218, 164, 64, 0.75);
 
             box-shadow:
-                0 18px 40px rgba(218, 164, 64, 0.28);
+                0 18px 40px rgba(218, 164, 64, 0.22);
         }
 
-        .card::before {
+        .feature-card::before {
             content: "";
 
             position: absolute;
@@ -481,31 +458,10 @@
                 0 0 12px rgba(218, 164, 64, 0.65);
         }
 
-        .card::after {
-            content: "";
+        .feature-icon {
+            font-size: 42px;
 
-            position: absolute;
-
-            inset: 0;
-
-            pointer-events: none;
-
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(218, 164, 64, 0.12),
-                    transparent 55%
-                );
-        }
-
-        .card-icon {
-            position: relative;
-
-            z-index: 1;
-
-            font-size: 38px;
-
-            margin-bottom: 10px;
+            margin-bottom: 12px;
 
             filter:
                 drop-shadow(
@@ -513,143 +469,34 @@
                 );
         }
 
-        .card h3 {
-            position: relative;
-
-            z-index: 1;
-
+        .feature-card h3 {
             color: #f7d47e;
 
             margin-bottom: 8px;
+
+            font-size: 20px;
         }
 
-        .card p {
-            position: relative;
-
-            z-index: 1;
-
+        .feature-card p {
             color: #b8ad99;
 
             font-size: 14px;
-        }
 
-        /* =========================================================
-           福利
-        ========================================================== */
-
-        .welfare {
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(222, 163, 51, 0.12),
-                    transparent 45%
-                ),
-                #100b11;
-        }
-
-        .welfare-box {
-            max-width: 850px;
-
-            margin: auto;
-
-            padding: 35px;
-
-            border:
-                1px solid rgba(229, 178, 71, 0.35);
-
-            border-radius: 22px;
-
-            background:
-                rgba(26, 18, 26, 0.8);
-
-            text-align: center;
-        }
-
-        .welfare-box h3 {
-            color: #ffe08c;
-
-            font-size: 25px;
+            line-height: 1.8;
 
             margin-bottom: 18px;
         }
 
-        .welfare-list {
-            list-style: none;
-
-            margin: 20px 0;
-        }
-
-        .welfare-list li {
-            padding: 10px;
-
-            color: #e7dcc6;
-        }
-
-        .welfare-list strong {
-            color: #ffd15c;
-        }
-
-        /* =========================================================
-           最新消息
-        ========================================================== */
-
-        .news-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-        .news {
-            background: #151018;
-
-            border:
-                1px solid #342838;
-
-            border-radius: 16px;
-
-            padding: 24px;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .news:hover {
-            transform: translateY(-5px);
-
-            border-color:
-                rgba(218, 164, 64, 0.65);
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.28);
-        }
-
-        .news-date {
-            color: #c99b4b;
-
-            font-size: 13px;
-
-            margin-bottom: 8px;
-        }
-
-        .news h3 {
-            color: #f5d685;
-
-            margin-bottom: 10px;
-        }
-
-        .news p {
-            color: #b8ad9b;
+        .feature-link {
+            color: #dcb45e;
 
             font-size: 14px;
+
+            font-weight: 700;
         }
 
         /* =========================================================
-           首頁影片：桌面自適應
+           宣傳影片
         ========================================================== */
 
         .video-wrap {
@@ -701,110 +548,116 @@
         }
 
         /* =========================================================
-           伺服器設定
+           新手福利
         ========================================================== */
 
-        .server-table {
-            width: 100%;
-
-            border-collapse: collapse;
-
-            overflow: hidden;
-
-            border-radius: 15px;
-
-            background: #141017;
+        .welfare {
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(222, 163, 51, 0.12),
+                    transparent 45%
+                ),
+                #100b11;
         }
 
-        .server-table th,
-        .server-table td {
-            padding: 15px;
-
-            text-align: center;
-
-            border-bottom:
-                1px solid #302735;
-        }
-
-        .server-table th {
-            background: #211823;
-
-            color: #ffd875;
-        }
-
-        .server-table td {
-            color: #ddd0b9;
-        }
-
-        /* =========================================================
-           社群
-        ========================================================== */
-
-        .community-box {
-            text-align: center;
-
+        .welfare-box {
             max-width: 850px;
 
             margin: auto;
 
-            padding: 40px 25px;
+            padding: 35px;
+
+            border:
+                1px solid rgba(229, 178, 71, 0.35);
 
             border-radius: 22px;
 
             background:
-                linear-gradient(
-                    145deg,
-                    #19121b,
-                    #0e0b11
-                );
+                rgba(26, 18, 26, 0.8);
 
-            border:
-                1px solid rgba(225, 171, 63, 0.28);
+            text-align: center;
         }
 
-        .community-box p {
+        .welfare-box h3 {
+            color: #ffe08c;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .welfare-box p {
+            color: #bdb09a;
+
+            margin-bottom: 20px;
+        }
+
+        .welfare-highlight {
+            color: #ffd15c;
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            margin: 18px 0 22px;
+        }
+
+        /* =========================================================
+           最終 CTA
+        ========================================================== */
+
+        .final-cta {
+            position: relative;
+
+            overflow: hidden;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(218, 164, 64, 0.16),
+                    transparent 48%
+                ),
+                linear-gradient(
+                    180deg,
+                    #120d14,
+                    #07060a
+                );
+        }
+
+        .final-cta-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 45px 30px;
+
+            border:
+                1px solid rgba(218, 164, 64, 0.30);
+
+            border-radius: 24px;
+
+            background:
+                rgba(18, 13, 20, 0.75);
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.30);
+        }
+
+        .final-cta h2 {
+            color: #ffe08c;
+
+            font-size: clamp(28px, 5vw, 42px);
+
+            margin-bottom: 12px;
+        }
+
+        .final-cta p {
             color: #b9ad99;
 
             margin-bottom: 25px;
-        }
-
-        /* =========================================================
-           下載
-        ========================================================== */
-
-        .download-box {
-            text-align: center;
-
-            max-width: 900px;
-
-            margin: auto;
-        }
-
-        .download-box p {
-            color: #bdb09a;
-
-            margin: 12px 0 25px;
-        }
-
-        /* =========================================================
-           免責
-        ========================================================== */
-
-        .disclaimer {
-            color: #8f877b;
-
-            font-size: 13px;
-        }
-
-        .disclaimer-box {
-            background: #0b090d;
-
-            border:
-                1px solid #28212c;
-
-            border-radius: 15px;
-
-            padding: 25px;
         }
 
         /* =========================================================
@@ -832,10 +685,6 @@
 
         @media (max-width: 800px) {
 
-            /* =====================================================
-               Hero
-            ====================================================== */
-
             .hero {
                 min-height: auto;
 
@@ -854,16 +703,16 @@
                 font-size: 14px;
             }
 
-            /* =====================================================
-               回憶．重新開始
-            ====================================================== */
+            .memory-section {
+                padding: 60px 0;
+            }
 
             .memory-box {
-                padding: 40px 22px;
+                padding: 38px 22px;
             }
 
             .memory-label {
-                font-size: 12px;
+                font-size: 11px;
 
                 letter-spacing: 2px;
             }
@@ -871,7 +720,7 @@
             .memory-box h2 {
                 font-size: 30px;
 
-                margin-bottom: 22px;
+                margin-bottom: 20px;
             }
 
             .memory-lead {
@@ -883,50 +732,16 @@
             .memory-box p {
                 font-size: 15px;
 
-                line-height: 1.9;
+                line-height: 1.85;
             }
 
-            /* =====================================================
-               遊戲特色
-            ====================================================== */
-
-            .cards {
+            .feature-grid {
                 grid-template-columns: 1fr;
             }
 
-            .card {
-                padding: 18px 16px;
+            .feature-card {
+                padding: 24px 18px;
             }
-
-            .card-icon {
-                font-size: 34px;
-
-                margin-bottom: 6px;
-            }
-
-            .card h3 {
-                margin-bottom: 6px;
-            }
-
-            .card p {
-                font-size: 14px;
-
-                line-height: 1.7;
-
-                margin: 0;
-            }
-
-            /* =====================================================
-               最新消息
-            ====================================================== */
-
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* =====================================================
-               手機影片
-            ====================================================== */
 
             .video-wrap {
                 width: 100%;
@@ -962,38 +777,17 @@
                 object-fit: contain;
             }
 
-            /* =====================================================
-               共用區塊
-            ====================================================== */
-
             section {
                 padding: 60px 0;
             }
 
-            /* =====================================================
-               福利
-            ====================================================== */
-
             .welfare-box {
-                padding: 25px 18px;
+                padding: 28px 18px;
             }
 
-            /* =====================================================
-               伺服器設定
-            ====================================================== */
-
-            .server-table {
-                font-size: 13px;
+            .final-cta-box {
+                padding: 38px 20px;
             }
-
-            .server-table th,
-            .server-table td {
-                padding: 10px 5px;
-            }
-
-            /* =====================================================
-               按鈕
-            ====================================================== */
 
             .btn {
                 width: 100%;
@@ -1035,8 +829,6 @@
 
             </a>
 
-            <!-- 手機版選單按鈕 -->
-
             <button
                 class="menu-toggle"
                 type="button"
@@ -1049,8 +841,6 @@
                 <span></span>
 
             </button>
-
-            <!-- 導覽列 -->
 
             <nav class="nav-menu">
 
@@ -1198,11 +988,7 @@
                     </p>
 
                     <p>
-                        一群人在村莊聊天，
-                    </p>
-
-                    <p>
-                        為了裝備蹲怪，
+                        一群人在村莊聊天，為了裝備蹲怪，
                     </p>
 
                     <p>
@@ -1210,7 +996,7 @@
                     </p>
 
                     <p>
-                        衝裝前，總要猶豫半天；
+                        衝裝前總要猶豫半天，
                     </p>
 
                     <p>
@@ -1221,218 +1007,13 @@
                         小白天堂想找回的，就是這種感覺。
                     </p>
 
-                    <p>
-                        不是三天就畢業，
-                    </p>
-
-                    <p>
-                        不是滿街都是神裝，
-                    </p>
-
-                    <p>
-                        也不是今天課金、明天就換裝。
-                    </p>
-
-                    <p>
-                        慢慢練、慢慢打、慢慢養成。
-                    </p>
-
-                    <p>
-                        讓每一次升級都值得期待，
-                    </p>
-
-                    <p>
-                        讓每一次冒險都有收穫，
-                    </p>
-
-                    <p>
-                        也讓每一件親手打到的裝備，
-                    </p>
-
-                    <p class="memory-ending">
-                        都真正擁有屬於它的價值。
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             遊戲特色
-        ====================================================== -->
-
-        <section class="section-dark features-section">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        ⚔️ 經典天堂・重新出發
-                    </h2>
-
-                    <p>
-                        熟悉的亞丁大陸，等待老玩家與新冒險者再次踏上旅程
-                    </p>
-
-                </div>
-
-                <div class="cards">
-
-                    <a
-                        href="/game/"
-                        class="card"
-                    >
-
-                        <div class="card-icon">
-                            🏰
-                        </div>
-
-                        <h3>
-                            經典 3.81
-                        </h3>
-
-                        <p>
-                            延續經典天堂 3.81 遊戲體驗，
-                            保留熟悉的世界與冒險感。
-                        </p>
-
-                    </a>
-
-                    <a
-                        href="/guide/"
-                        class="card"
-                    >
-
-                        <div class="card-icon">
-                            ⚔️
-                        </div>
-
-                        <h3>
-                            經典戰鬥
-                        </h3>
-
-                        <p>
-                            熟悉的角色成長、裝備強化與
-                            冒險戰鬥玩法。
-                        </p>
-
-                    </a>
-
-                    <a
-                        href="/classes/"
-                        class="card"
-                    >
-
-                        <div class="card-icon">
-                            👑
-                        </div>
-
-                        <h3>
-                            全新冒險
-                        </h3>
-
-                        <p>
-                            與夥伴一起加入亞丁世界，
-                            開始屬於你的全新篇章。
-                        </p>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             新手福利
-        ====================================================== -->
-
-        <section
-            class="welfare"
-            id="welfare"
-        >
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        🎁 新手福利
-                    </h2>
-
-                    <p>
-                        加入官方社群即可了解最新福利資訊
-                    </p>
-
-                </div>
-
-                <div class="welfare-box">
-
-                    <h3>
-                        新血玩家專屬福利
-                    </h3>
-
-                    <p>
-                        完成加入官方 LINE 社群與 Discord，
-                        即可申請新手福利。
-                    </p>
-
-                    <ul class="welfare-list">
-
-                        <li>
-                            🎁
-                            <strong>
-                                [+0] 贊助永久卡
-                            </strong>
-                        </li>
-
-                        <li>
-                            💰
-                            <strong>
-                                金幣 50 萬
-                            </strong>
-                        </li>
-
-                        <li>
-                            👤
-                            每個帳號限領一次
-                        </li>
-
-                    </ul>
-
-                    <p>
-                        詳細領取方式請加入官方社群並聯繫客服。
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a
-                            class="btn btn-gold"
-                            href="https://discord.gg/AwxV7gWn3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            💬 加入官方 Discord
-                        </a>
+                    <div class="memory-button">
 
                         <a
                             class="btn btn-dark"
-                            href="https://line.me/ti/g2/IPXklhVROAV7kst4d9ABe4lgxEvPLik5_aXwnQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/game/"
                         >
-                            🟢 加入官方 LINE
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
-                            href="/beginner/"
-                        >
-                            🎁 查看新手福利
+                            ⚔️ 了解小白天堂
                         </a>
 
                     </div>
@@ -1444,87 +1025,96 @@
         </section>
 
         <!-- =====================================================
-             最新消息
+             三大特色
         ====================================================== -->
 
-        <section
-            class="section-soft"
-            id="news"
-        >
+        <section class="section-dark">
 
             <div class="container">
 
                 <div class="section-title">
 
                     <h2>
-                        📰 最新消息
+                        ⚔️ 經典天堂・重新出發
                     </h2>
 
                     <p>
-                        掌握小白天堂最新公告與活動
+                        想了解更多，前往各專屬頁面查看完整內容
                     </p>
 
                 </div>
 
-                <div class="news-grid">
+                <div class="feature-grid">
 
                     <a
-                        href="/news/"
-                        class="news"
+                        href="/game/"
+                        class="feature-card"
                     >
 
-                        <div class="news-date">
-                            2026-09-10・重要
+                        <div class="feature-icon">
+                            🏰
                         </div>
 
                         <h3>
-                            新血福利正式開放
+                            經典 3.81
                         </h3>
 
                         <p>
-                            新玩家完成官方 LINE 與 Discord
-                            加入，即可了解永久卡與金幣 50 萬福利。
+                            熟悉的亞丁大陸，
+                            經典版本與伺服器設定一次了解。
                         </p>
+
+                        <div class="feature-link">
+                            查看遊戲介紹 →
+                        </div>
 
                     </a>
 
                     <a
-                        href="/news/"
-                        class="news"
+                        href="/guide/"
+                        class="feature-card"
                     >
 
-                        <div class="news-date">
-                            2026-09-10・活動
+                        <div class="feature-icon">
+                            ⚔️
                         </div>
 
                         <h3>
-                            開服連續七天活動
+                            經典戰鬥
                         </h3>
 
                         <p>
-                            開服期間推出連續七天經驗加倍
-                            與精彩活動。
+                            角色成長、裝備強化與冒險攻略，
+                            前往攻略指南深入了解。
                         </p>
+
+                        <div class="feature-link">
+                            查看攻略指南 →
+                        </div>
 
                     </a>
 
                     <a
-                        href="/news/"
-                        class="news"
+                        href="/classes/"
+                        class="feature-card"
                     >
 
-                        <div class="news-date">
-                            2026-09-09・公告
+                        <div class="feature-icon">
+                            👑
                         </div>
 
                         <h3>
-                            新手福利禮包
+                            多元職業
                         </h3>
 
                         <p>
-                            新進玩家可透過官方社群了解
-                            禮包領取與相關教學。
+                            王族、騎士、妖精、法師與黑暗妖精，
+                            選擇你的冒險道路。
                         </p>
+
+                        <div class="feature-link">
+                            查看職業介紹 →
+                        </div>
 
                     </a>
 
@@ -1538,7 +1128,7 @@
              宣傳影片
         ====================================================== -->
 
-        <section class="section-dark">
+        <section class="section-soft">
 
             <div class="container">
 
@@ -1549,7 +1139,7 @@
                     </h2>
 
                     <p>
-                        一起看看小白天堂的全新冒險
+                        先看看小白天堂的世界
                     </p>
 
                 </div>
@@ -1582,7 +1172,7 @@
                         class="btn btn-dark"
                         href="/videos/"
                     >
-                        🎬 查看完整影片
+                        🎬 查看影片專區
                     </a>
 
                 </div>
@@ -1592,147 +1182,49 @@
         </section>
 
         <!-- =====================================================
-             伺服器設定
+             新手福利
         ====================================================== -->
 
-        <section
-            class="section-soft"
-            id="server"
-        >
+        <section class="welfare">
 
             <div class="container">
 
                 <div class="section-title">
 
                     <h2>
-                        ⚙️ 伺服器設定
+                        🎁 新手福利
                     </h2>
 
                     <p>
-                        小白天堂 3.81 經典仿正設定
+                        新玩家加入即可了解專屬福利
                     </p>
 
                 </div>
 
-                <table class="server-table">
+                <div class="welfare-box">
 
-                    <thead>
+                    <h3>
+                        新血玩家專屬福利
+                    </h3>
 
-                        <tr>
+                    <p>
+                        完成官方社群加入後，即可申請新手福利。
+                    </p>
 
-                            <th>
-                                項目
-                            </th>
+                    <div class="welfare-highlight">
+                        💰 金幣 50 萬
+                    </div>
 
-                            <th>
-                                設定
-                            </th>
+                    <div class="hero-buttons">
 
-                        </tr>
+                        <a
+                            class="btn btn-gold"
+                            href="/beginner/"
+                        >
+                            🎁 查看完整福利
+                        </a>
 
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-
-                            <td>
-                                遊戲版本
-                            </td>
-
-                            <td>
-                                3.81 經典仿正
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                經驗值
-                            </td>
-
-                            <td>
-                                5 倍
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                金幣
-                            </td>
-
-                            <td>
-                                3 倍
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                掉寶
-                            </td>
-
-                            <td>
-                                2 倍
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                正義
-                            </td>
-
-                            <td>
-                                2 倍
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                武器
-                            </td>
-
-                            <td>
-                                2 倍
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-                                防具
-                            </td>
-
-                            <td>
-                                2 倍
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-                <div
-                    class="hero-buttons"
-                    style="margin-top: 24px;"
-                >
-
-                    <a
-                        class="btn btn-dark"
-                        href="/game/"
-                    >
-                        ⚙️ 查看完整遊戲介紹
-                    </a>
+                    </div>
 
                 </div>
 
@@ -1741,262 +1233,37 @@
         </section>
 
         <!-- =====================================================
-             下載
+             最終 CTA
         ====================================================== -->
 
-        <section
-            class="section-dark"
-            id="download"
-        >
+        <section class="final-cta">
 
             <div class="container">
 
-                <div class="download-box">
+                <div class="final-cta-box">
 
-                    <div class="section-title">
-
-                        <h2>
-                            📥 遊戲下載
-                        </h2>
-
-                        <p>
-                            準備好重新踏上亞丁大陸了嗎？
-                        </p>
-
-                    </div>
+                    <h2>
+                        準備好重新踏上亞丁大陸了嗎？
+                    </h2>
 
                     <p>
-                        請下載遊戲主程式，安裝完成後即可開始冒險。
+                        下載遊戲，加入小白天堂，開始屬於你的冒險。
                     </p>
 
                     <div class="hero-buttons">
 
                         <a
                             class="btn btn-gold"
-                            href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            📥 下載小白天堂 3.81
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
                             href="/download/"
                         >
-                            📖 查看完整下載教學
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             社群
-        ====================================================== -->
-
-        <section
-            class="section-soft"
-            id="community"
-        >
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        💬 官方社群
-                    </h2>
-
-                    <p>
-                        加入社群，掌握最新公告、活動與客服資訊
-                    </p>
-
-                </div>
-
-                <div class="community-box">
-
-                    <p>
-                        歡迎加入小白天堂官方 Discord，
-                        與其他玩家一起交流、組隊與冒險。
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a
-                            class="btn btn-gold"
-                            href="https://discord.gg/AwxV7gWn3"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            💬 小白天堂專用 DC
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
-                            href="https://line.me/ti/g2/IPXklhVROAV7kst4d9ABe4lgxEvPLik5_aXwnQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            🟢 官方 LINE 社群
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
-                            href="https://discord.gg/6fRCfpHCB"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            🎧 聯絡客服
+                            📥 立即加入
                         </a>
 
                         <a
                             class="btn btn-dark"
                             href="/community/"
                         >
-                            👥 玩家社群
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             聯絡客服
-        ====================================================== -->
-
-        <section
-            class="section-dark"
-            id="contact"
-        >
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        🛡️ 客服與玩家服務
-                    </h2>
-
-                    <p>
-                        如有遊戲問題，請透過官方 Discord 聯繫客服
-                    </p>
-
-                </div>
-
-                <div class="community-box">
-
-                    <p>
-                        遊戲問題、福利領取、帳號相關事項，
-                        請加入官方 Discord 取得協助。
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a
-                            class="btn btn-gold"
-                            href="https://discord.gg/6fRCfpHCB"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            前往官方客服 Discord
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
-                            href="https://line.me/ti/g2/IPXklhVROAV7kst4d9ABe4lgxEvPLik5_aXwnQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            🟢 加入官方 LINE
-                        </a>
-
-                        <a
-                            class="btn btn-dark"
-                            href="/community/"
-                        >
-                            👥 查看玩家社群
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             免責聲明
-        ====================================================== -->
-
-        <section class="section-soft">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>
-                        📜 免責聲明
-                    </h2>
-
-                </div>
-
-                <div class="disclaimer disclaimer-box">
-
-                    <p>
-                        本網站與小白天堂伺服器主要提供遊戲玩家交流、
-                        研究與社群服務。
-                    </p>
-
-                    <br>
-
-                    <p>
-                        玩家相關贊助、福利及遊戲服務皆依伺服器公告
-                        與實際規則辦理。相關贊助一經完成，原則上
-                        不提供退款。
-                    </p>
-
-                    <br>
-
-                    <p>
-                        伺服器營運期間可能因維護、更新、設備問題、
-                        資料錯誤或其他不可預期因素而進行重啟、
-                        回溯或調整。
-                    </p>
-
-                    <br>
-
-                    <p>
-                        本站保留依伺服器實際營運狀況調整相關內容
-                        與服務的權利。
-                    </p>
-
-                    <br>
-
-                    <p>
-                        遊戲玩家請遵守伺服器規範，禁止使用外掛、
-                        違規程式或其他影響遊戲公平性的行為。
-                    </p>
-
-                    <div
-                        class="hero-buttons"
-                        style="margin-top: 24px;"
-                    >
-
-                        <a
-                            class="btn btn-dark"
-                            href="/disclaimer/"
-                        >
-                            📜 查看完整免責聲明
+                            💬 加入玩家社群
                         </a>
 
                     </div>
