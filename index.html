@@ -214,6 +214,157 @@
         }
 
         /* =========================================================
+           回憶．重新開始
+        ========================================================== */
+
+        .memory-section {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(218, 164, 64, 0.14),
+                    transparent 48%
+                ),
+                linear-gradient(
+                    180deg,
+                    #120d14,
+                    #09070b
+                );
+        }
+
+        .memory-section::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(9, 7, 11, 0.20),
+                    rgba(9, 7, 11, 0.70)
+                );
+
+            pointer-events: none;
+        }
+
+        .memory-box {
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 55px 45px;
+
+            text-align: center;
+
+            border:
+                1px solid rgba(218, 164, 64, 0.35);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(27, 20, 29, 0.94),
+                    rgba(12, 9, 14, 0.94)
+                );
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 230, 154, 0.08);
+        }
+
+        .memory-box::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 15%;
+
+            width: 70%;
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #daa440,
+                    #fff1a8,
+                    #daa440,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 14px rgba(218, 164, 64, 0.65);
+        }
+
+        .memory-label {
+            color: #c99b4b;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 8px;
+
+            font-weight: 700;
+        }
+
+        .memory-box h2 {
+            color: #ffe08c;
+
+            font-size: clamp(30px, 5vw, 44px);
+
+            margin-bottom: 28px;
+
+            text-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .memory-lead {
+            color: #f5dfaa;
+
+            font-size: clamp(18px, 3vw, 23px);
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+        }
+
+        .memory-box p {
+            color: #c8bba5;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            margin-bottom: 8px;
+        }
+
+        .memory-highlight {
+            color: #f1d17b !important;
+
+            font-weight: 700;
+
+            margin-top: 22px !important;
+        }
+
+        .memory-ending {
+            margin-top: 20px !important;
+
+            color: #e8d6b4 !important;
+
+            font-weight: 700;
+        }
+
+        /* =========================================================
            共用區塊
         ========================================================== */
 
@@ -704,6 +855,38 @@
             }
 
             /* =====================================================
+               回憶．重新開始
+            ====================================================== */
+
+            .memory-box {
+                padding: 40px 22px;
+            }
+
+            .memory-label {
+                font-size: 12px;
+
+                letter-spacing: 2px;
+            }
+
+            .memory-box h2 {
+                font-size: 30px;
+
+                margin-bottom: 22px;
+            }
+
+            .memory-lead {
+                font-size: 18px;
+
+                line-height: 1.8;
+            }
+
+            .memory-box p {
+                font-size: 15px;
+
+                line-height: 1.9;
+            }
+
+            /* =====================================================
                遊戲特色
             ====================================================== */
 
@@ -985,6 +1168,90 @@
                     >
                         💬 官方 Discord
                     </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+             回憶．重新開始
+        ====================================================== -->
+
+        <section class="memory-section">
+
+            <div class="container">
+
+                <div class="memory-box">
+
+                    <div class="memory-label">
+                        A JOURNEY WORTH REMEMBERING
+                    </div>
+
+                    <h2>
+                        回憶．重新開始
+                    </h2>
+
+                    <p class="memory-lead">
+                        還記得以前的天堂嗎？
+                    </p>
+
+                    <p>
+                        一群人在村莊聊天，
+                    </p>
+
+                    <p>
+                        為了裝備蹲怪，
+                    </p>
+
+                    <p>
+                        半夜揪著血盟夥伴一起打王。
+                    </p>
+
+                    <p>
+                        衝裝前，總要猶豫半天；
+                    </p>
+
+                    <p>
+                        成功的那一刻，整個血盟一起歡呼。
+                    </p>
+
+                    <p class="memory-highlight">
+                        小白天堂想找回的，就是這種感覺。
+                    </p>
+
+                    <p>
+                        不是三天就畢業，
+                    </p>
+
+                    <p>
+                        不是滿街都是神裝，
+                    </p>
+
+                    <p>
+                        也不是今天課金、明天就換裝。
+                    </p>
+
+                    <p>
+                        慢慢練、慢慢打、慢慢養成。
+                    </p>
+
+                    <p>
+                        讓每一次升級都值得期待，
+                    </p>
+
+                    <p>
+                        讓每一次冒險都有收穫，
+                    </p>
+
+                    <p>
+                        也讓每一件親手打到的裝備，
+                    </p>
+
+                    <p class="memory-ending">
+                        都真正擁有屬於它的價值。
+                    </p>
 
                 </div>
 
