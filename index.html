@@ -24,6 +24,7 @@
         href="/assets/css/style.css"
     >
 
+
     <style>
 
         /* =========================================================
@@ -598,6 +599,173 @@
 
 
         /* =========================================================
+           最新消息 / 活動
+        ========================================================== */
+
+        .updates-section {
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(218, 164, 64, 0.06),
+                    transparent 52%
+                ),
+                #0a080d;
+        }
+
+        .updates-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 16px;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+        .update-card {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 210px;
+
+            padding: 26px 24px;
+
+            border:
+                1px solid rgba(218, 164, 64, 0.24);
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(31, 23, 31, 0.96),
+                    rgba(12, 10, 15, 0.96)
+                );
+
+            box-shadow:
+                0 14px 35px rgba(0, 0, 0, 0.28);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .update-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 12%;
+
+            width: 76%;
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #daa440,
+                    #fff1a8,
+                    #daa440,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 12px rgba(218, 164, 64, 0.55);
+        }
+
+        .update-card:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(218, 164, 64, 0.52);
+
+            box-shadow:
+                0 18px 42px rgba(0, 0, 0, 0.38);
+        }
+
+        .update-top {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            margin-bottom: 15px;
+        }
+
+        .update-type {
+            color: #ffd875;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+        .update-status {
+            padding: 4px 10px;
+
+            border:
+                1px solid rgba(218, 164, 64, 0.28);
+
+            border-radius: 999px;
+
+            background:
+                rgba(218, 164, 64, 0.08);
+
+            color: #dcb45e;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+        .update-card h3 {
+            color: #f7d47e;
+
+            font-size: 20px;
+
+            line-height: 1.45;
+
+            margin-bottom: 9px;
+        }
+
+        .update-card p {
+            color: #b8ad99;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin-bottom: 18px;
+        }
+
+        .update-link {
+            margin-top: auto;
+
+            color: #e1b95e;
+
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+
+        /* =========================================================
            宣傳影片
         ========================================================== */
 
@@ -932,6 +1100,10 @@
                 border-radius: 16px;
             }
 
+            .feature-card:hover {
+                transform: none;
+            }
+
             .feature-icon {
                 font-size: 35px;
 
@@ -948,6 +1120,41 @@
                 line-height: 1.7;
 
                 margin-bottom: 10px;
+            }
+
+
+            .updates-grid {
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+            }
+
+            .update-card {
+                min-height: 0;
+
+                padding: 21px 18px;
+
+                border-radius: 16px;
+            }
+
+            .update-card:hover {
+                transform: none;
+            }
+
+            .update-top {
+                margin-bottom: 12px;
+            }
+
+            .update-card h3 {
+                font-size: 18px;
+            }
+
+            .update-card p {
+                font-size: 13px;
+
+                line-height: 1.7;
+
+                margin-bottom: 14px;
             }
 
 
@@ -1142,7 +1349,9 @@
                 </a>
 
                 <a
-                    href="/download/"
+                    href="https://discord.gg/AwxV7gWn3"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="nav-cta"
                 >
                     立即加入
@@ -1159,7 +1368,7 @@
 
 
         <!-- =====================================================
-             HERO｜第一眼只做三件事
+             HERO
         ====================================================== -->
 
         <section
@@ -1370,6 +1579,110 @@
 
                         <div class="feature-link">
                             查看職業介紹 →
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             最新消息 / 目前活動
+        ====================================================== -->
+
+        <section class="updates-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        📢 最新動態
+                    </h2>
+
+                    <p>
+                        掌握小白天堂最新公告與目前活動
+                    </p>
+
+                </div>
+
+
+                <div class="updates-grid">
+
+
+                    <a
+                        href="/news/"
+                        class="update-card"
+                    >
+
+                        <div class="update-top">
+
+                            <div class="update-type">
+                                📢 最新公告
+                            </div>
+
+                            <div class="update-status">
+                                NEW
+                            </div>
+
+                        </div>
+
+
+                        <h3>
+                            新血玩家加入福利
+                        </h3>
+
+
+                        <p>
+                            新玩家加入即可申請
+                            [+0] 贊助永久卡 × 1
+                            與金幣 50 萬。
+                        </p>
+
+
+                        <div class="update-link">
+                            查看最新消息 →
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="/events/"
+                        class="update-card"
+                    >
+
+                        <div class="update-top">
+
+                            <div class="update-type">
+                                ⚔️ 目前活動
+                            </div>
+
+                            <div class="update-status">
+                                EVENT
+                            </div>
+
+                        </div>
+
+
+                        <h3>
+                            開服連續七天・經驗加倍活動
+                        </h3>
+
+
+                        <p>
+                            開服連續七天享有經驗加倍，
+                            陪你更快踏上亞丁大陸的冒險旅程。
+                        </p>
+
+
+                        <div class="update-link">
+                            查看活動詳情 →
                         </div>
 
                     </a>
