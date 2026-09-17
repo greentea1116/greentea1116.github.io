@@ -1,651 +1,287 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>遊戲下載｜小白天堂 3.81</title>
+    <meta charset="UTF-8">
 
-<meta
-    name="description"
-    content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin VPN 連線方式、安裝教學與官方客服資訊。"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="../assets/css/style.css">
+    <title>遊戲下載｜小白天堂 3.81</title>
 
-<style>
-.download-main-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 250px;
-    padding: 17px 38px;
-    border-radius: 36px;
-    background: linear-gradient(135deg, #ffe08a, #c08a24);
-    color: #111;
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    box-shadow: 0 10px 32px rgba(210,160,50,.32);
-    transition: .25s;
-}
+    <meta
+        name="description"
+        content="小白天堂 3.81 遊戲下載專區，提供遊戲主程式、Radmin VPN 連線方式、安裝教學與官方客服資訊。"
+    >
 
-.download-main-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 38px rgba(255,210,80,.42);
-}
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
 
-.join-download-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 205px;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #ffe08a, #c08a24);
-    color: #111;
-    font-size: 17px;
-    font-weight: 800;
-    box-shadow: 0 8px 25px rgba(210,160,50,.25);
-    transition: .25s;
-}
+    <style>
 
-.join-download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 11px 30px rgba(255,210,80,.35);
-}
+        .download-main-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 250px;
+            padding: 17px 38px;
+            border-radius: 36px;
+            background: linear-gradient(135deg, #ffe08a, #c08a24);
+            color: #111;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 32px rgba(210,160,50,.32);
+            transition: .25s;
+        }
 
-.install-download-link {
-    color: #ffd76a;
-    font-weight: 800;
-    text-decoration: none;
-    transition: .2s;
-}
+        .download-main-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 38px rgba(255,210,80,.42);
+        }
 
-.install-download-link:hover {
-    color: #ffe9a8;
-    text-decoration: underline;
-}
+        .join-download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 205px;
+            padding: 14px 28px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #ffe08a, #c08a24);
+            color: #111;
+            font-size: 17px;
+            font-weight: 800;
+            box-shadow: 0 8px 25px rgba(210,160,50,.25);
+            transition: .25s;
+        }
 
-@media (max-width: 800px) {
+        .join-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 11px 30px rgba(255,210,80,.35);
+        }
 
-    .download-main-btn {
-        width: 100%;
-        min-width: 0;
-        padding: 16px 22px;
-        font-size: 19px;
-    }
+        .install-download-link {
+            color: #ffd76a;
+            font-weight: 800;
+            text-decoration: none;
+            transition: .2s;
+        }
 
-    .join-download-btn {
-        width: 100%;
-        min-width: 0;
-    }
+        .install-download-link:hover {
+            color: #ffe9a8;
+            text-decoration: underline;
+        }
 
-}
-</style>
+        @media (max-width: 800px) {
+
+            .download-main-btn {
+                width: 100%;
+                min-width: 0;
+                padding: 16px 22px;
+                font-size: 19px;
+            }
+
+            .join-download-btn {
+                width: 100%;
+                min-width: 0;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<header class="site-header">
 
-    <div class="nav-container">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-        <a href="../" class="nav-logo">
+    <header class="site-header">
 
-            <img
-                src="../xiaobai-heaven-logo.jpg"
-                alt="小白天堂 3.81"
-            >
-
-            <span>
-                小白天堂 3.81
-            </span>
-
-        </a>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="開啟選單"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="nav-menu">
-
-            <a href="../">首頁</a>
-            <a href="../game/">遊戲介紹</a>
-            <a href="../news/">最新消息</a>
-            <a href="../events/">活動</a>
-            <a href="../beginner/">新手專區</a>
-            <a href="../guide/">攻略指南</a>
-            <a href="../classes/">職業介紹</a>
-            <a href="../videos/">影片</a>
-            <a href="../community/">玩家社群</a>
-            <a href="./" class="active">遊戲下載</a>
-            <a href="../about/">關於我們</a>
-            <a href="../disclaimer/">免責聲明</a>
-            <a href="../faq/">FAQ</a>
+        <div class="nav-container">
 
             <a
-                href="https://discord.gg/6fRCfpHCB"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-cta"
+                href="../"
+                class="nav-logo"
             >
-                立即加入
+
+                <img
+                    src="../xiaobai-heaven-logo.jpg"
+                    alt="小白天堂 3.81"
+                >
+
+                <span>
+                    小白天堂 3.81
+                </span>
+
             </a>
 
-        </nav>
 
-    </div>
-
-</header>
-
-<main>
-
-    <section class="page-hero">
-
-        <div class="page-hero-inner">
-
-            <div class="section-kicker">
-                小白天堂 3.81 官方下載專區
-            </div>
-
-            <h1>
-                遊戲下載
-            </h1>
-
-            <p>
-                下載遊戲主程式，完成 VPN 連線後，
-                準備再次踏上亞丁大陸。
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <div class="section-kicker">
-                DOWNLOAD
-            </div>
-
-            <h2>
-                🎮 官方遊戲下載
-            </h2>
-
-            <p>
-                請使用官方下載連結取得遊戲主程式
-            </p>
-
-        </div>
-
-        <div class="download-box">
-
-            <h3>
-                小白天堂 3.81 遊戲主程式
-            </h3>
-
-            <p>
-                下載完整遊戲程式後，
-                請依照下方 VPN 連線教學加入測試服。
-            </p>
-
-            <a
-                class="download-main-btn"
-                href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="開啟選單"
+                aria-expanded="false"
             >
-                ⬇️ 立即下載遊戲
-            </a>
 
-            <div class="notice">
+                <span></span>
+                <span></span>
+                <span></span>
 
-                <strong>📌 下載提醒</strong><br>
+            </button>
 
-                請確認硬碟有足夠空間，
-                並建議將遊戲安裝在獨立資料夾中。
-                若下載速度較慢，請稍候片刻或重新整理下載頁面。
 
-            </div>
+            <nav class="nav-menu">
 
-        </div>
+                <a href="../">
+                    首頁
+                </a>
 
-    </section>
+                <a href="../game/">
+                    遊戲介紹
+                </a>
 
-    <section class="section">
+                <a href="../news/">
+                    最新消息
+                </a>
 
-        <div class="section-title">
+                <a href="../events/">
+                    活動
+                </a>
 
-            <div class="section-kicker">
-                SERVER CONNECTION
-            </div>
+                <a href="../beginner/">
+                    新手專區
+                </a>
 
-            <h2>
-                ⚠️ 目前伺服器連線方式
-            </h2>
+                <a href="../guide/">
+                    攻略指南
+                </a>
 
-            <p>
-                目前測試服需要使用 Radmin VPN 才能連線進入伺服器
-            </p>
+                <a href="../classes/">
+                    職業介紹
+                </a>
 
-        </div>
+                <a href="../videos/">
+                    影片
+                </a>
 
-        <div class="download-box">
+                <a href="../community/">
+                    玩家社群
+                </a>
 
-            <h3>
-                🔐 使用 Radmin VPN 連線
-            </h3>
+                <a
+                    href="./"
+                    class="active"
+                >
+                    遊戲下載
+                </a>
 
-            <p>
-                請先下載並安裝 Radmin VPN，
-                加入「免費測試服」網路後，再開啟小白天堂遊戲。
-            </p>
+                <a href="../about/">
+                    關於我們
+                </a>
 
-            <a
-                class="download-btn"
-                href="https://www.radmin-vpn.com/tw/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                🌐 下載 Radmin VPN
-            </a>
+                <a href="../disclaimer/">
+                    免責聲明
+                </a>
 
-            <div class="notice">
+                <a href="../faq/">
+                    FAQ
+                </a>
 
-                <strong>📋 測試服 VPN 資訊</strong><br><br>
+                <a
+                    href="https://discord.gg/AwxV7gWn3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-cta"
+                >
+                    立即加入
+                </a>
 
-                <strong>網路名稱：</strong>
-                <code>免費測試服</code>
-                <br>
-
-                <strong>密碼：</strong>
-                <code>123456</code>
-
-            </div>
-
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-
-                <div class="step-number">
-                    1
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        下載 Radmin VPN
-                    </h3>
-
-                    <p>
-                        點擊上方「下載 Radmin VPN」，
-                        前往官方網站下載並安裝軟體。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    2
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        開啟 Radmin VPN
-                    </h3>
-
-                    <p>
-                        安裝完成後開啟 Radmin VPN，
-                        確認程式正常啟動。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    3
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        點擊「加入網路」
-                    </h3>
-
-                    <p>
-                        在 Radmin VPN 主畫面選擇
-                        「加入網路」。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    4
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        輸入測試服資訊
-                    </h3>
-
-                    <p>
-                        網路名稱輸入：
-                        <strong>免費測試服</strong>
-                        <br>
-                        密碼輸入：
-                        <strong>123456</strong>
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    5
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        加入成功後開啟遊戲
-                    </h3>
-
-                    <p>
-                        確認已成功加入「免費測試服」，
-                        再啟動小白天堂 3.81。
-                    </p>
-
-                </div>
-
-            </div>
+            </nav>
 
         </div>
 
-    </section>
+    </header>
 
-    <section class="section">
 
-        <div class="section-title">
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-            <div class="section-kicker">
-                BEFORE YOU PLAY
-            </div>
+    <main>
 
-            <h2>
-                📋 開始遊戲前
-            </h2>
 
-            <p>
-                第一次進入小白天堂，可以先確認以下事項
-            </p>
+        <!-- =================================================
+             PAGE HERO
+        ================================================== -->
 
-        </div>
+        <section class="page-hero">
 
-        <div class="content-grid">
+            <div class="page-hero-inner">
 
-            <div class="content-card">
-
-                <div class="card-icon">
-                    💻
+                <div class="section-kicker">
+                    小白天堂 3.81 官方下載專區
                 </div>
 
-                <h3>
-                    準備電腦
-                </h3>
+                <h1>
+                    遊戲下載
+                </h1>
 
                 <p>
-                    請使用 Windows 電腦進行遊戲，
-                    並確認系統可以正常執行遊戲程式。
+                    下載遊戲主程式，完成 VPN 連線後，
+                    準備再次踏上亞丁大陸。
                 </p>
 
             </div>
 
-            <div class="content-card">
+        </section>
 
-                <div class="card-icon">
-                    📦
-                </div>
 
-                <h3>
-                    完整下載
-                </h3>
+        <!-- =================================================
+             GAME DOWNLOAD
+        ================================================== -->
 
-                <p>
-                    請等待遊戲主程式完整下載完成，
-                    不要在下載途中中斷檔案。
-                </p>
-
-            </div>
-
-            <div class="content-card">
-
-                <div class="card-icon">
-                    🛡️
-                </div>
-
-                <h3>
-                    安全設定
-                </h3>
-
-                <p>
-                    若 Windows 或防毒軟體出現提示，
-                    請先確認檔案來源為官方下載位置。
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <div class="section-kicker">
-                INSTALLATION
-            </div>
-
-            <h2>
-                📥 安裝教學
-            </h2>
-
-            <p>
-                依照以下流程即可完成基本安裝
-            </p>
-
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-
-                <div class="step-number">
-                    1
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        <a
-                            class="install-download-link"
-                            href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            下載遊戲主程式
-                        </a>
-                    </h3>
-
-                    <p>
-                        點擊「下載遊戲主程式」，
-                        直接前往官方 Google Drive 下載遊戲檔案。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    2
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        建立遊戲資料夾
-                    </h3>
-
-                    <p>
-                        建議在電腦中建立專用的
-                        「小白天堂 3.81」資料夾。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    3
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        解壓縮或安裝
-                    </h3>
-
-                    <p>
-                        依照下載檔案的格式，
-                        完成解壓縮或安裝程序。
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="step">
-
-                <div class="step-number">
-                    4
-                </div>
-
-                <div class="step-content">
-
-                    <h3>
-                        啟動遊戲
-                    </h3>
-
-                    <p>
-                        確認 Radmin VPN 已經成功連線，
-                        再啟動遊戲程式開始冒險。
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <div class="section-kicker">
-                UPDATE
-            </div>
-
-            <h2>
-                🔄 遊戲更新
-            </h2>
-
-            <p>
-                保持遊戲版本最新，才能正常進入伺服器
-            </p>
-
-        </div>
-
-        <div class="download-box">
-
-            <h3>
-                需要更新時怎麼辦？
-            </h3>
-
-            <p>
-                若官方發布新的遊戲版本或更新檔，
-                請依照官方公告提供的更新方式進行更新。
-            </p>
-
-            <div class="notice">
-
-                <strong>⚠️ 重要提醒</strong><br>
-
-                請不要使用來路不明的更新檔案。
-                若遇到無法登入、版本不符或遊戲異常，
-                請前往官方社群聯絡客服。
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="content-box">
+        <section class="section">
 
             <div class="section-title">
 
                 <div class="section-kicker">
-                    JOIN US
+                    DOWNLOAD
                 </div>
 
                 <h2>
-                    準備好重返亞丁大陸了嗎？
+                    🎮 官方遊戲下載
                 </h2>
 
                 <p>
-                    下載遊戲、連線測試服，加入小白天堂 3.81。
+                    請使用官方下載連結取得遊戲主程式
                 </p>
 
             </div>
 
-            <div class="community-links">
+
+            <div class="download-box">
+
+                <h3>
+                    小白天堂 3.81 遊戲主程式
+                </h3>
+
+                <p>
+                    下載完整遊戲程式後，
+                    請依照下方 VPN 連線教學加入測試服。
+                </p>
 
                 <a
-                    class="join-download-btn"
+                    class="download-main-btn"
                     href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -653,80 +289,648 @@
                     ⬇️ 立即下載遊戲
                 </a>
 
+                <div class="notice">
+
+                    <strong>
+                        📌 下載提醒
+                    </strong>
+                    <br>
+
+                    請確認硬碟有足夠空間，
+                    並建議將遊戲安裝在獨立資料夾中。
+                    若下載速度較慢，請稍候片刻或重新整理下載頁面。
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVER CONNECTION
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-kicker">
+                    SERVER CONNECTION
+                </div>
+
+                <h2>
+                    ⚠️ 目前伺服器連線方式
+                </h2>
+
+                <p>
+                    目前測試服需要使用 Radmin VPN 才能連線進入伺服器
+                </p>
+
+            </div>
+
+
+            <div class="download-box">
+
+                <h3>
+                    🔐 使用 Radmin VPN 連線
+                </h3>
+
+                <p>
+                    請先下載並安裝 Radmin VPN，
+                    加入「免費測試服」網路後，再開啟小白天堂遊戲。
+                </p>
+
                 <a
-                    class="btn"
+                    class="download-btn"
                     href="https://www.radmin-vpn.com/tw/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    🌐 Radmin VPN
+                    🌐 下載 Radmin VPN
                 </a>
 
-                <a
-                    class="btn"
-                    href="../community/"
-                >
-                    加入玩家社群
+                <div class="notice">
+
+                    <strong>
+                        📋 測試服 VPN 資訊
+                    </strong>
+
+                    <br><br>
+
+                    <strong>
+                        網路名稱：
+                    </strong>
+
+                    <code>
+                        免費測試服
+                    </code>
+
+                    <br>
+
+                    <strong>
+                        密碼：
+                    </strong>
+
+                    <code>
+                        123456
+                    </code>
+
+                </div>
+
+            </div>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            下載 Radmin VPN
+                        </h3>
+
+                        <p>
+                            點擊上方「下載 Radmin VPN」，
+                            前往官方網站下載並安裝軟體。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            開啟 Radmin VPN
+                        </h3>
+
+                        <p>
+                            安裝完成後開啟 Radmin VPN，
+                            確認程式正常啟動。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            點擊「加入網路」
+                        </h3>
+
+                        <p>
+                            在 Radmin VPN 主畫面選擇
+                            「加入網路」。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            輸入測試服資訊
+                        </h3>
+
+                        <p>
+                            網路名稱輸入：
+                            <strong>免費測試服</strong>
+                            <br>
+                            密碼輸入：
+                            <strong>123456</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        5
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            加入成功後開啟遊戲
+                        </h3>
+
+                        <p>
+                            確認已成功加入「免費測試服」，
+                            再啟動小白天堂 3.81。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BEFORE YOU PLAY
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-kicker">
+                    BEFORE YOU PLAY
+                </div>
+
+                <h2>
+                    📋 開始遊戲前
+                </h2>
+
+                <p>
+                    第一次進入小白天堂，可以先確認以下事項
+                </p>
+
+            </div>
+
+
+            <div class="content-grid">
+
+
+                <div class="content-card">
+
+                    <div class="card-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        準備電腦
+                    </h3>
+
+                    <p>
+                        請使用 Windows 電腦進行遊戲，
+                        並確認系統可以正常執行遊戲程式。
+                    </p>
+
+                </div>
+
+
+                <div class="content-card">
+
+                    <div class="card-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        完整下載
+                    </h3>
+
+                    <p>
+                        請等待遊戲主程式完整下載完成，
+                        不要在下載途中中斷檔案。
+                    </p>
+
+                </div>
+
+
+                <div class="content-card">
+
+                    <div class="card-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        安全設定
+                    </h3>
+
+                    <p>
+                        若 Windows 或防毒軟體出現提示，
+                        請先確認檔案來源為官方下載位置。
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INSTALLATION
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-kicker">
+                    INSTALLATION
+                </div>
+
+                <h2>
+                    📥 安裝教學
+                </h2>
+
+                <p>
+                    依照以下流程即可完成基本安裝
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+
+                            <a
+                                class="install-download-link"
+                                href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                下載遊戲主程式
+                            </a>
+
+                        </h3>
+
+                        <p>
+                            點擊「下載遊戲主程式」，
+                            直接前往官方 Google Drive 下載遊戲檔案。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            建立遊戲資料夾
+                        </h3>
+
+                        <p>
+                            建議在電腦中建立專用的
+                            「小白天堂 3.81」資料夾。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            解壓縮或安裝
+                        </h3>
+
+                        <p>
+                            依照下載檔案的格式，
+                            完成解壓縮或安裝程序。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            啟動遊戲
+                        </h3>
+
+                        <p>
+                            確認 Radmin VPN 已經成功連線，
+                            再啟動遊戲程式開始冒險。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             UPDATE
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <div class="section-kicker">
+                    UPDATE
+                </div>
+
+                <h2>
+                    🔄 遊戲更新
+                </h2>
+
+                <p>
+                    保持遊戲版本最新，才能正常進入伺服器
+                </p>
+
+            </div>
+
+
+            <div class="download-box">
+
+                <h3>
+                    需要更新時怎麼辦？
+                </h3>
+
+                <p>
+                    若官方發布新的遊戲版本或更新檔，
+                    請依照官方公告提供的更新方式進行更新。
+                </p>
+
+                <div class="notice">
+
+                    <strong>
+                        ⚠️ 重要提醒
+                    </strong>
+
+                    <br>
+
+                    請不要使用來路不明的更新檔案。
+                    若遇到無法登入、版本不符或遊戲異常，
+                    請前往官方社群聯絡客服。
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             JOIN US
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="content-box">
+
+                <div class="section-title">
+
+                    <div class="section-kicker">
+                        JOIN US
+                    </div>
+
+                    <h2>
+                        準備好重返亞丁大陸了嗎？
+                    </h2>
+
+                    <p>
+                        下載遊戲、連線測試服，加入小白天堂 3.81。
+                    </p>
+
+                </div>
+
+
+                <div class="community-links">
+
+                    <a
+                        class="join-download-btn"
+                        href="https://drive.google.com/file/d/1z_JfLNUpNNOlcJPv6J6k64U2eDkeg7HY/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ⬇️ 立即下載遊戲
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="https://www.radmin-vpn.com/tw/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        🌐 Radmin VPN
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="../community/"
+                    >
+                        加入玩家社群
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="../"
+                    >
+                        回到首頁
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-links">
+
+                <a href="../">
+                    首頁
                 </a>
 
-                <a
-                    class="btn"
-                    href="../"
-                >
-                    回到首頁
+                <a href="../game/">
+                    遊戲介紹
+                </a>
+
+                <a href="../news/">
+                    最新消息
+                </a>
+
+                <a href="../events/">
+                    活動
+                </a>
+
+                <a href="../beginner/">
+                    新手專區
+                </a>
+
+                <a href="../guide/">
+                    攻略指南
+                </a>
+
+                <a href="../classes/">
+                    職業介紹
+                </a>
+
+                <a href="../videos/">
+                    影片
+                </a>
+
+                <a href="../community/">
+                    玩家社群
+                </a>
+
+                <a href="./">
+                    遊戲下載
+                </a>
+
+                <a href="../about/">
+                    關於我們
+                </a>
+
+                <a href="../disclaimer/">
+                    免責聲明
+                </a>
+
+                <a href="../faq/">
+                    FAQ
                 </a>
 
             </div>
 
-        </div>
 
-    </section>
+            <p>
+                © 2026 小白天堂 3.81 All Rights Reserved.
+            </p>
 
-</main>
-
-<footer class="site-footer">
-
-    <div class="footer-inner">
-
-        <div class="footer-links">
-
-            <a href="../">首頁</a>
-            <a href="../game/">遊戲介紹</a>
-            <a href="../news/">最新消息</a>
-            <a href="../events/">活動</a>
-            <a href="../beginner/">新手專區</a>
-            <a href="../guide/">攻略指南</a>
-            <a href="../classes/">職業介紹</a>
-            <a href="../videos/">影片</a>
-            <a href="../community/">玩家社群</a>
-            <a href="./">遊戲下載</a>
-            <a href="../about/">關於我們</a>
-            <a href="../disclaimer/">免責聲明</a>
-            <a href="../faq/">FAQ</a>
+            <p>
+                重返亞丁大陸・續寫輝煌篇章
+            </p>
 
         </div>
 
-        <p>
-            小白天堂 3.81｜重返亞丁大陸・續寫輝煌篇章
-        </p>
+    </footer>
 
-        <p>
-            © 2026 小白天堂 3.81. All Rights Reserved.
-        </p>
 
-    </div>
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
 
-</footer>
+    <button
+        class="back-to-top"
+        type="button"
+        aria-label="回到頂端"
+    >
+        ↑
+    </button>
 
-<button
-    class="back-to-top"
-    type="button"
-    aria-label="回到頂端"
->
-    ↑
-</button>
 
-<script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
+
 
 </body>
+
 </html>
