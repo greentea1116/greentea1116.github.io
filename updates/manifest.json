@@ -1,9 +1,11 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.5",
   "files": [
     {
       "path": "Text.pak",
-      "url": "https://drive.usercontent.google.com/download?id=1jvrE4N14QPOjx_t4TYIhTrcuua7OFyxM&export=download&confirm=t"
+      "url": "https://drive.usercontent.google.com/download?id=1c7-fX0DE4PGBGAr9cCOco_VgLmkJA8wB&export=download&confirm=t",
+      "sha256": "655A3447D9D884D3CAD197215696A67D166134FEE29A31E303685209833A8CBA",
+      "size": 28739432
     }
   ]
 }
