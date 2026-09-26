@@ -3,5 +3,5 @@ count=1
 url=https://greentea1116.github.io/updates/
 
 [update]
-file_0=Text.pak
+file_0=text\Text.pak
 md5_0=bb0e51de33f45bcaa9f54a5728344545
