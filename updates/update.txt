@@ -1,6 +1,6 @@
 [main]
 count=1
-url=
+url=https://greentea1116.github.io/updates/
 
 [update]
 file_0=Text.pak
