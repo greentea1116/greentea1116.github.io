@@ -1,5 +1,5 @@
 {
-  "version": "1.0.9",
+  "version": "1.0.10",
   "files": [
     {
       "path": "Text.idx",
@@ -12,6 +12,12 @@
       "url": "https://drive.usercontent.google.com/download?id=1nwokhsPoP9l4UVMr6EIbLmymdqKHN2AW&export=download&confirm=t",
       "sha256": "655A3447D9D884D3CAD197215696A67D166134FEE29A31E303685209833A8CBA",
       "size": 28739432
+    },
+    {
+      "path": "TW13081901.pak",
+      "url": "https://drive.usercontent.google.com/download?id=1fhgx3qO6lGcD-Zh7H3Tr-ElCBRHGdp7w&export=download&confirm=t",
+      "sha256": "7D40E2CBDC9D4BEC8B41FE871C15076428DE4E5478742A9C2E2BB355AAF79474",
+      "size": 7227352
     }
   ]
 }
