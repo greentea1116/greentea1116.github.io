@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-labelledby="title desc">
+<title id="title">小白天堂威望階級表</title>
+<desc id="desc">從二兵到三軍統帥的威望數值範圍</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#120b12"/><stop offset="0.55" stop-color="#07070b"/><stop offset="1" stop-color="#211307"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8d6422"/><stop offset="0.5" stop-color="#ffe49a"/><stop offset="1" stop-color="#b57a25"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+text{font-family:'Microsoft JhengHei','Noto Sans TC',Arial,sans-serif}.title{font-size:54px;font-weight:900;fill:#ffe6a3}.sub{font-size:23px;fill:#cbb98e}.rank{font-size:31px;font-weight:900;fill:#ffe5a2}.range{font-size:24px;fill:#f4d58b}.note{font-size:20px;fill:#a99a7f}.small{font-size:18px;fill:#8f846f}
+</style>
+</defs>
+<rect width="1400" height="980" rx="34" fill="url(#bg)"/>
+<rect x="36" y="36" width="1328" height="908" rx="28" fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.78"/>
+<circle cx="180" cy="130" r="130" fill="#d49d38" opacity="0.12" filter="url(#glow)"/>
+<circle cx="1220" cy="820" r="170" fill="#9b2e22" opacity="0.18" filter="url(#glow)"/>
+<text x="700" y="105" text-anchor="middle" class="title">威望階級成長表</text>
+<text x="700" y="148" text-anchor="middle" class="sub">DB 設定：w_威望設置｜最高頭銜：三軍統帥</text>
+<g transform="translate(90 205)">
+<rect width="1220" height="620" rx="22" fill="#0e0d12" stroke="#5d4420"/>
+<g transform="translate(32 34)">
+<rect x="0" y="0" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="39" class="rank">二兵</text><text x="520" y="39" text-anchor="end" class="range">1 - 3,000</text>
+<rect x="0" y="72" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="111" class="rank">一兵</text><text x="520" y="111" text-anchor="end" class="range">3,001 - 6,000</text>
+<rect x="0" y="144" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="183" class="rank">上兵</text><text x="520" y="183" text-anchor="end" class="range">6,001 - 10,000</text>
+<rect x="0" y="216" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="255" class="rank">下士</text><text x="520" y="255" text-anchor="end" class="range">10,001 - 20,000</text>
+<rect x="0" y="288" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="327" class="rank">中士</text><text x="520" y="327" text-anchor="end" class="range">20,001 - 40,000</text>
+<rect x="0" y="360" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="399" class="rank">上士</text><text x="520" y="399" text-anchor="end" class="range">40,001 - 60,000</text>
+<rect x="0" y="432" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="471" class="rank">少尉</text><text x="520" y="471" text-anchor="end" class="range">60,001 - 100,000</text>
+<rect x="0" y="504" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="543" class="rank">中尉</text><text x="520" y="543" text-anchor="end" class="range">100,001 - 130,000</text>
+</g>
+<g transform="translate(628 34)">
+<rect x="0" y="0" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="39" class="rank">上尉</text><text x="520" y="39" text-anchor="end" class="range">130,001 - 160,000</text>
+<rect x="0" y="72" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="111" class="rank">少校</text><text x="520" y="111" text-anchor="end" class="range">160,001 - 210,000</text>
+<rect x="0" y="144" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="183" class="rank">中校</text><text x="520" y="183" text-anchor="end" class="range">210,001 - 250,000</text>
+<rect x="0" y="216" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="255" class="rank">上校</text><text x="520" y="255" text-anchor="end" class="range">250,001 - 290,000</text>
+<rect x="0" y="288" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="327" class="rank">少將</text><text x="520" y="327" text-anchor="end" class="range">290,001 - 350,000</text>
+<rect x="0" y="360" width="560" height="60" rx="12" fill="#171419" stroke="#4c3b21"/><text x="32" y="399" class="rank">中將</text><text x="520" y="399" text-anchor="end" class="range">350,001 - 400,000</text>
+<rect x="0" y="432" width="560" height="60" rx="12" fill="#21180f" stroke="#6d4e1e"/><text x="32" y="471" class="rank">上將</text><text x="520" y="471" text-anchor="end" class="range">400,001 - 450,000</text>
+<rect x="0" y="504" width="560" height="60" rx="12" fill="#35230c" stroke="#ffd56e" stroke-width="2"/><text x="32" y="543" class="rank">三軍統帥</text><text x="520" y="543" text-anchor="end" class="range">450,001 - 600,000</text>
+</g>
+</g>
+<text x="700" y="882" text-anchor="middle" class="note">威望取得與消耗請以遊戲內 NPC、活動公告與官方社群最新設定為準。</text>
+<text x="700" y="914" text-anchor="middle" class="small">本圖依 DB 欄位 w_威望設置整理，不包含未配置或未公告用途。</text>
+</svg>
