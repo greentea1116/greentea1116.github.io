@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">區域王查詢示意圖</title><desc id="desc">區域王位置查詢用的黑金奇幻地圖視覺</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#090a0e"/><stop offset=".55" stop-color="#17100d"/><stop offset="1" stop-color="#261607"/></linearGradient><radialGradient id="mark"><stop offset="0" stop-color="#fff0a8"/><stop offset=".55" stop-color="#d89b37"/><stop offset="1" stop-color="#7a351c"/></radialGradient><style>text{font-family:'Microsoft JhengHei','Noto Sans TC',Arial,sans-serif}.t{font-size:46px;font-weight:900;fill:#ffe5a0}.s{font-size:22px;fill:#c9b98f}.m{font-size:22px;font-weight:900;fill:#ffe5a0}.p{font-size:18px;fill:#cbb98e}</style></defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/><rect x="30" y="30" width="1140" height="700" rx="24" fill="none" stroke="#c89436" stroke-width="3" opacity=".75"/>
+<text x="600" y="86" text-anchor="middle" class="t">區域王位置查詢</text><text x="600" y="124" text-anchor="middle" class="s">以 DB 設定整理，官網作為玩家查詢入口</text>
+<path d="M178 222 C300 144 431 180 517 247 C612 322 723 211 838 258 C959 308 985 470 896 558 C790 663 629 567 520 606 C399 649 254 615 188 506 C122 397 85 282 178 222Z" fill="#171116" stroke="#8b6327" stroke-width="4"/>
+<path d="M305 255 C385 220 452 246 493 302 C545 373 650 342 704 386 C752 425 742 512 681 542 C602 581 537 502 462 530 C372 563 269 506 261 411 C255 344 250 281 305 255Z" fill="#0d1015" stroke="#5e4623" stroke-width="3" opacity=".9"/>
+<g><circle cx="285" cy="252" r="18" fill="url(#mark)"/><text x="315" y="260" class="m">說話之島</text><text x="315" y="287" class="p">上方區域優先巡查</text></g>
+<g><circle cx="445" cy="360" r="18" fill="url(#mark)"/><text x="475" y="368" class="m">古魯丁地監</text><text x="475" y="395" class="p">依樓層查詢</text></g>
+<g><circle cx="650" cy="292" r="18" fill="url(#mark)"/><text x="680" y="300" class="m">火窟 / 龍谷</text><text x="680" y="327" class="p">高壓區域請組隊</text></g>
+<g><circle cx="742" cy="500" r="18" fill="url(#mark)"/><text x="772" y="508" class="m">奇岩地監</text><text x="772" y="535" class="p">地監區域查詢</text></g>
+<g transform="translate(92 610)"><rect width="1016" height="72" rx="16" fill="#120f12" stroke="#5d4420"/><text x="508" y="45" text-anchor="middle" class="s">圖片為查詢示意，不冒充遊戲截圖；實際位置以 DB 與遊戲內設定為準。</text></g>
+</svg>
