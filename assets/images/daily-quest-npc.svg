@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">每日任務 NPC 示意圖</title><desc id="desc">小白天堂每日任務 NPC 與八個任務地區的示意圖</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0b10"/><stop offset="1" stop-color="#251509"/></linearGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe39a"/><stop offset="1" stop-color="#a66c1b"/></linearGradient><style>text{font-family:'Microsoft JhengHei','Noto Sans TC',Arial,sans-serif}.t{font-size:44px;font-weight:900;fill:#ffe5a0}.s{font-size:22px;fill:#c7b48b}.h{font-size:26px;font-weight:900;fill:#ffe0a0}.p{font-size:21px;fill:#d7c6a1}.tag{font-size:20px;font-weight:900;fill:#201205}</style></defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/><rect x="30" y="30" width="1140" height="700" rx="24" fill="none" stroke="#c89436" stroke-width="3" opacity=".75"/>
+<text x="600" y="82" text-anchor="middle" class="t">每日任務 NPC</text><text x="600" y="120" text-anchor="middle" class="s">DB 設定：w_狩獵怪物任務，共 8 個地區</text>
+<g transform="translate(90 180)"><circle cx="160" cy="130" r="72" fill="#171116" stroke="url(#g)" stroke-width="5"/><circle cx="160" cy="95" r="28" fill="#d7b15f"/><path d="M102 204c18-47 96-47 116 0" fill="#8f5e24" stroke="#f3cf7a" stroke-width="4"/><rect x="70" y="235" width="180" height="130" rx="14" fill="#171116" stroke="#6d4c20"/><text x="160" y="288" text-anchor="middle" class="h">任務看板</text><text x="160" y="326" text-anchor="middle" class="p">接取 / 回報</text></g>
+<g transform="translate(420 180)">
+<rect x="0" y="0" width="300" height="72" rx="14" fill="#21170e" stroke="#6d4c20"/><text x="24" y="46" class="p">沙漠地區</text><rect x="330" y="0" width="300" height="72" rx="14" fill="#171419" stroke="#4e3b22"/><text x="354" y="46" class="p">火窟地區</text>
+<rect x="0" y="90" width="300" height="72" rx="14" fill="#171419" stroke="#4e3b22"/><text x="24" y="136" class="p">騎士洞穴地區</text><rect x="330" y="90" width="300" height="72" rx="14" fill="#21170e" stroke="#6d4c20"/><text x="354" y="136" class="p">象牙塔地區</text>
+<rect x="0" y="180" width="300" height="72" rx="14" fill="#21170e" stroke="#6d4c20"/><text x="24" y="226" class="p">龍之谷地區</text><rect x="330" y="180" width="300" height="72" rx="14" fill="#171419" stroke="#4e3b22"/><text x="354" y="226" class="p">黃昏山脈地區</text>
+<rect x="0" y="270" width="300" height="72" rx="14" fill="#171419" stroke="#4e3b22"/><text x="24" y="316" class="p">遺忘地區</text><rect x="330" y="270" width="300" height="72" rx="14" fill="#21170e" stroke="#6d4c20"/><text x="354" y="316" class="p">奇岩地監地區</text>
+</g>
+<g transform="translate(92 590)"><rect width="1016" height="76" rx="16" fill="#120f12" stroke="#5d4420"/><text x="508" y="47" text-anchor="middle" class="s">獎勵箱：沙漠、火窟、騎洞、象牙塔、龍之谷、黃昏山脈、遺忘、奇岩地監</text></g>
+</svg>
