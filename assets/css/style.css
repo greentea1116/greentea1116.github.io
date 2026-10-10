@@ -519,6 +519,67 @@ button {
     color: #b8c0d0;
 }
 
+.news-feature {
+    border-color: rgba(217, 180, 91, 0.28);
+    background:
+        radial-gradient(circle at 76% 16%, rgba(217, 180, 91, 0.14), transparent 28%),
+        linear-gradient(145deg, rgba(31, 23, 31, 0.92), rgba(12, 10, 15, 0.96));
+}
+
+.news-feature-body {
+    display: grid;
+    gap: 16px;
+}
+
+.news-visual {
+    overflow: hidden;
+    border: 1px solid rgba(217, 180, 91, 0.24);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.news-visual img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.drop-update-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.drop-update-card {
+    padding: 14px 15px;
+    border: 1px solid rgba(217, 180, 91, 0.16);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.drop-update-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #f4d886;
+}
+
+.drop-update-card span {
+    color: #b8c0d0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.drop-update-note {
+    padding: 14px 16px;
+    border-left: 3px solid #d5b05b;
+    border-radius: 10px;
+    background: rgba(217, 180, 91, 0.08);
+}
+
+.drop-update-note strong {
+    color: #f4d886;
+}
+
 
 /* =========================================================
    11. VIDEO 影片
@@ -1316,6 +1377,15 @@ button {
 
     .news-item p {
         font-size: 14px;
+    }
+
+    .drop-update-grid {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .drop-update-card {
+        padding: 13px 14px;
     }
 
 

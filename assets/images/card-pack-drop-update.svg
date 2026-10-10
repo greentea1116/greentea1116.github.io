@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">一般變身卡與娃娃卡禮盒包掉落更新</title>
+  <desc id="desc">黑金奇幻風格的更新視覺，呈現兩個禮盒卡包、一般怪物與四屬性泥龍意象。</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#6c4a1d"/>
+      <stop offset="0.42" stop-color="#19101a"/>
+      <stop offset="1" stop-color="#08070c"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0a9"/>
+      <stop offset="0.45" stop-color="#d6a23c"/>
+      <stop offset="1" stop-color="#7f4d16"/>
+    </linearGradient>
+    <linearGradient id="cardA" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2b1f34"/>
+      <stop offset="1" stop-color="#0d0b12"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bgGlow)"/>
+  <path d="M0 515 C180 452 318 555 505 486 C695 415 828 478 1000 424 C1110 390 1163 400 1200 412 L1200 675 L0 675 Z" fill="#08070c" opacity=".68"/>
+  <g opacity=".22" fill="none" stroke="#d6a23c">
+    <circle cx="600" cy="338" r="245"/>
+    <circle cx="600" cy="338" r="310"/>
+    <path d="M130 126 H1070 M155 552 H1045"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="310" y="176" width="190" height="285" rx="22" fill="url(#cardA)" stroke="url(#gold)" stroke-width="4"/>
+    <rect x="700" y="176" width="190" height="285" rx="22" fill="url(#cardA)" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M352 226 H458 M352 414 H458" stroke="#f4d886" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+    <path d="M742 226 H848 M742 414 H848" stroke="#f4d886" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+    <path d="M405 266 C365 292 356 348 405 374 C454 348 445 292 405 266 Z" fill="#d6a23c"/>
+    <circle cx="795" cy="326" r="54" fill="#d6a23c"/>
+    <circle cx="773" cy="309" r="8" fill="#21150d"/>
+    <circle cx="817" cy="309" r="8" fill="#21150d"/>
+    <path d="M774 348 Q795 365 816 348" fill="none" stroke="#21150d" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M524 388 C503 337 522 282 570 255 C612 231 672 242 701 286 C735 336 711 401 658 421 C610 439 546 431 524 388 Z" fill="#3a2e24" stroke="#c8943d" stroke-width="5"/>
+    <path d="M555 315 C594 276 638 276 675 315" fill="none" stroke="#90c987" stroke-width="8" stroke-linecap="round"/>
+    <path d="M548 351 C593 325 643 325 686 351" fill="none" stroke="#6aa8e8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M565 386 C596 369 635 369 666 386" fill="none" stroke="#f06b45" stroke-width="8" stroke-linecap="round"/>
+    <path d="M592 423 C612 404 638 404 658 423" fill="none" stroke="#d7d7d7" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="578" cy="336" r="8" fill="#f4d886"/>
+    <circle cx="650" cy="336" r="8" fill="#f4d886"/>
+  </g>
+  <g fill="#f7dc91" text-anchor="middle" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+    <text x="600" y="96" font-size="44" font-weight="900">全服一般怪物掉落更新</text>
+    <text x="600" y="142" font-size="24" fill="#d9c18a">一般變身卡禮盒包・一般娃娃卡禮盒包</text>
+    <text x="600" y="537" font-size="36" font-weight="900">824 種指定一般怪物</text>
+    <text x="600" y="580" font-size="24" fill="#c7b58f">包含四屬性變種泥龍</text>
+  </g>
+</svg>
