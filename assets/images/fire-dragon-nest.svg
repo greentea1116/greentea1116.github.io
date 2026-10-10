@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">火龍巢穴副本流程</title>
+<desc id="desc">玩家進入火龍巢穴、取得副本武器、擊敗 BOSS 後傳回奇岩，離開時回收副本武器。</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1b0806"/><stop offset=".52" stop-color="#3a1010"/><stop offset="1" stop-color="#07070b"/></linearGradient><radialGradient id="fire" cx=".5" cy=".5" r=".55"><stop offset="0" stop-color="#ffe095"/><stop offset=".45" stop-color="#f26b23"/><stop offset="1" stop-color="#6e1210" stop-opacity=".2"/></radialGradient></defs>
+<rect width="1200" height="680" fill="url(#bg)"/>
+<circle cx="600" cy="358" r="230" fill="url(#fire)" opacity=".55"/>
+<path d="M600 170c86 82 138 149 138 236 0 89-63 148-138 148s-138-59-138-148c0-87 52-154 138-236z" fill="#12090b" stroke="#ffd07a" stroke-width="5"/>
+<path d="M600 276c38 46 61 82 61 130 0 46-28 78-61 78s-61-32-61-78c0-48 23-84 61-130z" fill="#ff9a33"/>
+<text x="600" y="82" text-anchor="middle" fill="#ffe3a0" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="46" font-weight="900">火龍巢穴副本</text>
+<text x="600" y="123" text-anchor="middle" fill="#cdbb98" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">進場、取得副本武器、擊敗 BOSS，完成後傳回奇岩</text>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="900" font-size="24" fill="#ffe3a0">
+<rect x="90" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="200" y="500" text-anchor="middle">1. 進入巢穴</text>
+<rect x="350" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="460" y="500" text-anchor="middle">2. 領取 1054</text>
+<rect x="630" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="740" y="500" text-anchor="middle">3. 擊敗 BOSS</text>
+<rect x="890" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="1000" y="500" text-anchor="middle">4. 傳回奇岩</text>
+</g>
+<path d="M315 493h28M575 493h48M855 493h28" stroke="#ffd07a" stroke-width="8" stroke-linecap="round"/>
+<text x="600" y="596" text-anchor="middle" fill="#cdbb98" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">死亡、登出或離開副本時，副本武器會回收</text>
+</svg>

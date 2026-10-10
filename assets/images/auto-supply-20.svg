@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">內掛自動補給 20 格</title>
+<desc id="desc">自動補給從 9 格升級為 20 格，玩家可設定目標數量，系統只補足差額。</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0a1118"/><stop offset=".5" stop-color="#172323"/><stop offset="1" stop-color="#09070b"/></linearGradient></defs>
+<rect width="1200" height="680" fill="url(#bg)"/>
+<text x="600" y="82" text-anchor="middle" fill="#ffe3a0" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="44" font-weight="900">內掛自動補給 20 格</text>
+<text x="600" y="122" text-anchor="middle" fill="#cdbb98" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">設定目標數量，背包不足時自動補足差額</text>
+<rect x="125" y="165" width="950" height="405" rx="30" fill="#11141a" stroke="#d8a649" stroke-opacity=".42" stroke-width="3"/>
+<g transform="translate(188 220)" fill="#1f2630" stroke="#d8a649" stroke-opacity=".42">
+<rect width="824" height="248" rx="18"/>
+<g fill="#2e3945" stroke="#f1c76e" stroke-opacity=".22">
+<rect x="28" y="26" width="128" height="78" rx="12"/><rect x="172" y="26" width="128" height="78" rx="12"/><rect x="316" y="26" width="128" height="78" rx="12"/><rect x="460" y="26" width="128" height="78" rx="12"/><rect x="604" y="26" width="128" height="78" rx="12"/>
+<rect x="28" y="124" width="128" height="78" rx="12"/><rect x="172" y="124" width="128" height="78" rx="12"/><rect x="316" y="124" width="128" height="78" rx="12"/><rect x="460" y="124" width="128" height="78" rx="12"/><rect x="604" y="124" width="128" height="78" rx="12"/>
+</g>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="900" fill="#ffe3a0" font-size="26">
+<text x="92" y="75" text-anchor="middle">HP水</text><text x="236" y="75" text-anchor="middle">MP水</text><text x="380" y="75" text-anchor="middle">卷軸</text><text x="524" y="75" text-anchor="middle">藥品</text><text x="668" y="75" text-anchor="middle">道具</text>
+<text x="92" y="173" text-anchor="middle">11</text><text x="236" y="173" text-anchor="middle">12</text><text x="380" y="173" text-anchor="middle">...</text><text x="524" y="173" text-anchor="middle">19</text><text x="668" y="173" text-anchor="middle">20</text>
+</g>
+</g>
+<g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">
+<text x="214" y="525" fill="#ffe3a0" font-weight="900">重點：</text>
+<text x="286" y="525" fill="#cdbb98">每格可設定道具與單價，目標數量上限提高到 5000，只補背包缺少的數量。</text>
+</g>
+</svg>
