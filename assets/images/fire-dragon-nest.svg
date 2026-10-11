@@ -7,10 +7,10 @@
 <path d="M600 170c86 82 138 149 138 236 0 89-63 148-138 148s-138-59-138-148c0-87 52-154 138-236z" fill="#12090b" stroke="#ffd07a" stroke-width="5"/>
 <path d="M600 276c38 46 61 82 61 130 0 46-28 78-61 78s-61-32-61-78c0-48 23-84 61-130z" fill="#ff9a33"/>
 <text x="600" y="82" text-anchor="middle" fill="#ffe3a0" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="46" font-weight="900">火龍巢穴副本</text>
-<text x="600" y="123" text-anchor="middle" fill="#cdbb98" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">進場、取得副本武器、擊敗 BOSS，完成後傳回奇岩</text>
+<text x="600" y="123" text-anchor="middle" fill="#cdbb98" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-size="22">進場、取得真．死亡騎士烈炎之劍、擊敗 BOSS，完成後傳回奇岩</text>
 <g font-family="Noto Sans TC, Microsoft JhengHei, sans-serif" font-weight="900" font-size="24" fill="#ffe3a0">
 <rect x="90" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="200" y="500" text-anchor="middle">1. 進入巢穴</text>
-<rect x="350" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="460" y="500" text-anchor="middle">2. 領取 1054</text>
+<rect x="350" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="460" y="488" text-anchor="middle">2. 領取</text><text x="460" y="516" text-anchor="middle">真．死亡騎士烈炎之劍</text>
 <rect x="630" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="740" y="500" text-anchor="middle">3. 擊敗 BOSS</text>
 <rect x="890" y="450" width="220" height="86" rx="16" fill="#151015" stroke="#d8a649" stroke-opacity=".42"/><text x="1000" y="500" text-anchor="middle">4. 傳回奇岩</text>
 </g>
