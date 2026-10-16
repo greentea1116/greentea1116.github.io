@@ -1,17 +1,17 @@
 {
-  "version": "1.0.12",
+  "version": "1.0.13",
   "files": [
     {
       "path": "Text.idx",
-      "url": "https://drive.google.com/uc?export=download&id=1RN7XO-LV-n9MjVcanulbmex0yVDM6UVw",
-      "sha256": "6E7E78E87CAFDB0672A11A7A1A566D4C8425988C5BED4D23397DB706543DC54D",
-      "size": 1092312
+      "url": "https://greentea1116.github.io/updates/Text-1.0.13.idx.bin",
+      "sha256": "2FA4BD01EA14FC80B16D2A140699A9FABE0BC704CE7BFC90ABB917D1DE1EB192",
+      "size": 1092340
     },
     {
       "path": "Text.pak",
-      "url": "https://drive.google.com/uc?export=download&id=1FNZZ-7JaM07HtXdi7LLzg_d62XqLi3P0",
-      "sha256": "BA94D8D6FDA5078FD4B2462A7C41C9760658789120185252A17268B338B07BD7",
-      "size": 28744454
+      "url": "https://greentea1116.github.io/updates/Text-1.0.13.pak.bin",
+      "sha256": "E2315332AFE4899F4E0A7C0E55052867116FB5278B9340386AEA5EDCC7277FE7",
+      "size": 28746829
     },
     {
       "path": "TW13081901.pak",
