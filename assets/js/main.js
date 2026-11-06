@@ -140,8 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
        只替換舊遊戲端 Google Drive，其他更新包/VPN 不動
     ===================================================== */
 
-    const latestGameDownload = "https://drive.google.com/file/d/1BzNCwbraGfVa-suQmgShKnJNjNibUNVu/view?usp=sharing";
+    const latestGameDownload = "https://drive.google.com/file/d/1-41cX2leuns7sA_5X5FxnQ4iRhg060jC/view?usp=sharing";
     const oldGameDownloadIds = [
+        "1GjtTT_5wJdJLuzgSfAWV2UmaBE596nsu",
         "1xlXZ_ythiusF5bQHtUShktqWeOPySFxH",
         "1tcVl908CNaQy2sjbSfFgIOY21wiFsXtH",
         "1DrjIrPZ0EfB8vlBMGB2wy-B9XJ3c-Fir"
