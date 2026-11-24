@@ -1,14 +1,14 @@
 {
-  "version": "1.0.16",
+  "version": "1.0.17",
   "files": [
     {
-      "path": "text/Text.idx",
+      "path": "Text.idx",
       "url": "https://drive.usercontent.google.com/download?id=1ukGciqn3EpUiI97JDYPeLHKHuhd43lps&export=download&confirm=t",
       "sha256": "417344EB015E14D60038CFBAA8403B3D3001F900C9A2972AAFCEB374C71FA613",
       "size": 1093124
     },
     {
-      "path": "text/Text.pak",
+      "path": "Text.pak",
       "url": "https://drive.usercontent.google.com/download?id=1pFfpE5dz4CTmTrmWEnZJZhxGxAG1YcYp&export=download&confirm=t",
       "sha256": "62199C67F7C40327A7C623759D56B1F05A73C4744C9CEFF6162945A1E9B73A4C",
       "size": 28839769
