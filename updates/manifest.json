@@ -1,17 +1,17 @@
 {
-  "version": "1.0.14",
+  "version": "1.0.15",
   "files": [
     {
       "path": "Text.idx",
-      "url": "https://drive.usercontent.google.com/download?id=1dywMIW9_c11zx6ykhcq2ZWRc2f_cApE-&export=download&confirm=t",
-      "sha256": "8ACF5ABF849F2FB55E60DA821DF254D0D6A23D12B77FFB59BFCD4892FC8DC4B7",
-      "size": 1092676
+      "url": "https://drive.usercontent.google.com/download?id=1ukGciqn3EpUiI97JDYPeLHKHuhd43lps&export=download&confirm=t",
+      "sha256": "417344EB015E14D60038CFBAA8403B3D3001F900C9A2972AAFCEB374C71FA613",
+      "size": 1093124
     },
     {
       "path": "Text.pak",
-      "url": "https://drive.usercontent.google.com/download?id=1RhiDVWCzD-frS6A8np3xMYejdk9hQos4&export=download&confirm=t",
-      "sha256": "3C04C7F0F7D9C4153FF3C4A16047A131ED088DEE072E30769CBBD1B273063BAF",
-      "size": 28755891
+      "url": "https://drive.usercontent.google.com/download?id=1pFfpE5dz4CTmTrmWEnZJZhxGxAG1YcYp&export=download&confirm=t",
+      "sha256": "62199C67F7C40327A7C623759D56B1F05A73C4744C9CEFF6162945A1E9B73A4C",
+      "size": 28839769
     },
     {
       "path": "TW13081901.pak",
